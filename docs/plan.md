@@ -216,7 +216,7 @@ Os xestos e os botóns chaman a `decidir()`. Por agora usa datos falsos nunha p�
 - a localización gardada no perfil (adoptante) ou na sesión (visitante).
 
 **Aceptación:**
-- [ ] A distancia Vigo–Santiago dá uns 80 km (±2).
+- [ ] A distancia Vigo–Santiago en liña recta dá uns 72 km (±2); por estrada son uns 90.
 - [ ] Ao denegar o GPS aparece o selector de concello.
 - [ ] A fixture carga os 313 concellos.
 

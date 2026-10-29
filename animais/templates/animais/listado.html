@@ -27,6 +27,7 @@
   {% include "animais/_filtros.html" %}
 
   {% if paxina.object_list %}
+    <h2 class="so-lectores">Resultados</h2>
     <ul class="grella grella--cans">
       {% for avaliado in paxina %}{% include "animais/_tarxeta.html" %}{% endfor %}
     </ul>
