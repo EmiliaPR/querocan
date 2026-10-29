@@ -23,6 +23,10 @@ services:
   web:
     build: .
     env_file: .env
+    # Mesmo usuario ca no ordenador, para que os ficheiros creados (migracións...) non sexan de root
+    user: "${UID_LOCAL:-1000}:${GID_LOCAL:-1000}"
+    environment:
+      HOME: /tmp
     ports:
       - "${PORTO_WEB:-8000}:8000"
     volumes:
