@@ -55,6 +55,13 @@ contido (test, contrato, manual).
 - **Sen deseñar aínda:** panel da protectora, panel do superadmin, solicitudes, checklist de
   responsabilidade, contrato, perfil do adoptante.
 
+## Notas para a implementación
+- **Alternativas ao swipe.** Cada xesto do deck ten que ter un botón visible que faga o mesmo
+  ("Non é para min", "Gústame"), para quen prefira non usar xestos ou non poida facelos (rato,
+  lector de pantalla, mobilidade reducida). Os botóns e o xesto chaman á mesma función JS, e
+  os botóns son `<button>` accesibles por teclado. A proposta de identidade xa os debuxa baixo
+  a tarxeta, xunto cos atallos de teclado (← → ↑ Z).
+
 ## Key Assumptions to Validate
 - [ ] A compatibilidade ordena con sentido — seed de ~30 cans e 3 perfís contrastados (estudante
       en piso, familia con nenos e casa, xubilada); o top 3 de cada perfil debe parecer razoable
