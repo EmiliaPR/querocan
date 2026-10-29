@@ -120,6 +120,10 @@ MEDIA_ROOT = BASE_DIR / "media"
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
+# Límite das subidas (as fotos poden pesar ata 5 MB; deixamos marxe para o formulario)
+DATA_UPLOAD_MAX_MEMORY_SIZE = 6 * 1024 * 1024
+FILE_UPLOAD_MAX_MEMORY_SIZE = 6 * 1024 * 1024
+
 # Enderezo público da web (para as ligazóns dos correos)
 SITIO_URL = _env("SITIO_URL", "http://localhost:8000")
 
@@ -134,3 +138,22 @@ EMAIL_HOST_USER = _env("EMAIL_HOST_USER")
 EMAIL_HOST_PASSWORD = _env("EMAIL_HOST_PASSWORD")
 EMAIL_USE_TLS = _env_bool("EMAIL_USE_TLS", True)
 DEFAULT_FROM_EMAIL = _env("DEFAULT_FROM_EMAIL", "QueroCan <ola@querocan.local>")
+
+# ---------------------------------------------------------------------------------------
+# Seguridade en produción (DJANGO_DEBUG=0). Caddy recibe o HTTPS e pásallo a Django.
+# ---------------------------------------------------------------------------------------
+if not DEBUG:
+    STORAGES = {
+        "default": {"BACKEND": "django.core.files.storage.FileSystemStorage"},
+        "staticfiles": {"BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage"},
+    }
+    SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
+    SECURE_SSL_REDIRECT = _env_bool("DJANGO_SSL_REDIRECT", True)
+    SESSION_COOKIE_SECURE = True
+    CSRF_COOKIE_SECURE = True
+    SECURE_HSTS_SECONDS = int(_env("DJANGO_HSTS_SECONDS", "31536000"))
+    SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+    SECURE_HSTS_PRELOAD = False
+    CSRF_TRUSTED_ORIGINS = [
+        f"https://{h}" for h in ALLOWED_HOSTS if h not in ("localhost", "127.0.0.1")
+    ]

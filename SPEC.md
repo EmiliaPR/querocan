@@ -183,12 +183,13 @@ querocan/
 ├── README.md                  → como arrancar o proxecto e percorrido guiado polo código
 ├── compose.yaml               → web (Django runserver), db (MySQL), tarefas (expiración)
 ├── compose.prod.yaml          → gunicorn + caddy (HTTPS)
+├── Caddyfile                  → configuración de Caddy (HTTPS e /media/)
 ├── Dockerfile
 ├── .env.exemplo
 ├── requirements.txt
 ├── pyproject.toml             → configuración de ruff e pytest
 ├── manage.py
-├── querocan/                  → configuración do proxecto (settings, urls, wsgi)
+├── querocan/                  → configuración do proxecto (settings, urls, wsgi) e comando cargar_demo
 ├── contas/                    → Usuario (con rol), PerfilAdoptante, Protectora, rexistro/login, decoradores de rol
 ├── animais/                   → Can, FotoCan, listado, ficha, deck (vistas + API JSON do swipe)
 ├── compatibilidade/           → calculo.py e distancia.py (Python puro), test sen conta, Concello
@@ -202,7 +203,6 @@ querocan/
 │   ├── fontes/
 │   └── vendor/                → chart.js
 ├── media/                     → fotos subidas (non versionado)
-├── tests/                     → se a proba cruza apps; os tests de cada app van en <app>/tests/
 └── docs/
     ├── ideas/querocan.md
     ├── referencias/

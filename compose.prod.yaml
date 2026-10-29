@@ -1,0 +1,44 @@
+# Despregue da demo nun servidor con dominio (HTTPS automático con Caddy).
+# Úsase xunto con compose.yaml:
+#   docker compose -f compose.yaml -f compose.prod.yaml up --build -d
+# No .env de produción: DJANGO_DEBUG=0, DJANGO_SECRET_KEY longa, DOMINIO=o.teu.dominio,
+# DJANGO_ALLOWED_HOSTS=o.teu.dominio e PORTO_WEB=127.0.0.1:8000 (Django só accesible a Caddy).
+services:
+  web:
+    environment:
+      DJANGO_DEBUG: "0"
+    # Aplica as migracións, recolle os estáticos e arranca Gunicorn en vez de runserver
+    command: >
+      sh -c "python manage.py migrate --noinput &&
+             python manage.py collectstatic --noinput &&
+             gunicorn querocan.wsgi --bind 0.0.0.0:8000 --workers 3 --access-logfile -"
+    restart: unless-stopped
+
+  tarefas:
+    environment:
+      DJANGO_DEBUG: "0"
+    restart: unless-stopped
+
+  db:
+    restart: unless-stopped
+
+  # Servidor web público: certificado HTTPS de Let's Encrypt, fotos e proxy cara a Django
+  caddy:
+    image: caddy:2.8
+    environment:
+      DOMINIO: ${DOMINIO}
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - ./media:/srv/media:ro
+      - datos_caddy:/data
+      - config_caddy:/config
+    depends_on:
+      - web
+    restart: unless-stopped
+
+volumes:
+  datos_caddy:
+  config_caddy:

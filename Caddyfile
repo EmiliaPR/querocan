@@ -1,0 +1,13 @@
+# Caddy obtén e renova o certificado HTTPS automaticamente para o dominio.
+{$DOMINIO} {
+	encode gzip
+
+	# As fotos subidas sérveas Caddy directamente desde o disco
+	handle_path /media/* {
+		root * /srv/media
+		file_server
+	}
+
+	# O resto (páxinas e estáticos con WhiteNoise) vai a Django/Gunicorn
+	reverse_proxy web:8000
+}

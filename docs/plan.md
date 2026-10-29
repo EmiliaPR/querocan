@@ -1,5 +1,9 @@
 # Plan de implementación: QueroCan
 
+> **Estado (2026-10-29):** as 25 tarefas están implementadas e cada fase ten o seu commit.
+> Hai 277 probas e a cobertura é do 98 %. Pendente: validar o swipe en Android e iOS físicos e cun
+> lector de pantalla real (ver `docs/probas-manuais.md`), e despregar nun dominio.
+
 ## Visión xeral
 Implementación do MVP descrito en `SPEC.md`: plataforma Django + MySQL en Docker con tres roles,
 deck de swipe ordenado por compatibilidade e fluxo de adopción completo (solicitude → match →
