@@ -1,0 +1,14 @@
+# Contorno e segredos
+.env
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+# Ficheiros subidos polas persoas usuarias (as fotos de demo si se versionan)
+media/*
+!media/demo/
+# Estáticos recollidos para produción
+staticfiles/

@@ -1,0 +1,35 @@
+# Contorno de desenvolvemento de QueroCan.
+#   web     → Django (servidor de desenvolvemento)
+#   db      → MySQL 8.4
+#   tarefas → executa cada hora a caducidade das solicitudes aceptadas
+services:
+  db:
+    image: mysql:8.4
+    environment:
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+    command: ["--character-set-server=utf8mb4", "--collation-server=utf8mb4_unicode_ci"]
+    volumes:
+      - datos_mysql:/var/lib/mysql
+      - ./docker/mysql-init.sql:/docker-entrypoint-initdb.d/01-permisos.sql:ro
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-p${MYSQL_ROOT_PASSWORD}"]
+      interval: 5s
+      timeout: 5s
+      retries: 30
+
+  web:
+    build: .
+    env_file: .env
+    ports:
+      - "${PORTO_WEB:-8000}:8000"
+    volumes:
+      - .:/app
+    depends_on:
+      db:
+        condition: service_healthy
+
+volumes:
+  datos_mysql:

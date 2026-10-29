@@ -1,0 +1,12 @@
+# Dependencias de QueroCan (versións fixadas para que o proxecto sexa reproducible)
+Django==5.2.7
+mysqlclient==2.2.7
+weasyprint==66.0
+Pillow==11.3.0
+gunicorn==23.0.0
+whitenoise==6.11.0
+# Probas e calidade
+pytest==8.4.2
+pytest-django==4.11.1
+pytest-cov==7.0.0
+ruff==0.13.3
