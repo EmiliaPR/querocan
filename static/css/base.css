@@ -7,6 +7,8 @@
 
 /* ---------- Reinicio mínimo ---------- */
 *, *::before, *::after { box-sizing: border-box; }
+/* O atributo hidden sempre oculta, aínda que unha clase lle dea outro display */
+[hidden] { display: none !important; }
 html { -webkit-text-size-adjust: 100%; }
 body {
   margin: 0;
@@ -118,12 +120,20 @@ textarea:focus-visible, summary:focus-visible, [tabindex]:not(main):focus-visibl
 .menu-movil a:not(.boton), .menu-movil .boton-ligazon { padding: 0.85rem 0.25rem; font-size: var(--tam-l); font-weight: 500; border-bottom: 1px solid var(--rosa-claro); text-decoration: none; text-align: left; }
 .menu-movil .boton { margin-top: var(--esp-3); }
 .menu-movil__check:checked ~ .menu-movil { display: flex; }
+.cabeceira__accions a:not(.boton) { text-decoration: none; font-weight: 500; white-space: nowrap; }
+.cabeceira__accions a:not(.boton):hover { text-decoration: underline; text-underline-offset: 6px; }
+.nav-principal a { white-space: nowrap; }
 @media (min-width: 1000px) {
   .nav-principal { display: flex; gap: var(--esp-5); }
-  .cabeceira__accions { display: flex; align-items: center; gap: var(--esp-3); }
+  .cabeceira__accions { display: flex; align-items: center; gap: var(--esp-4); }
   .menu-movil__boton, .menu-movil { display: none !important; }
   .logo__icona { width: 52px; height: 52px; }
   .logo__texto { font-size: 2.25rem; }
+}
+@media (min-width: 1000px) and (max-width: 1239px) {
+  .con-sesion .nav-principal, .con-sesion .cabeceira__accions { display: none; }
+  .con-sesion .menu-movil__boton { display: flex !important; }
+  .con-sesion .menu-movil__check:checked ~ .menu-movil { display: flex !important; }
 }
 
 /* ---------- Pé ---------- */
@@ -188,6 +198,15 @@ fieldset { border: 0; padding: 0; margin: 0; }
 .datos dt, .datos dd { padding: var(--esp-3) 0; border-bottom: 1px solid var(--borde); margin: 0; }
 .datos dt { color: var(--texto-secundario); }
 .datos dd { text-align: right; font-weight: 700; }
+
+/* Porcentaxe de compatibilidade (círculo rubí) */
+.porcentaxe {
+  width: 72px; height: 72px; flex: none; border-radius: 50%; background: var(--rubi); color: var(--crema);
+  display: flex; align-items: center; justify-content: center; font-family: var(--fonte-titulares);
+  font-weight: 800; font-size: 1.4rem;
+}
+.porcentaxe--sobre-foto { position: absolute; top: var(--esp-3); right: var(--esp-3); width: 60px; height: 60px; font-size: 1.15rem; box-shadow: var(--sombra); }
+.porcentaxe--pequena { display: inline-flex; width: auto; height: auto; padding: var(--esp-1) var(--esp-3); border-radius: var(--raio-pilula); font-size: var(--tam-m); }
 
 /* ---------- Grella de tarxetas de animais ---------- */
 .grella { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: var(--esp-5); }

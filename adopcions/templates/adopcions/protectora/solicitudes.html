@@ -32,7 +32,7 @@
         {% if fila.resultado %}<p class="porcentaxe" aria-label="{{ fila.resultado.porcentaxe }} % de compatibilidade">{{ fila.resultado.porcentaxe }}%</p>{% endif %}
         <div class="pila solicitude__quen">
           <h2 class="solicitude__titulo">{{ s.adoptante.nome }} → {{ s.can.nome }}</h2>
-          <p class="texto-secundario">Solicitada o {{ s.data_creacion|date:"j \d\e F" }}{% if fila.outras_activas %} · ten outras {{ fila.outras_activas }} solicitude{{ fila.outras_activas|pluralize:"s" }} activa{{ fila.outras_activas|pluralize:"s" }}{% endif %}</p>
+          <p class="texto-secundario">Solicitada o {{ s.data_creacion|date:"j \d\e F"|lower }}{% if fila.outras_activas %} · ten outras {{ fila.outras_activas }} solicitude{{ fila.outras_activas|pluralize:"s" }} activa{{ fila.outras_activas|pluralize:"s" }}{% endif %}</p>
         </div>
         <span class="etiqueta estado estado--{{ s.estado }}">{{ s.get_estado_display }}</span>
       </div>
@@ -54,7 +54,7 @@
       {% endif %}
 
       {% if s.estado == "aceptada" %}
-        <p>Prazo para completar: ata o {{ fila.data_limite|date:"j \d\e F" }}. Compromiso: {% if s.checklist_feito %}feito{% else %}pendente{% endif %}. Contacto: <a href="mailto:{{ s.adoptante.email }}">{{ s.adoptante.email }}</a></p>
+        <p>Prazo para completar: ata o {{ fila.data_limite|date:"j \d\e F"|lower }}. Compromiso: {% if s.checklist_feito %}feito{% else %}pendente{% endif %}. Contacto: <a href="mailto:{{ s.adoptante.email }}">{{ s.adoptante.email }}</a></p>
       {% elif s.estado == "completada" %}
         <p>Contacto: <a href="mailto:{{ s.adoptante.email }}">{{ s.adoptante.email }}</a> · <a href="{% url 'adopcions:contrato_pdf' s.pk %}">Descargar o contrato (PDF)</a></p>
       {% endif %}

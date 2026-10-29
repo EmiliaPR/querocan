@@ -13,7 +13,7 @@
   <script type="module" src="{% static 'js/aviso-non-implementado.js' %}"></script>
   {% block scripts %}{% endblock %}
 </head>
-<body class="{% block clase_body %}{% endblock %}">
+<body class="{% if user.is_authenticated %}con-sesion{% endif %} {% block clase_body %}{% endblock %}">
   {% include "componentes/logo_simbolo.html" %}
   <a class="saltar-contido boton boton--primario" href="#contido">Ir ao contido</a>
 

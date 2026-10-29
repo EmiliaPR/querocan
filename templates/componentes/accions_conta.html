@@ -2,8 +2,8 @@
 {% if user.is_authenticated %}
   {% if user.es_adoptante %}
     <a href="{% url 'animais:deck' %}">Descubrir</a>
-    <a href="{% url 'adopcions:minas_solicitudes' %}">As miñas solicitudes</a>
-    <a href="{% url 'compatibilidade:test' %}">O meu perfil</a>
+    <a href="{% url 'adopcions:minas_solicitudes' %}">Solicitudes</a>
+    <a href="{% url 'compatibilidade:test' %}">Perfil</a>
   {% elif user.es_protectora %}
     <a href="{% url 'animais:protectora_cans' %}">Os meus cans</a>
     <a href="{% url 'adopcions:protectora_solicitudes' %}">Solicitudes</a>

@@ -15,14 +15,14 @@
           <h2 class="solicitude__titulo"><a href="{% url 'animais:ficha' s.can.pk %}">{{ s.can.nome }}</a></h2>
           <span class="etiqueta estado estado--{{ s.estado }}">{{ s.get_estado_display }}</span>
         </div>
-        <p class="texto-secundario">{{ s.can.protectora.nome }} · solicitada o {{ s.data_creacion|date:"j \d\e F" }}</p>
+        <p class="texto-secundario">{{ s.can.protectora.nome }} · solicitada o {{ s.data_creacion|date:"j \d\e F"|lower }}</p>
 
         {% if s.estado == "pendente" %}
           <p>A protectora aínda non revisou a túa solicitude.</p>
         {% elif s.estado == "en_espera" %}
           <p>{{ s.can.nome }} ten agora outra adopción en curso. Se non sae adiante, a túa solicitude volve estar activa.</p>
         {% elif s.estado == "aceptada" %}
-          <p class="mensaxe mensaxe--success"><strong>Match!</strong> A protectora aceptou a túa solicitude. Quéda{{ s.dias_restantes|pluralize:"che,nche" }} <strong>{{ s.dias_restantes }} día{{ s.dias_restantes|pluralize:"s" }}</strong> (ata o {{ s.data_limite|date:"j \d\e F" }}) para completar o compromiso e o contrato.</p>
+          <p class="mensaxe mensaxe--success"><strong>Match!</strong> A protectora aceptou a túa solicitude. Quéda{{ s.dias_restantes|pluralize:"che,nche" }} <strong>{{ s.dias_restantes }} día{{ s.dias_restantes|pluralize:"s" }}</strong> (ata o {{ s.data_limite|date:"j \d\e F"|lower }}) para completar o compromiso e o contrato.</p>
           <div class="fila">
             {% if s.checklist_feito %}
               <a class="boton boton--primario" href="{% url 'adopcions:contrato' s.pk %}">Ler e aceptar o contrato</a>

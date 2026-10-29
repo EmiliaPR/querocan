@@ -32,6 +32,8 @@ class CanAvaliado:
     can: Can
     resultado: Resultado | None
     distancia: float | None
+    # A persoa xa ten unha solicitude en curso para este can (non se lle ofrece «Adoptar»)
+    solicitado: bool = False
 
     @property
     def porcentaxe(self):
@@ -106,12 +108,31 @@ def ordenar(avaliados):
     return sorted(avaliados, key=clave)
 
 
+def marcar_solicitados(request, avaliados):
+    """Marca os cans para os que a persoa xa ten unha solicitude en curso."""
+    from adopcions.models import Solicitude
+
+    usuario = request.user
+    if not (usuario.is_authenticated and usuario.es_adoptante):
+        return avaliados
+    solicitados = set(
+        Solicitude.objects.filter(adoptante=usuario, estado__in=Solicitude.ACTIVAS).values_list(
+            "can_id", flat=True
+        )
+    )
+    for avaliado in avaliados:
+        avaliado.solicitado = avaliado.can.pk in solicitados
+    return avaliados
+
+
 def cans_avaliados(request, filtros=None, excluir=()):
     """Cans publicados, filtrados, avaliados para a persoa e ordenados."""
     filtros = filtros or {}
     consulta = aplicar_filtros(cans_publicados(), filtros).exclude(pk__in=excluir)
     localizacion = almacen.localizacion_de(request)
-    avaliados = avaliar(consulta, almacen.perfil_de(request), localizacion)
+    avaliados = marcar_solicitados(
+        request, avaliar(consulta, almacen.perfil_de(request), localizacion)
+    )
     distancia_max = filtros.get("distancia")
     if distancia_max and localizacion:
         avaliados = [

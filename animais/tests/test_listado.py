@@ -158,3 +158,14 @@ def test_ficha_ten_botons_non_implementados(client, crear_can):
     html = client.get(reverse("animais:ficha", args=[crear_can().pk])).content.decode()
     assert html.count("data-non-implementado") >= 2
     assert "Apadriñar" in html and "Apadrinar" not in html
+
+
+def test_cans_xa_solicitados_non_ofrecen_adoptar(client, adoptante_con_perfil, crear_can):
+    from adopcions import estados
+
+    can = crear_can(nome="Solicitado")
+    estados.crear_solicitude(adoptante_con_perfil, can)
+    client.force_login(adoptante_con_perfil)
+    html = client.get(reverse("animais:listado")).content.decode()
+    assert ">Solicitado</a>" in html
+    assert reverse("adopcions:solicitar", args=[can.pk]) not in html

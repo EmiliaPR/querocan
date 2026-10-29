@@ -42,7 +42,7 @@ def texto_final(modelo, solicitude, datos, data=None):
         "email": datos["email"],
         "can": solicitude.can.nome,
         "protectora": solicitude.can.protectora.nome,
-        "data": formats.date_format(data, "j \\d\\e F \\d\\e Y"),
+        "data": formats.date_format(data, "j \\d\\e F \\d\\e Y").lower(),
     }
     texto = modelo.texto
     for clave, valor in valores.items():
