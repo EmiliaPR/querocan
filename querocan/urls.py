@@ -2,12 +2,13 @@
 
 from django.conf import settings
 from django.conf.urls.static import static
-from django.urls import path
+from django.urls import include, path
 
 from . import views
 
 urlpatterns = [
     path("saude/", views.saude, name="saude"),
+    path("", include("contido.urls")),
 ]
 
 # En desenvolvemento Django serve as fotos subidas; en produción faino Caddy

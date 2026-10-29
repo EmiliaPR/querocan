@@ -1,0 +1,25 @@
+{# Cabeceira común. En escritorio amosa o menú completo; en móbil, un botón hamburguesa #}
+{# que funciona sen JavaScript (checkbox + label). #}
+<header class="cabeceira">
+  <div class="contedor cabeceira__dentro">
+    {% include "componentes/logo.html" %}
+
+    <nav class="nav-principal" aria-label="Principal">
+      {% include "componentes/ligazons_principais.html" %}
+    </nav>
+
+    <div class="cabeceira__accions">
+      {% include "componentes/accions_conta.html" %}
+    </div>
+
+    <input type="checkbox" id="menu-movil" class="menu-movil__check" aria-label="Abrir ou pechar o menú">
+    <label for="menu-movil" class="menu-movil__boton" aria-hidden="true">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </label>
+    <nav class="menu-movil" aria-label="Menú">
+      {% include "componentes/ligazons_principais.html" %}
+      <a href="/manual/">Manual de boas maneiras</a>
+      {% include "componentes/accions_conta.html" with en_menu=True %}
+    </nav>
+  </div>
+</header>

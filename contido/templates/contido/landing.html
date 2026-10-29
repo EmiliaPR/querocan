@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+{% load static %}
+{% block titulo %}Adopción de cans por compatibilidade{% endblock %}
+{% block estilos %}<link rel="stylesheet" href="{% static 'css/landing.css' %}">{% endblock %}
+
+{% block contido %}
+<section class="contedor heroe">
+  <h1 class="heroe__titulo"><span>Un pequeno xesto,</span> <span>un amor para sempre.</span></h1>
+  <p class="heroe__subtitulo">Desliza, coñece o seu carácter e adopta o can que encaixa coa túa vida. Sen présa e con toda a información.</p>
+  <div class="fila heroe__accions">
+    <a href="/animais/" class="boton boton--suave">Ver animais</a>
+    <a href="/test/" class="boton boton--primario">Facer o test de compatibilidade</a>
+    <a href="/rexistro/" class="boton boton--contorno">Crear conta</a>
+  </div>
+</section>
+
+<section class="banda" aria-label="Que ofrece QueroCan">
+  <ul class="contedor banda__lista">
+    <li>Protectoras rexistradas</li>
+    <li>Test de compatibilidade</li>
+    <li>Adopción guiada ata o contrato</li>
+    <li>Adoptar ou apadriñar</li>
+  </ul>
+</section>
+
+<section class="contedor seccion" aria-labelledby="como-funciona">
+  <h2 id="como-funciona">Como funciona</h2>
+  <ol class="pasos">
+    <li class="paso">
+      <span class="paso__numero" aria-hidden="true">1</span>
+      <h3>Fai o test</h3>
+      <p class="texto-secundario">Cóntanos como é a túa vida: casa, tempo, experiencia e outros animais.</p>
+    </li>
+    <li class="paso">
+      <span class="paso__numero" aria-hidden="true">2</span>
+      <h3>Desliza e escolle</h3>
+      <p class="texto-secundario">Os cans aparecen ordenados por compatibilidade, co porqué. Á dereita se che gusta, á esquerda se non é para ti.</p>
+    </li>
+    <li class="paso">
+      <span class="paso__numero" aria-hidden="true">3</span>
+      <h3>Fai match coa protectora</h3>
+      <p class="texto-secundario">A protectora revisa a túa solicitude. Se ambas partes dicides que si, completas o compromiso e o contrato en liña.</p>
+    </li>
+  </ol>
+</section>
+
+{% block landing_animais %}{% endblock %}
+
+<section class="banda-test" aria-labelledby="test-titulo">
+  <div class="contedor banda-test__dentro">
+    <div class="pila banda-test__texto">
+      <h2 id="test-titulo">Antes de adoptar, coñécete</h2>
+      <p>Responde unhas preguntas sobre a túa casa, o teu tempo e a túa experiencia, e ordenamos os cans segundo o encaixe contigo.</p>
+    </div>
+    <div class="pila">
+      <ul class="etiquetas">
+        <li class="etiqueta etiqueta--banda">Vivenda</li>
+        <li class="etiqueta etiqueta--banda">Tempo só</li>
+        <li class="etiqueta etiqueta--banda">Outros animais</li>
+        <li class="etiqueta etiqueta--banda">Experiencia</li>
+      </ul>
+      <a href="/test/" class="boton boton--crema">Facer o test</a>
+    </div>
+  </div>
+</section>
+
+{% block landing_testemunos %}{% endblock %}
+
+<section class="banda-protectoras" aria-labelledby="protectoras-titulo">
+  <div class="contedor banda-protectoras__dentro">
+    <div class="pila">
+      <h2 id="protectoras-titulo">Es unha protectora?</h2>
+      <p class="texto-secundario">Publica os teus cans, recibe solicitudes con compatibilidade e xestiona as adopcións nun só sitio.</p>
+    </div>
+    <a href="/rexistro/protectora/" class="boton boton--primario">Dar de alta a protectora</a>
+  </div>
+</section>
+{% endblock %}

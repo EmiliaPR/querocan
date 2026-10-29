@@ -1,0 +1,120 @@
+/*
+ * Tokens de deseño de QueroCan.
+ *
+ * Única fonte das cores, tipografías e medidas da interface. O resto de ficheiros CSS
+ * só usan estas variables (nunca cores soltas), así un cambio de marca faise aquí.
+ * Paleta tomada da prancha «02 · Marca» da proposta de identidade gráfica.
+ */
+
+/* Tipografías servidas desde o propio proxecto (licenza en static/fontes/LICENZA.md) */
+@font-face {
+  font-family: "Nunito";
+  font-weight: 800;
+  font-display: swap;
+  src: url("../fontes/nunito-latin-800-normal.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Nunito";
+  font-weight: 800;
+  font-display: swap;
+  src: url("../fontes/nunito-latin-ext-800-normal.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "DM Sans";
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fontes/dm-sans-latin-400-normal.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "DM Sans";
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fontes/dm-sans-latin-ext-400-normal.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "DM Sans";
+  font-weight: 500;
+  font-display: swap;
+  src: url("../fontes/dm-sans-latin-500-normal.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "DM Sans";
+  font-weight: 500;
+  font-display: swap;
+  src: url("../fontes/dm-sans-latin-ext-500-normal.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "DM Sans";
+  font-weight: 700;
+  font-display: swap;
+  src: url("../fontes/dm-sans-latin-700-normal.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "DM Sans";
+  font-weight: 700;
+  font-display: swap;
+  src: url("../fontes/dm-sans-latin-ext-700-normal.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+:root {
+  /* Paleta de marca (prancha «02 · Marca») */
+  --vino-profundo: #400a16;   /* texto e fondos escuros */
+  --borgona: #65202d;         /* cor principal e botóns */
+  --rubi: #902124;            /* «Can» no logo e titulares destacados */
+  --rosa: #c2858c;            /* acentos suaves: só en elementos grandes (2,6:1 sobre crema) */
+  --terracota: #844d43;       /* etiquetas e detalles */
+  --salvia: #8f9a72;          /* botón «Gústame» */
+  --crema: #f8efea;           /* fondo base */
+
+  /* Tons de apoio derivados da paleta (usados nas pantallas da proposta) */
+  --texto-secundario: #6a4650;
+  --rosa-claro: #f0dad7;      /* fondo de etiquetas e bandas */
+  --rosa-foto: #e3c3bf;       /* fondo das fotos mentres cargan */
+  --borde: #e6cfcb;           /* bordos e separadores */
+  --salvia-claro: #e4e8d8;    /* fondo de mensaxes e etiquetas positivas */
+  --branco: #ffffff;
+
+  /* Cores con significado */
+  --cor-texto: var(--vino-profundo);
+  --cor-fondo: var(--crema);
+  --cor-primaria: var(--borgona);
+  --cor-primaria-texto: var(--crema);
+  --cor-foco: var(--vino-profundo);
+  --cor-ok: #4f5a35;          /* salvia escurecida para texto (contraste AA) */
+  --cor-aviso: var(--rubi);
+
+  /* Tipografía */
+  --fonte-titulares: "Nunito", system-ui, sans-serif;
+  --fonte-texto: "DM Sans", system-ui, sans-serif;
+  --tam-xs: 0.8125rem;   /* 13px */
+  --tam-s: 0.875rem;     /* 14px */
+  --tam-m: 1rem;         /* 16px */
+  --tam-l: 1.125rem;     /* 18px */
+  --tam-xl: 1.5rem;      /* 24px */
+  --tam-2xl: 1.75rem;    /* 28px */
+  --tam-3xl: 2.25rem;    /* 36px */
+
+  /* Espazos, raios e sombras */
+  --esp-1: 0.25rem;
+  --esp-2: 0.5rem;
+  --esp-3: 0.75rem;
+  --esp-4: 1rem;
+  --esp-5: 1.5rem;
+  --esp-6: 2rem;
+  --esp-7: 3rem;
+  --esp-8: 4.5rem;
+  --raio-s: 12px;
+  --raio-m: 16px;
+  --raio-l: 24px;
+  --raio-pilula: 999px;
+  --sombra: 0 10px 30px rgb(64 10 22 / 0.12);
+  --ancho-max: 1200px;
+}

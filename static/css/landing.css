@@ -1,0 +1,56 @@
+/* Estilos específicos da landing (páxina de inicio). */
+
+.heroe {
+  min-height: min(70vh, 640px); display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: var(--esp-6); text-align: center; padding-block: var(--esp-7);
+}
+.heroe__titulo { font-size: clamp(2.2rem, 9vw, 6.5rem); line-height: 1.05; color: var(--rubi); }
+.heroe__titulo span { display: block; }
+.heroe__subtitulo { max-width: 560px; font-size: var(--tam-l); color: var(--texto-secundario); }
+.heroe__accions { justify-content: center; flex-direction: column; width: 100%; max-width: 360px; }
+.heroe__accions .boton { width: 100%; }
+@media (min-width: 700px) {
+  .heroe__accions { flex-direction: row; max-width: none; width: auto; }
+  .heroe__accions .boton { width: auto; }
+}
+
+.banda { background: var(--rosa-claro); }
+.banda__lista {
+  list-style: none; margin: 0 auto; padding-block: var(--esp-5); display: flex; flex-direction: column;
+  gap: var(--esp-4); font-weight: 700;
+}
+@media (min-width: 700px) { .banda__lista { flex-direction: row; justify-content: space-between; flex-wrap: wrap; } }
+
+.pasos { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--esp-6); }
+@media (min-width: 700px) { .pasos { grid-template-columns: repeat(3, 1fr); } }
+.paso { display: flex; flex-direction: column; gap: var(--esp-2); }
+.paso h3 { font-size: 1.375rem; }
+.paso__numero {
+  width: 44px; height: 44px; border-radius: 50%; background: var(--rosa); color: var(--vino-profundo);
+  font-family: var(--fonte-titulares); font-weight: 800; font-size: 1.25rem; display: flex;
+  align-items: center; justify-content: center;
+}
+
+.banda-test { background: var(--borgona); color: var(--crema); }
+.banda-test__dentro {
+  padding-block: var(--esp-7); display: flex; flex-wrap: wrap; align-items: center;
+  justify-content: space-between; gap: var(--esp-6);
+}
+.banda-test__texto { max-width: 560px; }
+.banda-test__texto p { font-size: var(--tam-l); }
+.etiqueta--banda { background: var(--rosa); color: var(--vino-profundo); }
+.boton--crema { background: var(--crema); color: var(--borgona); align-self: flex-start; }
+
+.testemunos { display: grid; gap: var(--esp-5); }
+@media (min-width: 900px) { .testemunos { grid-template-columns: repeat(2, 1fr); } }
+.testemuno { display: flex; gap: var(--esp-4); padding: var(--esp-4); align-items: center; }
+.testemuno__foto { width: 120px; height: 120px; border-radius: var(--raio-m); flex: none; object-fit: cover; }
+.testemuno blockquote { margin: 0; }
+.testemuno figcaption { font-size: var(--tam-s); font-weight: 700; color: var(--rubi); margin-top: var(--esp-2); }
+
+.banda-protectoras { background: var(--rosa-claro); margin-bottom: calc(-1 * var(--esp-7)); }
+.banda-protectoras__dentro {
+  padding-block: var(--esp-7); display: flex; flex-wrap: wrap; align-items: center;
+  justify-content: space-between; gap: var(--esp-5);
+}
+.banda-protectoras__dentro .pila { max-width: 600px; }

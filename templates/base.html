@@ -1,0 +1,39 @@
+{% load static %}<!DOCTYPE html>
+<html lang="gl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block titulo %}QueroCan{% endblock %} · QueroCan</title>
+  <meta name="description" content="{% block descricion %}QueroCan: adopción de cans por compatibilidade. Un pequeno xesto, un amor para sempre.{% endblock %}">
+  <meta name="theme-color" content="#65202d">
+  <link rel="icon" href="{% static 'img/favicon.svg' %}" type="image/svg+xml">
+  <link rel="stylesheet" href="{% static 'css/tokens.css' %}">
+  <link rel="stylesheet" href="{% static 'css/base.css' %}">
+  {% block estilos %}{% endblock %}
+  <script type="module" src="{% static 'js/aviso-non-implementado.js' %}"></script>
+  {% block scripts %}{% endblock %}
+</head>
+<body class="{% block clase_body %}{% endblock %}">
+  {% include "componentes/logo_simbolo.html" %}
+  <a class="saltar-contido boton boton--primario" href="#contido">Ir ao contido</a>
+
+  {% block cabeceira %}{% include "componentes/cabeceira.html" %}{% endblock %}
+
+  {% if messages %}
+    <ul class="mensaxes" role="status">
+      {% for mensaxe in messages %}
+        <li class="mensaxe mensaxe--{{ mensaxe.tags }}">{{ mensaxe }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+
+  <main id="contido" tabindex="-1">
+    {% block contido %}{% endblock %}
+  </main>
+
+  {% block pe %}{% include "componentes/pe.html" %}{% endblock %}
+
+  {# Rexión onde aparece o aviso «Esta funcionalidade aínda non está implementada» #}
+  <div class="aviso-flotante" id="aviso-flotante" role="status" aria-live="polite"></div>
+</body>
+</html>
