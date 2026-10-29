@@ -1,0 +1,18 @@
+{% extends "contido/base_texto.html" %}
+{% block titulo %}Privacidade{% endblock %}
+{% block texto %}
+  <h1>Política de privacidade</h1>
+  <p class="caixa caixa--suave">QueroCan é un proxecto académico. Este texto describe como trata a aplicación os datos e debe revisarse antes de calquera uso real.</p>
+  <h2>Que datos gardamos</h2>
+  <ul>
+    <li>Datos da conta: nome, correo electrónico e contrasinal (cifrado).</li>
+    <li>Respostas do test de compatibilidade e, se a das, a túa localización aproximada ou o teu concello.</li>
+    <li>As túas solicitudes de adopción e, se completas unha, os datos do contrato (nome, NIF, enderezo e teléfono).</li>
+  </ul>
+  <h2>Para que os usamos</h2>
+  <p>Só para calcular a compatibilidade cos cans, amosarche a distancia ata eles e xestionar as solicitudes coa protectora correspondente.</p>
+  <h2>Con quen os compartimos</h2>
+  <p>A protectora á que envías unha solicitude ve o teu nome e as respostas do test. Cando acepta a solicitude, ve tamén o teu correo; e, se completas a adopción, os datos do contrato. Non cedemos datos a ninguén máis.</p>
+  <h2>Os teus dereitos</h2>
+  <p>Podes pedir o acceso, a rectificación ou a eliminación dos teus datos desde a páxina de <a href="{% url 'contido:contacto' %}">contacto</a>.</p>
+{% endblock %}

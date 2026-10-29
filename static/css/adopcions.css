@@ -1,5 +1,4 @@
 /* Solicitudes (panel da protectora e da persoa adoptante) e contrato. */
-.filtros-panel { align-items: end; }
 .lista-solicitudes { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: var(--esp-4); }
 .solicitude { display: flex; flex-direction: column; gap: var(--esp-3); }
 .solicitude__cabeceira { display: flex; align-items: center; gap: var(--esp-4); flex-wrap: wrap; }

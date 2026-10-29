@@ -18,7 +18,7 @@
     </label>
     <nav class="menu-movil" aria-label="Menú">
       {% include "componentes/ligazons_principais.html" %}
-      <a href="/manual/">Manual de boas maneiras</a>
+      <a href="{% url 'contido:manual' %}">Manual de boas maneiras</a>
       {% include "componentes/accions_conta.html" with en_menu=True %}
     </nav>
   </div>

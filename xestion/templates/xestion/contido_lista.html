@@ -1,0 +1,27 @@
+{% extends "xestion/base_xestion.html" %}
+{% block titulo %}{{ titulo }}{% endblock %}
+{% block xestion %}
+  <div class="fila fila--separada">
+    <h1>{{ titulo }}</h1>
+    <a class="boton boton--primario" href="{% url 'xestion:contido_novo' tipo %}">Engadir</a>
+  </div>
+  <div class="taboa-envoltorio">
+    <table class="taboa">
+      <tbody>
+      {% for obxecto in obxectos %}
+        <tr>
+          <td>{{ obxecto }}</td>
+          <td>
+            <div class="fila">
+              <a class="boton boton--pequeno boton--contorno" href="{% url 'xestion:contido_editar' tipo obxecto.pk %}">Editar</a>
+              <form method="post" action="{% url 'xestion:contido_borrar' tipo obxecto.pk %}">{% csrf_token %}<button class="boton boton--pequeno boton--suave">Borrar</button></form>
+            </div>
+          </td>
+        </tr>
+      {% empty %}
+        <tr><td>Aínda non hai nada.</td></tr>
+      {% endfor %}
+      </tbody>
+    </table>
+  </div>
+{% endblock %}

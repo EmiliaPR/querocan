@@ -71,6 +71,7 @@ TEMPLATES = [
                 "django.template.context_processors.request",
                 "django.contrib.auth.context_processors.auth",
                 "django.contrib.messages.context_processors.messages",
+                "querocan.contexto.globais",
             ],
         },
     },
@@ -121,6 +122,9 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 # Enderezo público da web (para as ligazóns dos correos)
 SITIO_URL = _env("SITIO_URL", "http://localhost:8000")
+
+# Correo de contacto que se amosa na web
+CONTACTO_EMAIL = _env("CONTACTO_EMAIL", "ola@querocan.gal")
 
 # Correo
 EMAIL_BACKEND = _env("EMAIL_BACKEND", "django.core.mail.backends.console.EmailBackend")

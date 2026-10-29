@@ -1,0 +1,13 @@
+{% extends "xestion/base_xestion.html" %}
+{% block titulo %}{{ titulo }}{% endblock %}
+{% block xestion %}
+  <h1>{{ titulo }}</h1>
+  <form method="post" enctype="multipart/form-data" class="caixa formulario" novalidate>
+    {% csrf_token %}
+    {% include "componentes/formulario.html" %}
+    <div class="fila">
+      <button type="submit" class="boton boton--primario">Gardar</button>
+      <a class="boton boton--contorno" href="{% url 'xestion:contido_lista' tipo %}">Cancelar</a>
+    </div>
+  </form>
+{% endblock %}

@@ -6,7 +6,12 @@
   <nav class="xestion__menu" aria-label="Xestión">
     <a href="{% url 'xestion:inicio' %}" {% if seccion == "inicio" %}aria-current="page"{% endif %}>Resumo</a>
     <a href="{% url 'xestion:protectoras' %}" {% if seccion == "protectoras" %}aria-current="page"{% endif %}>Protectoras</a>
-    {% block menu_extra %}{% endblock %}
+    <a href="{% url 'xestion:usuarios' %}" {% if seccion == "usuarios" %}aria-current="page"{% endif %}>Usuarios</a>
+    <a href="{% url 'xestion:funil' %}" {% if seccion == "funil" %}aria-current="page"{% endif %}>Funil de adopción</a>
+    <a href="{% url 'xestion:contido_lista' 'testemunos' %}" {% if seccion == "testemunos" %}aria-current="page"{% endif %}>Finais felices</a>
+    <a href="{% url 'xestion:contido_lista' 'enlaces' %}" {% if seccion == "enlaces" %}aria-current="page"{% endif %}>Enlaces</a>
+    <a href="{% url 'xestion:contido_lista' 'checklist' %}" {% if seccion == "checklist" %}aria-current="page"{% endif %}>Checklist</a>
+    <a href="{% url 'xestion:contrato' %}" {% if seccion == "contrato" %}aria-current="page"{% endif %}>Contrato</a>
   </nav>
   <div class="xestion__contido">
     {% block xestion %}{% endblock %}

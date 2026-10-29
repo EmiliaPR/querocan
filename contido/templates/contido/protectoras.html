@@ -1,0 +1,21 @@
+{% extends "contido/base_texto.html" %}
+{% block titulo %}Protectoras{% endblock %}
+{% block texto %}
+  <h1>Protectoras</h1>
+  <p>Estas son as protectoras que publican os seus cans en QueroCan. Todas foron validadas polo noso equipo.</p>
+  <ul class="lista-protectoras">
+    {% for p in protectoras %}
+      <li class="caixa pila">
+        <h2>{{ p.nome }}</h2>
+        <p class="texto-secundario">{{ p.concello.nome }} ({{ p.concello.provincia }}) · {{ p.disponibles }} can{{ p.disponibles|pluralize:"s" }} dispoñible{{ p.disponibles|pluralize:"s" }}</p>
+        {% if p.descricion %}<p>{{ p.descricion }}</p>{% endif %}
+        {% if p.web %}<p><a href="{{ p.web }}" rel="noopener">Web da protectora</a></p>{% endif %}
+      </li>
+    {% empty %}<li>Aínda non hai protectoras rexistradas.</li>{% endfor %}
+  </ul>
+  <div class="caixa caixa--suave pila">
+    <h2>Es unha protectora?</h2>
+    <p>Publica os teus cans, recibe solicitudes con compatibilidade e xestiona as adopcións nun só sitio.</p>
+    <p><a class="boton boton--primario" href="{% url 'contas:rexistro' %}?rol=protectora">Dar de alta a protectora</a></p>
+  </div>
+{% endblock %}

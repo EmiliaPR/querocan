@@ -1,0 +1,9 @@
+{% extends "contido/base_texto.html" %}
+{% block titulo %}Finais felices{% endblock %}
+{% block texto %}
+  <h1>Finais felices</h1>
+  <p class="texto-secundario">Historias de persoas que atoparon o seu can en QueroCan.</p>
+  <div class="testemunos testemunos--columna">
+    {% for t in testemunos %}{% include "contido/_testemuno.html" %}{% empty %}<p class="caixa">Axiña publicaremos as primeiras historias.</p>{% endfor %}
+  </div>
+{% endblock %}

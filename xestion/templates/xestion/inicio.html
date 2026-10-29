@@ -3,9 +3,11 @@
 {% block xestion %}
   <h1>Xestión</h1>
   <div class="xestion__resumo">
-    <a class="caixa xestion__cifra" href="{% url 'xestion:protectoras' %}">
-      <span class="xestion__numero">{{ pendentes }}</span>
-      <span>protectoras pendentes de validar</span>
-    </a>
+    <a class="caixa xestion__cifra" href="{% url 'xestion:protectoras' %}"><span class="xestion__numero">{{ pendentes }}</span><span>protectoras pendentes de validar</span></a>
+    <a class="caixa xestion__cifra" href="{% url 'xestion:protectoras' %}?estado=activa"><span class="xestion__numero">{{ protectoras }}</span><span>protectoras activas</span></a>
+    <div class="caixa xestion__cifra"><span class="xestion__numero">{{ cans }}</span><span>cans dispoñibles</span></div>
+    <a class="caixa xestion__cifra" href="{% url 'xestion:usuarios' %}?rol=adoptante"><span class="xestion__numero">{{ adoptantes }}</span><span>persoas adoptantes</span></a>
+    <a class="caixa xestion__cifra" href="{% url 'xestion:funil' %}"><span class="xestion__numero">{{ activas }}</span><span>solicitudes en curso</span></a>
+    <a class="caixa xestion__cifra" href="{% url 'xestion:funil' %}"><span class="xestion__numero">{{ adopcions }}</span><span>adopcións completadas</span></a>
   </div>
 {% endblock %}

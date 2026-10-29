@@ -1,0 +1,18 @@
+{% extends "xestion/base_xestion.html" %}
+{% block titulo %}Contrato de adopción{% endblock %}
+{% block xestion %}
+  <h1>Contrato de adopción</h1>
+  <p class="texto-secundario">Versión en uso: {% if actual %}v{{ actual.version }}{% else %}ningunha{% endif %}. Ao gardar créase unha versión nova; os contratos xa aceptados conservan o seu texto e o seu hash.</p>
+  <form method="post" class="caixa formulario" novalidate>
+    {% csrf_token %}
+    {% include "componentes/formulario.html" %}
+    <button type="submit" class="boton boton--primario">Gardar como versión nova</button>
+  </form>
+  <h2>Versións</h2>
+  <div class="taboa-envoltorio">
+    <table class="taboa">
+      <thead><tr><th>Versión</th><th>Data</th><th>Contratos aceptados</th><th>Estado</th></tr></thead>
+      <tbody>{% for v in versions %}<tr><td>v{{ v.version }}</td><td>{{ v.data_creacion|date:"d/m/Y H:i" }}</td><td>{{ v.usos }}</td><td>{% if v.activo %}<span class="etiqueta">En uso</span>{% endif %}</td></tr>{% endfor %}</tbody>
+    </table>
+  </div>
+{% endblock %}

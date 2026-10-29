@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% load static %}
 {% block titulo %}Adopción de cans por compatibilidade{% endblock %}
-{% block estilos %}<link rel="stylesheet" href="{% static 'css/landing.css' %}">{% endblock %}
+{% block estilos %}<link rel="stylesheet" href="{% static 'css/landing.css' %}"><link rel="stylesheet" href="{% static 'css/animais.css' %}">{% endblock %}
 
 {% block contido %}
 <section class="contedor heroe">
@@ -44,7 +44,18 @@
   </ol>
 </section>
 
-{% block landing_animais %}{% endblock %}
+<section class="contedor seccion" aria-labelledby="animais-titulo">
+  <div class="pila">
+    <h2 id="animais-titulo">Cans que buscan fogar</h2>
+    <p class="texto-secundario">Se non podes levar un can á casa agora, axiña poderás axudalo apadriñándoo. E co corazón poderás gardar os que che gusten para velos despois.</p>
+  </div>
+  {% if avaliados %}
+    <ul class="grella grella--cans">{% for avaliado in avaliados %}{% include "animais/_tarxeta.html" %}{% endfor %}</ul>
+  {% else %}
+    <p class="caixa">Axiña haberá cans publicados polas protectoras.</p>
+  {% endif %}
+  <p><a href="{% url 'animais:listado' %}" class="boton boton--contorno">Ver todos os cans</a></p>
+</section>
 
 <section class="banda-test" aria-labelledby="test-titulo">
   <div class="contedor banda-test__dentro">
@@ -64,7 +75,15 @@
   </div>
 </section>
 
-{% block landing_testemunos %}{% endblock %}
+{% if testemunos %}
+<section class="contedor seccion" aria-labelledby="finais-titulo">
+  <h2 id="finais-titulo">Finais felices</h2>
+  <div class="testemunos">
+    {% for t in testemunos %}{% include "contido/_testemuno.html" %}{% endfor %}
+  </div>
+  <p><a href="{% url 'contido:finais_felices' %}">Ler máis historias</a></p>
+</section>
+{% endif %}
 
 <section class="banda-protectoras" aria-labelledby="protectoras-titulo">
   <div class="contedor banda-protectoras__dentro">

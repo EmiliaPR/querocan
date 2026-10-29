@@ -1,0 +1,11 @@
+{% extends "contido/base_texto.html" %}
+{% block titulo %}Enlaces de interese{% endblock %}
+{% block texto %}
+  <h1>Enlaces de interese</h1>
+  <p>Información sobre o mundo canino: dereitos e deberes, coidados, alimentación, educación e moito máis.</p>
+  <ul class="lista-enlaces">
+    {% for enlace in enlaces %}
+      <li><a href="{{ enlace.url }}" rel="noopener">{{ enlace.titulo }}</a>{% if enlace.descricion %}<br><span class="texto-secundario">{{ enlace.descricion }}</span>{% endif %}</li>
+    {% empty %}<li>Aínda non hai enlaces.</li>{% endfor %}
+  </ul>
+{% endblock %}

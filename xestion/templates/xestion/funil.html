@@ -1,0 +1,44 @@
+{% extends "xestion/base_xestion.html" %}
+{% load static %}
+{% block titulo %}Funil de adopción{% endblock %}
+{% block scripts %}
+  <script src="{% static 'vendor/chart.umd.min.js' %}" defer></script>
+  <script src="{% static 'js/funil.js' %}" defer></script>
+{% endblock %}
+{% block xestion %}
+  <h1>Funil de adopción</h1>
+  <form method="get" class="fila filtros-panel" aria-label="Filtrar o funil">
+    <div class="campo"><label for="id_protectora">Protectora</label>{{ formulario.protectora }}</div>
+    <div class="campo"><label for="id_desde">Desde</label>{{ formulario.desde }}</div>
+    <div class="campo"><label for="id_ata">Ata</label>{{ formulario.ata }}</div>
+    <button class="boton boton--contorno boton--pequeno">Aplicar</button>
+  </form>
+
+  <figure class="caixa grafica">
+    <figcaption><strong>Solicitudes que chegan a cada etapa</strong></figcaption>
+    <div class="grafica__lenzo"><canvas id="grafica-funil" role="img" aria-label="Gráfica do funil: {% for e in funil.etapas %}{{ e.nome }} {{ e.total }}{% if not forloop.last %}, {% endif %}{% endfor %}"></canvas></div>
+  </figure>
+  {{ datos_grafica|json_script:"datos-funil" }}
+
+  <div class="taboa-envoltorio">
+    <table class="taboa">
+      <caption class="so-lectores">Funil de adopción en táboa</caption>
+      <thead><tr><th>Etapa</th><th>Total</th><th>% sobre as solicitudes</th></tr></thead>
+      <tbody>
+        {% for e in funil.etapas %}<tr><td>{{ e.nome }}</td><td>{{ e.total }}</td><td>{{ e.porcentaxe }} %</td></tr>{% endfor %}
+      </tbody>
+    </table>
+  </div>
+  <p class="texto-secundario">Pechadas sen adopción: {% for p in funil.peches %}{{ p.nome|lower }} {{ p.total }}{% if not forloop.last %} · {% endif %}{% endfor %}.</p>
+
+  <h2>Por protectora</h2>
+  <div class="taboa-envoltorio">
+    <table class="taboa">
+      <thead><tr><th>Protectora</th>{% for e in funil.etapas %}<th>{{ e.nome }}</th>{% endfor %}</tr></thead>
+      <tbody>
+        {% for fila in por_protectora %}<tr><td>{{ fila.protectora.nome }}</td>{% for e in fila.etapas %}<td>{{ e.total }}</td>{% endfor %}</tr>
+        {% empty %}<tr><td colspan="5">Non hai protectoras activas.</td></tr>{% endfor %}
+      </tbody>
+    </table>
+  </div>
+{% endblock %}

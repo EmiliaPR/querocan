@@ -7,9 +7,9 @@
     <p>Grazas por rexistrarte. O equipo de QueroCan está revisando os datos da protectora; recibirás un correo cando estea validada e entón poderás publicar os teus cans.</p>
   {% elif protectora.estado == "rexeitada" %}
     <p><span class="etiqueta etiqueta--aviso">Non validada</span></p>
-    <p>Non puidemos validar esta protectora. Se cres que é un erro, escríbenos desde a páxina de <a href="/contacto/">contacto</a>.</p>
+    <p>Non puidemos validar esta protectora. Se cres que é un erro, escríbenos desde a páxina de <a href="{% url 'contido:contacto' %}">contacto</a>.</p>
   {% else %}
     <p><span class="etiqueta etiqueta--aviso">Desactivada</span></p>
-    <p>Esta protectora está desactivada e os seus cans non se amosan. Para máis información, escríbenos desde a páxina de <a href="/contacto/">contacto</a>.</p>
+    <p>Esta protectora está desactivada e os seus cans non se amosan. Para máis información, escríbenos desde a páxina de <a href="{% url 'contido:contacto' %}">contacto</a>.</p>
   {% endif %}
 {% endblock %}

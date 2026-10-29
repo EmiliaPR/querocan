@@ -1,0 +1,7 @@
+<figure class="tarxeta testemuno">
+  {% if t.foto %}<img class="testemuno__foto" src="{{ t.foto.url }}" alt="{{ t.nome_persoa }} con {{ t.nome_can }}" loading="lazy">{% else %}<div class="testemuno__foto foto-baleira" aria-hidden="true">{{ t.nome_can }}</div>{% endif %}
+  <div>
+    <blockquote>«{{ t.texto }}»</blockquote>
+    <figcaption>{{ t.nome_persoa }} e {{ t.nome_can }}</figcaption>
+  </div>
+</figure>

@@ -2,10 +2,10 @@
   <div class="contedor pe__dentro">
     {% include "componentes/logo.html" %}
     <nav aria-label="Pé de páxina">
-      <a href="/manual/">Manual de boas maneiras</a>
-      <a href="/enlaces/">Enlaces de interese</a>
-      <a href="/privacidade/">Privacidade</a>
-      <a href="/contacto/">Contacto</a>
+      <a href="{% url 'contido:manual' %}">Manual de boas maneiras</a>
+      <a href="{% url 'contido:enlaces' %}">Enlaces de interese</a>
+      <a href="{% url 'contido:privacidade' %}">Privacidade</a>
+      <a href="{% url 'contido:contacto' %}">Contacto</a>
     </nav>
   </div>
 </footer>

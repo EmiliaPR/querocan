@@ -12,6 +12,8 @@ select = ["E", "F", "I", "B", "UP"]
 [tool.pytest.ini_options]
 DJANGO_SETTINGS_MODULE = "querocan.settings"
 python_files = ["test_*.py"]
+# Non usamos clases de proba; evita que pytest confunda o modelo «Testemuno» cunha
+python_classes = ["Proba*"]
 addopts = "--reuse-db -q"
 
 [tool.coverage.run]
