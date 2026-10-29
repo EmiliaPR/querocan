@@ -1,0 +1,15 @@
+{% extends "contas/base_conta.html" %}
+{% block titulo %}Contrasinal novo{% endblock %}
+{% block caixa %}
+  {% if validlink %}
+    <h1>Contrasinal novo</h1>
+    <form method="post" class="formulario" novalidate>
+      {% csrf_token %}
+      {% include "componentes/formulario.html" with formulario=form %}
+      <button type="submit" class="boton boton--primario boton--bloque">Gardar</button>
+    </form>
+  {% else %}
+    <h1>Ligazón caducada</h1>
+    <p>Esta ligazón xa non é válida. <a href="{% url 'contas:recuperar' %}">Pide unha nova</a>.</p>
+  {% endif %}
+{% endblock %}

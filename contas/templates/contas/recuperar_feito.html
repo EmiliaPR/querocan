@@ -1,0 +1,6 @@
+{% extends "contas/base_conta.html" %}
+{% block titulo %}Contrasinal cambiado{% endblock %}
+{% block caixa %}
+  <h1>Contrasinal cambiado</h1>
+  <p>Xa podes <a href="{% url 'contas:entrar' %}">entrar</a> co contrasinal novo.</p>
+{% endblock %}

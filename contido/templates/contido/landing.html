@@ -10,7 +10,7 @@
   <div class="fila heroe__accions">
     <a href="/animais/" class="boton boton--suave">Ver animais</a>
     <a href="/test/" class="boton boton--primario">Facer o test de compatibilidade</a>
-    <a href="/rexistro/" class="boton boton--contorno">Crear conta</a>
+    <a href="{% url 'contas:rexistro' %}" class="boton boton--contorno">Crear conta</a>
   </div>
 </section>
 
@@ -72,7 +72,7 @@
       <h2 id="protectoras-titulo">Es unha protectora?</h2>
       <p class="texto-secundario">Publica os teus cans, recibe solicitudes con compatibilidade e xestiona as adopcións nun só sitio.</p>
     </div>
-    <a href="/rexistro/protectora/" class="boton boton--primario">Dar de alta a protectora</a>
+    <a href="{% url 'contas:rexistro' %}?rol=protectora" class="boton boton--primario">Dar de alta a protectora</a>
   </div>
 </section>
 {% endblock %}

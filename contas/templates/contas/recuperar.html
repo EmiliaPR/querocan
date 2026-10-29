@@ -1,0 +1,11 @@
+{% extends "contas/base_conta.html" %}
+{% block titulo %}Recuperar o contrasinal{% endblock %}
+{% block caixa %}
+  <h1>Recuperar o contrasinal</h1>
+  <p class="texto-secundario">Escribe o teu correo e enviarémosche unha ligazón para crear un contrasinal novo.</p>
+  <form method="post" class="formulario" novalidate>
+    {% csrf_token %}
+    {% include "componentes/formulario.html" with formulario=form %}
+    <button type="submit" class="boton boton--primario boton--bloque">Enviar a ligazón</button>
+  </form>
+{% endblock %}

@@ -1,0 +1,8 @@
+{# Pinta todos os campos dun formulario e os seus erros xerais. #}
+{% if formulario.non_field_errors %}
+  <ul class="mensaxe mensaxe--error errorlist" role="alert">{% for erro in formulario.non_field_errors %}<li>{{ erro }}</li>{% endfor %}</ul>
+{% endif %}
+{% for campo in formulario.hidden_fields %}{{ campo }}{% endfor %}
+{% for campo in formulario.visible_fields %}
+  {% include "componentes/campo.html" with campo=campo %}
+{% endfor %}

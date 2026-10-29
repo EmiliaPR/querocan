@@ -1,0 +1,26 @@
+{# Pinta un campo de formulario coa súa etiqueta, axuda e erros. Uso: include ... with campo=formulario.email #}
+{% if campo.field.widget.input_type == "checkbox" %}
+  <div class="campo campo--check">
+    {{ campo }}
+    <label for="{{ campo.id_for_label }}">{{ campo.label }}</label>
+  </div>
+  {% if campo.errors %}<ul class="campo__erro">{% for erro in campo.errors %}<li>{{ erro }}</li>{% endfor %}</ul>{% endif %}
+{% elif campo.field.widget.input_type == "radio" %}
+  <fieldset class="campo">
+    <legend>{{ campo.label }}</legend>
+    <div class="opcions">
+      {% for opcion in campo %}
+        <label for="{{ opcion.id_for_label }}">{{ opcion.tag }}<span>{{ opcion.choice_label }}</span></label>
+      {% endfor %}
+    </div>
+    {% if campo.help_text %}<p class="campo__axuda">{{ campo.help_text }}</p>{% endif %}
+    {% if campo.errors %}<ul class="campo__erro">{% for erro in campo.errors %}<li>{{ erro }}</li>{% endfor %}</ul>{% endif %}
+  </fieldset>
+{% else %}
+  <div class="campo">
+    <label for="{{ campo.id_for_label }}">{{ campo.label }}</label>
+    {{ campo }}
+    {% if campo.help_text %}<p class="campo__axuda">{{ campo.help_text|safe }}</p>{% endif %}
+    {% if campo.errors %}<ul class="campo__erro">{% for erro in campo.errors %}<li>{{ erro }}</li>{% endfor %}</ul>{% endif %}
+  </div>
+{% endif %}

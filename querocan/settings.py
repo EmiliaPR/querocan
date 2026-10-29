@@ -37,7 +37,10 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     # Apps de QueroCan
     "querocan",
+    "contas",
     "contido",
+    "animais",
+    "xestion",
 ]
 
 MIDDLEWARE = [
@@ -86,6 +89,11 @@ DATABASES = {
         "TEST": {"CHARSET": "utf8mb4", "COLLATION": "utf8mb4_unicode_ci"},
     }
 }
+
+# Modelo de usuario propio (entrada por correo e campo «rol»)
+AUTH_USER_MODEL = "contas.Usuario"
+LOGIN_URL = "contas:entrar"
+LOGIN_REDIRECT_URL = "contido:landing"
 
 AUTH_PASSWORD_VALIDATORS = [
     {"NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator"},

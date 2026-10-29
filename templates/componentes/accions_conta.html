@@ -1,2 +1,16 @@
 {# Botóns da conta: cambian segundo se a persoa entrou e segundo o seu rol. #}
-<a href="/entrar/" class="boton boton--primario boton--pequeno">Entrar</a>
+{% if user.is_authenticated %}
+  {% if user.es_adoptante %}
+    <a href="{% url 'animais:deck' %}">Descubrir</a>
+  {% elif user.es_protectora %}
+    <a href="{% url 'animais:protectora_cans' %}">Os meus cans</a>
+  {% elif user.es_superadmin %}
+    <a href="{% url 'xestion:inicio' %}">Xestión</a>
+  {% endif %}
+  <form method="post" action="{% url 'contas:sair' %}">
+    {% csrf_token %}
+    <button type="submit" class="{% if en_menu %}boton-ligazon{% else %}boton boton--contorno boton--pequeno{% endif %}">Saír</button>
+  </form>
+{% else %}
+  <a href="{% url 'contas:entrar' %}" class="boton boton--primario boton--pequeno">Entrar</a>
+{% endif %}

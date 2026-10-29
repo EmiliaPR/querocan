@@ -1,0 +1,13 @@
+{% extends "contas/base_conta.html" %}
+{% block titulo %}Crear conta{% endblock %}
+{% block caixa %}
+  <h1>Crear conta</h1>
+  <form method="post" class="formulario" novalidate>
+    {% csrf_token %}
+    <input type="hidden" name="next" value="{{ request.GET.next }}">
+    {% include "componentes/formulario.html" %}
+    <p class="campo__axuda">Consulta a <a href="/privacidade/">política de privacidade</a>.</p>
+    <button type="submit" class="boton boton--primario boton--bloque">Crear conta</button>
+  </form>
+  <p>Xa tes conta? <a href="{% url 'contas:entrar' %}">Entrar</a></p>
+{% endblock %}

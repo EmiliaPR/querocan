@@ -1,0 +1,13 @@
+{% extends "contas/base_conta.html" %}
+{% block titulo %}Entrar{% endblock %}
+{% block caixa %}
+  <h1>Entrar</h1>
+  <form method="post" class="formulario" novalidate>
+    {% csrf_token %}
+    <input type="hidden" name="next" value="{{ next }}">
+    {% include "componentes/formulario.html" with formulario=form %}
+    <a href="{% url 'contas:recuperar' %}" class="texto-secundario">Esqueciches o contrasinal?</a>
+    <button type="submit" class="boton boton--primario boton--bloque">Entrar</button>
+  </form>
+  <p>Non tes conta? <a href="{% url 'contas:rexistro' %}{% if next %}?next={{ next|urlencode }}{% endif %}">Crear conta</a></p>
+{% endblock %}

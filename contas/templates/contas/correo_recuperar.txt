@@ -1,0 +1,10 @@
+Ola, {{ user.nome }}:
+
+Recibimos unha petición para cambiar o contrasinal da túa conta en QueroCan.
+Podes facelo nesta ligazón:
+
+{{ protocol }}://{{ domain }}{% url 'contas:recuperar_confirmar' uidb64=uid token=token %}
+
+Se non fuches ti, ignora esta mensaxe.
+
+QueroCan
