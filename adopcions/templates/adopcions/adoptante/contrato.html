@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load static %}
+{% block titulo %}Contrato de adopción{% endblock %}
+{% block estilos %}<link rel="stylesheet" href="{% static 'css/adopcions.css' %}">{% endblock %}
+{% block contido %}
+<div class="contedor seccion seccion--estreita">
+  <p class="texto-secundario">Paso 2 de 2 · Adopción de {{ solicitude.can.nome }}</p>
+  <h1>Contrato de adopción</h1>
+  <div class="caixa contrato-texto" tabindex="0" aria-label="Texto do contrato">{{ previa|linebreaks }}</div>
+  <form method="post" class="caixa formulario" novalidate>
+    {% csrf_token %}
+    <h2>Datos da persoa adoptante</h2>
+    {% include "componentes/formulario.html" %}
+    <p class="campo__axuda">Ao aceptar gardamos unha copia exacta do contrato cos teus datos e a súa pegada dixital (hash SHA-256), para que ninguén o poida modificar despois.</p>
+    <button type="submit" class="boton boton--primario">Acepto o contrato</button>
+  </form>
+</div>
+{% endblock %}

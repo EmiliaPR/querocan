@@ -1,0 +1,79 @@
+{% extends "panel/base_panel.html" %}
+{% load static %}
+{% block titulo %}Solicitudes{% endblock %}
+{% block estilos_panel %}<link rel="stylesheet" href="{% static 'css/adopcions.css' %}">{% endblock %}
+{% block panel %}
+  <h1>Solicitudes</h1>
+
+  <form method="get" class="fila filtros-panel" aria-label="Filtrar solicitudes">
+    <div class="campo">
+      <label for="f-can">Can</label>
+      <select name="can" id="f-can">
+        <option value="">Todos</option>
+        {% for can in cans %}<option value="{{ can.pk }}" {% if can_id == can.pk|stringformat:"s" %}selected{% endif %}>{{ can.nome }}{% if can.activas %} ({{ can.activas }}){% endif %}</option>{% endfor %}
+      </select>
+    </div>
+    <div class="campo">
+      <label for="f-estado">Estado</label>
+      <select name="estado" id="f-estado">
+        <option value="activas" {% if estado == "activas" %}selected{% endif %}>Activas</option>
+        <option value="todas" {% if estado == "todas" %}selected{% endif %}>Todas</option>
+        {% for valor, texto in estados_posibles %}<option value="{{ valor }}" {% if estado == valor %}selected{% endif %}>{{ texto }}</option>{% endfor %}
+      </select>
+    </div>
+    <button class="boton boton--contorno boton--pequeno">Filtrar</button>
+  </form>
+
+  {% if filas %}
+  <ul class="lista-solicitudes">
+    {% for fila in filas %}{% with s=fila.solicitude %}
+    <li class="caixa solicitude">
+      <div class="solicitude__cabeceira">
+        {% if fila.resultado %}<p class="porcentaxe" aria-label="{{ fila.resultado.porcentaxe }} % de compatibilidade">{{ fila.resultado.porcentaxe }}%</p>{% endif %}
+        <div class="pila solicitude__quen">
+          <h2 class="solicitude__titulo">{{ s.adoptante.nome }} → {{ s.can.nome }}</h2>
+          <p class="texto-secundario">Solicitada o {{ s.data_creacion|date:"j \d\e F" }}{% if fila.outras_activas %} · ten outras {{ fila.outras_activas }} solicitude{{ fila.outras_activas|pluralize:"s" }} activa{{ fila.outras_activas|pluralize:"s" }}{% endif %}</p>
+        </div>
+        <span class="etiqueta estado estado--{{ s.estado }}">{{ s.get_estado_display }}</span>
+      </div>
+
+      {% if fila.resultado %}{% include "animais/_motivos.html" with motivos=fila.resultado.motivos %}{% endif %}
+
+      {% if fila.perfil %}
+      <details>
+        <summary>Respostas do test</summary>
+        <dl class="datos">
+          <dt>Vivenda</dt><dd>{{ fila.perfil.get_vivenda_display }}</dd>
+          <dt>Horas só</dt><dd>{{ fila.perfil.get_horas_so_display }}</dd>
+          <dt>Nenos na casa</dt><dd>{{ fila.perfil.ten_nenos|yesno:"Si,Non" }}</dd>
+          <dt>Outros animais</dt><dd>{{ fila.perfil.get_outros_animais_display }}</dd>
+          <dt>Ritmo de vida</dt><dd>{{ fila.perfil.get_actividade_display }}</dd>
+          <dt>Xa tivo can</dt><dd>{{ fila.perfil.experiencia|yesno:"Si,Non" }}</dd>
+        </dl>
+      </details>
+      {% endif %}
+
+      {% if s.estado == "aceptada" %}
+        <p>Prazo para completar: ata o {{ fila.data_limite|date:"j \d\e F" }}. Compromiso: {% if s.checklist_feito %}feito{% else %}pendente{% endif %}. Contacto: <a href="mailto:{{ s.adoptante.email }}">{{ s.adoptante.email }}</a></p>
+      {% elif s.estado == "completada" %}
+        <p>Contacto: <a href="mailto:{{ s.adoptante.email }}">{{ s.adoptante.email }}</a> · <a href="{% url 'adopcions:contrato_pdf' s.pk %}">Descargar o contrato (PDF)</a></p>
+      {% endif %}
+
+      <div class="fila">
+        {% if s.estado == "pendente" %}
+          {% include "adopcions/protectora/_accion.html" with accion="aceptar" texto="Aceptar (match)" clase="boton--primario" %}
+          {% include "adopcions/protectora/_accion.html" with accion="rexeitar" texto="Rexeitar" clase="boton--contorno" %}
+        {% elif s.estado == "en_espera" %}
+          {% include "adopcions/protectora/_accion.html" with accion="rexeitar" texto="Rexeitar" clase="boton--contorno" %}
+          <span class="texto-secundario">Agarda porque {{ s.can.nome }} ten outra adopción en curso.</span>
+        {% elif s.estado == "aceptada" %}
+          {% include "adopcions/protectora/_accion.html" with accion="cancelar" texto="Cancelar a adopción" clase="boton--contorno" %}
+        {% endif %}
+      </div>
+    </li>
+    {% endwith %}{% endfor %}
+  </ul>
+  {% else %}
+    <p class="caixa">Non hai solicitudes con estes filtros.</p>
+  {% endif %}
+{% endblock %}

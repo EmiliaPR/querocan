@@ -1,0 +1,29 @@
+{# Plantilla do PDF do contrato (WeasyPrint). Usa só fontes do sistema. #}
+<!DOCTYPE html>
+<html lang="gl">
+<head>
+<meta charset="utf-8">
+<title>Contrato de adopción de {{ aceptacion.solicitude.can.nome }}</title>
+<style>
+  @page { size: A4; margin: 2.2cm 2cm; @bottom-center { content: "QueroCan · páxina " counter(page) " de " counter(pages); font-size: 9pt; color: #6a4650; } }
+  body { font-family: "DejaVu Sans", sans-serif; font-size: 10.5pt; line-height: 1.5; color: #400a16; }
+  h1 { color: #902124; font-size: 20pt; margin: 0 0 4pt; }
+  .subtitulo { color: #6a4650; margin: 0 0 18pt; }
+  .texto p { margin: 0 0 8pt; text-align: justify; }
+  .rexistro { margin-top: 24pt; padding: 10pt 12pt; border: 1px solid #e6cfcb; border-radius: 6pt; font-size: 9pt; }
+  .rexistro dt { font-weight: bold; float: left; width: 4.2cm; }
+  .rexistro dd { margin: 0 0 3pt 4.4cm; word-break: break-all; }
+</style>
+</head>
+<body>
+  <h1>QueroCan · Contrato de adopción</h1>
+  <p class="subtitulo">{{ aceptacion.solicitude.can.nome }} · {{ aceptacion.solicitude.can.protectora.nome }}</p>
+  <div class="texto">{{ aceptacion.texto_final|linebreaks }}</div>
+  <dl class="rexistro">
+    <dt>Aceptado por</dt><dd>{{ aceptacion.nome }} ({{ aceptacion.nif }})</dd>
+    <dt>Data e hora</dt><dd>{{ aceptacion.data|date:"d/m/Y H:i" }}</dd>
+    <dt>Versión do modelo</dt><dd>{{ aceptacion.modelo.version }}</dd>
+    <dt>Hash SHA-256 do texto</dt><dd>{{ aceptacion.hash_sha256 }}</dd>
+  </dl>
+</body>
+</html>

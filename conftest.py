@@ -153,3 +153,11 @@ def crear_perfil(db):
 def adoptante_con_perfil(adoptante, crear_perfil):
     crear_perfil(adoptante)
     return adoptante
+
+
+@pytest.fixture
+def datos_adopcion(db):
+    """Carga os compromisos do checklist e o modelo de contrato inicial."""
+    from django.core.management import call_command
+
+    call_command("loaddata", "adopcion_inicial", verbosity=0)

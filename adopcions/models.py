@@ -97,3 +97,86 @@ class Descarte(models.Model):
         verbose_name = "descarte"
         verbose_name_plural = "descartes"
         constraints = [models.UniqueConstraint(fields=["adoptante", "can"], name="descarte_unico")]
+
+
+class ItemChecklist(models.Model):
+    """Un compromiso de responsabilidade que a persoa ten que marcar antes do contrato.
+
+    Os textos saen do Manual de boas maneiras e pódeos editar o superadmin.
+    """
+
+    texto = models.CharField("compromiso", max_length=250)
+    orde = models.PositiveSmallIntegerField("orde", default=0)
+    activo = models.BooleanField("activo", default=True)
+
+    class Meta:
+        verbose_name = "compromiso do checklist"
+        verbose_name_plural = "compromisos do checklist"
+        ordering = ["orde", "pk"]
+
+    def __str__(self):
+        return self.texto
+
+
+class ModeloContrato(models.Model):
+    """Texto común do contrato de adopción. Cada edición crea unha versión nova.
+
+    O texto admite marcadores entre chaves que se substitúen ao aceptar:
+    {nome}, {nif}, {enderezo}, {telefono}, {email}, {can}, {protectora}, {data}.
+    """
+
+    version = models.PositiveIntegerField("versión", unique=True)
+    texto = models.TextField("texto do contrato")
+    activo = models.BooleanField("en uso", default=False)
+    data_creacion = models.DateTimeField("data", auto_now_add=True)
+
+    class Meta:
+        verbose_name = "modelo de contrato"
+        verbose_name_plural = "modelos de contrato"
+        ordering = ["-version"]
+
+    def __str__(self):
+        return f"Contrato v{self.version}"
+
+    @classmethod
+    def actual(cls):
+        return cls.objects.filter(activo=True).order_by("-version").first()
+
+
+class ContratoInmutable(Exception):
+    """Unha aceptación de contrato xa gardada non se pode modificar nin borrar."""
+
+
+class AceptacionContrato(models.Model):
+    """Copia exacta do contrato que aceptou a persoa, co seu hash SHA-256.
+
+    Non se pode modificar despois de creada: así sempre se pode demostrar que o
+    texto gardado é o que se aceptou (o hash dun texto cambiado non coincidiría).
+    """
+
+    solicitude = models.OneToOneField(Solicitude, on_delete=models.PROTECT, related_name="contrato")
+    modelo = models.ForeignKey(ModeloContrato, on_delete=models.PROTECT, related_name="aceptacions")
+    texto_final = models.TextField("texto aceptado")
+    hash_sha256 = models.CharField("hash SHA-256", max_length=64)
+    nome = models.CharField("nome e apelidos", max_length=150)
+    nif = models.CharField("NIF/NIE", max_length=9)
+    enderezo = models.CharField("enderezo", max_length=250)
+    telefono = models.CharField("teléfono", max_length=20)
+    email = models.EmailField("correo electrónico")
+    data = models.DateTimeField("data de aceptación", auto_now_add=True)
+    ip = models.GenericIPAddressField("IP", null=True, blank=True)
+
+    class Meta:
+        verbose_name = "contrato aceptado"
+        verbose_name_plural = "contratos aceptados"
+
+    def __str__(self):
+        return f"Contrato de {self.solicitude.can.nome} ({self.nome})"
+
+    def save(self, *args, **kwargs):
+        if self.pk is not None:
+            raise ContratoInmutable("Un contrato aceptado non se pode modificar.")
+        super().save(*args, **kwargs)
+
+    def delete(self, *args, **kwargs):
+        raise ContratoInmutable("Un contrato aceptado non se pode borrar.")

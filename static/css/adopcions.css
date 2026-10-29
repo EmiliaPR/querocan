@@ -1,0 +1,20 @@
+/* Solicitudes (panel da protectora e da persoa adoptante) e contrato. */
+.filtros-panel { align-items: end; }
+.lista-solicitudes { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: var(--esp-4); }
+.solicitude { display: flex; flex-direction: column; gap: var(--esp-3); }
+.solicitude__cabeceira { display: flex; align-items: center; gap: var(--esp-4); flex-wrap: wrap; }
+.solicitude__quen { flex: 1; min-width: 200px; gap: var(--esp-1); }
+.solicitude__titulo { font-size: var(--tam-xl); }
+.solicitude__titulo a { text-decoration: none; }
+.solicitude--adoptante { display: grid; grid-template-columns: 88px 1fr; gap: var(--esp-4); align-items: start; }
+.solicitude__foto { width: 88px; height: 88px; object-fit: cover; border-radius: var(--raio-m); }
+.solicitude .porcentaxe { width: 60px; height: 60px; font-size: 1.1rem; }
+.estado--aceptada, .estado--completada { background: var(--salvia-claro); color: var(--cor-ok); }
+.estado--rexeitada, .estado--cancelada, .estado--caducada { background: var(--crema); color: var(--texto-secundario); border: 1px solid var(--borde); }
+.contrato-texto { max-height: 420px; overflow-y: auto; }
+.contrato-texto p + p { margin-top: var(--esp-3); }
+.parabens { text-align: center; align-items: center; }
+.parabens__logo { width: 110px; height: 110px; }
+.parabens__lema { font-family: var(--fonte-titulares); font-weight: 800; font-size: var(--tam-xl); }
+.parabens .fila { justify-content: center; }
+.parabens code { word-break: break-all; }

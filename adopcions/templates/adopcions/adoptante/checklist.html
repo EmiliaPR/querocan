@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block titulo %}Compromiso de responsabilidade{% endblock %}
+{% block contido %}
+<div class="contedor seccion seccion--estreita">
+  <p class="texto-secundario">Paso 1 de 2 · Adopción de {{ solicitude.can.nome }}</p>
+  <h1>Compromiso de responsabilidade</h1>
+  <p>Adoptar é unha decisión para toda a vida de {{ solicitude.can.nome }}. Antes do contrato, confirma que coñeces e aceptas estes compromisos (saen do noso <a href="/manual/">Manual de boas maneiras</a>).</p>
+  <form method="post" class="caixa formulario" novalidate>
+    {% csrf_token %}
+    {% if formulario.errors %}<p class="mensaxe mensaxe--error" role="alert">Para seguir tes que aceptar todos os compromisos.</p>{% endif %}
+    {% include "componentes/formulario.html" %}
+    <button type="submit" class="boton boton--primario">Seguir ao contrato</button>
+  </form>
+</div>
+{% endblock %}

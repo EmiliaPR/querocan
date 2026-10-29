@@ -35,5 +35,19 @@ services:
       db:
         condition: service_healthy
 
+  tarefas:
+    build: .
+    env_file: .env
+    user: "${UID_LOCAL:-1000}:${GID_LOCAL:-1000}"
+    environment:
+      HOME: /tmp
+    volumes:
+      - .:/app
+    depends_on:
+      db:
+        condition: service_healthy
+    # Cada hora caduca as solicitudes aceptadas que superaron o prazo de 7 días
+    command: sh -c "while true; do python manage.py expirar_solicitudes; sleep 3600; done"
+
 volumes:
   datos_mysql:

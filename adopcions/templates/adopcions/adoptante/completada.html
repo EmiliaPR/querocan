@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block titulo %}Parabéns!{% endblock %}
+{% block contido %}
+<div class="contedor seccion seccion--estreita parabens">
+  <svg class="parabens__logo" viewBox="0 0 200 200" aria-hidden="true"><use href="#logo-c"></use></svg>
+  <h1 class="titulo-rubi">Parabéns!</h1>
+  <p>Acabas de adoptar a <strong>{{ solicitude.can.nome }}</strong>. {{ solicitude.can.protectora.nome }} porase en contacto contigo para organizar a entrega.</p>
+  <p class="parabens__lema">Que sexades felices xuntos!</p>
+  <div class="fila">
+    <a class="boton boton--primario" href="{% url 'adopcions:contrato_pdf' solicitude.pk %}">Descargar o contrato (PDF)</a>
+    <a class="boton boton--contorno" href="{% url 'adopcions:minas_solicitudes' %}">As miñas solicitudes</a>
+  </div>
+  <p class="campo__axuda">Pegada do contrato (SHA-256): <code>{{ aceptacion.hash_sha256 }}</code></p>
+</div>
+{% endblock %}

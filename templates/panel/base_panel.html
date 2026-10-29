@@ -6,6 +6,7 @@
 <div class="contedor xestion">
   <nav class="xestion__menu" aria-label="Panel da protectora">
     <a href="{% url 'animais:protectora_cans' %}" {% if seccion == "cans" %}aria-current="page"{% endif %}>Os meus cans</a>
+    <a href="{% url 'adopcions:protectora_solicitudes' %}" {% if seccion == "solicitudes" %}aria-current="page"{% endif %}>Solicitudes</a>
     {% block menu_panel %}{% endblock %}
   </nav>
   <div class="xestion__contido">

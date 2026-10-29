@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% load static %}
+{% block titulo %}As miñas solicitudes{% endblock %}
+{% block estilos %}<link rel="stylesheet" href="{% static 'css/adopcions.css' %}">{% endblock %}
+{% block contido %}
+<div class="contedor seccion">
+  <h1>As miñas solicitudes</h1>
+  {% if solicitudes %}
+  <ul class="lista-solicitudes">
+    {% for s in solicitudes %}{% with foto=s.can.foto_principal %}
+    <li class="caixa solicitude solicitude--adoptante">
+      {% if foto %}<img class="solicitude__foto" src="{{ foto.imaxe.url }}" alt="" loading="lazy">{% else %}<div class="solicitude__foto foto-baleira">Sen foto</div>{% endif %}
+      <div class="pila">
+        <div class="fila fila--separada">
+          <h2 class="solicitude__titulo"><a href="{% url 'animais:ficha' s.can.pk %}">{{ s.can.nome }}</a></h2>
+          <span class="etiqueta estado estado--{{ s.estado }}">{{ s.get_estado_display }}</span>
+        </div>
+        <p class="texto-secundario">{{ s.can.protectora.nome }} · solicitada o {{ s.data_creacion|date:"j \d\e F" }}</p>
+
+        {% if s.estado == "pendente" %}
+          <p>A protectora aínda non revisou a túa solicitude.</p>
+        {% elif s.estado == "en_espera" %}
+          <p>{{ s.can.nome }} ten agora outra adopción en curso. Se non sae adiante, a túa solicitude volve estar activa.</p>
+        {% elif s.estado == "aceptada" %}
+          <p class="mensaxe mensaxe--success"><strong>Match!</strong> A protectora aceptou a túa solicitude. Quéda{{ s.dias_restantes|pluralize:"che,nche" }} <strong>{{ s.dias_restantes }} día{{ s.dias_restantes|pluralize:"s" }}</strong> (ata o {{ s.data_limite|date:"j \d\e F" }}) para completar o compromiso e o contrato.</p>
+          <div class="fila">
+            {% if s.checklist_feito %}
+              <a class="boton boton--primario" href="{% url 'adopcions:contrato' s.pk %}">Ler e aceptar o contrato</a>
+            {% else %}
+              <a class="boton boton--primario" href="{% url 'adopcions:checklist' s.pk %}">Completar o compromiso</a>
+            {% endif %}
+          </div>
+        {% elif s.estado == "completada" %}
+          <p>Parabéns! A adopción está completada. <a href="{% url 'adopcions:contrato_pdf' s.pk %}">Descargar o contrato (PDF)</a></p>
+        {% elif s.estado == "caducada" %}
+          <p>A adopción caducou porque non se completou no prazo.</p>
+        {% endif %}
+
+        {% if s.activa %}
+        <form method="post" action="{% url 'adopcions:retirar' s.pk %}">
+          {% csrf_token %}
+          <button type="submit" class="boton-ligazon">{% if s.estado == "aceptada" %}Cancelar a adopción{% else %}Retirar a solicitude{% endif %}</button>
+        </form>
+        {% endif %}
+      </div>
+    </li>
+    {% endwith %}{% endfor %}
+  </ul>
+  {% else %}
+    <div class="caixa pila">
+      <p>Aínda non solicitaches ningunha adopción.</p>
+      <p><a class="boton boton--primario" href="{% url 'animais:deck' %}">Descubrir cans</a></p>
+    </div>
+  {% endif %}
+</div>
+{% endblock %}

@@ -1,0 +1,84 @@
+[
+ {
+  "model": "adopcions.itemchecklist",
+  "pk": 1,
+  "fields": {
+   "texto": "Comprométome a darlle comida axeitada e auga limpa todos os días.",
+   "orde": 1,
+   "activo": true
+  }
+ },
+ {
+  "model": "adopcions.itemchecklist",
+  "pk": 2,
+  "fields": {
+   "texto": "Sacareino a pasear e a facer exercicio a diario, segundo as súas necesidades.",
+   "orde": 2,
+   "activo": true
+  }
+ },
+ {
+  "model": "adopcions.itemchecklist",
+  "pk": 3,
+  "fields": {
+   "texto": "Levareino ao veterinario para as vacinas, a desparasitación e cando estea enfermo.",
+   "orde": 3,
+   "activo": true
+  }
+ },
+ {
+  "model": "adopcions.itemchecklist",
+  "pk": 4,
+  "fields": {
+   "texto": "Manterei actualizados os datos do seu microchip (RIAC) se cambio de enderezo ou teléfono.",
+   "orde": 4,
+   "activo": true
+  }
+ },
+ {
+  "model": "adopcions.itemchecklist",
+  "pk": 5,
+  "fields": {
+   "texto": "Recollerei sempre os seus excrementos na rúa.",
+   "orde": 5,
+   "activo": true
+  }
+ },
+ {
+  "model": "adopcions.itemchecklist",
+  "pk": 6,
+  "fields": {
+   "texto": "Dedicarei tempo e paciencia a educalo, ou buscarei axuda profesional se o necesito.",
+   "orde": 6,
+   "activo": true
+  }
+ },
+ {
+  "model": "adopcions.itemchecklist",
+  "pk": 7,
+  "fields": {
+   "texto": "Non o deixarei só máis tempo do que pode soportar sen pasalo mal.",
+   "orde": 7,
+   "activo": true
+  }
+ },
+ {
+  "model": "adopcions.itemchecklist",
+  "pk": 8,
+  "fields": {
+   "texto": "Entendo que é un compromiso para toda a súa vida, tamén nas vacacións e nos cambios.",
+   "orde": 8,
+   "activo": true
+  }
+ },
+ {
+  "model": "adopcions.modelocontrato",
+  "pk": 1,
+  "fields": {
+   "version": 1,
+   "texto": "CONTRATO DE ADOPCIÓN\n\nEn data {data}, {protectora} entrega en adopción o can {can} a {nome}, con NIF {nif}, domicilio en {enderezo}, teléfono {telefono} e correo electrónico {email}.\n\nNo momento da adopción o can atópase vacinado, desparasitado e identificado con microchip e, nalgúns casos, tamén esterilizado. Para costear eses gastos, a protectora pode solicitar un donativo, que se aboará directamente a ela.\n\nComo adoptante declaro que todos os datos anteriores son certos e comprométome, mediante a aceptación do presente documento, a:\n\n1. Aceptar que as persoas responsables de {protectora} efectúen as visitas de control necesarias para comprobar o estado de saúde e benestar do animal.\n\n2. Manter actualizada a información do animal, polo que informarei a {protectora} dos cambios de domicilio, extravío ou fuga do animal nun prazo máximo de 48 horas.\n\n3. Velar pola súa saúde física e psicolóxica de acordo coas leis de protección e benestar animal, sen maltratalo nin tolerar malos tratos por parte de terceiras persoas.\n\n4. Proporcionarlle atención veterinaria e unha vida nun ambiente de afecto. Non dedicalo á cría e esterilizalo se non o está xa.\n\n5. Informar de inmediato a {protectora} se se modificasen as circunstancias que posibilitaron a súa adopción, renunciando expresamente a regalalo ou cedelo sen o consentimento de {protectora}.\n\n6. Facerme cargo do animal durante o resto da súa vida, renunciando a devolvelo, así como a abandonalo ou ingresalo noutro refuxio, protectora ou canceira.\n\n7. Utilizar os servizos dun veterinario colexiado se, por unha enfermidade incurable ou incompatible cunha vida digna, o animal tivese que ser sacrificado.\n\nAdemais, quedo informado/a de que calquera infracción dos apartados 3, 5 ou 6 suporá a intervención de {protectora} que, en nome do animal, poderá interpoñer unha denuncia ante os organismos oficiais competentes en benestar animal.",
+   "activo": true,
+   "data_creacion": "2026-10-29T00:00:00Z"
+  }
+ }
+]
