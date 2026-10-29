@@ -1,0 +1,29 @@
+{# Estrutura do deck. A pila énchea deck.js; os botóns fan o mesmo ca os xestos. #}
+<section class="deck" data-deck aria-label="Cans para descubrir">
+  <div class="deck__pila" data-deck-pila></div>
+
+  <div class="deck__baleiro caixa" data-deck-baleiro hidden>
+    <h2>Non quedan máis cans</h2>
+    <p class="texto-secundario">Proba a cambiar os filtros ou volve máis tarde: as protectoras publican cans novos a miúdo.</p>
+    <p><a class="boton boton--contorno" href="{% url 'animais:listado' %}">Ver todos os cans</a></p>
+  </div>
+
+  <div class="deck__controis">
+    <button type="button" class="deck__boton" data-deck-accion="desfacer" aria-label="Desfacer a última decisión" title="Desfacer (Z)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 14 4 9l5-5"/><path d="M4 9h10.5a5.5 5.5 0 0 1 0 11H11"/></svg>
+    </button>
+    <button type="button" class="deck__boton deck__boton--grande" data-deck-accion="non" aria-label="Non é para min" title="Non é para min (←)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+    </button>
+    <button type="button" class="deck__boton deck__boton--grande deck__boton--gustame" data-deck-accion="gustame" aria-label="Gústame: solicitar a adopción" title="Gústame (→)">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icona-corazon"></use></svg>
+    </button>
+    <button type="button" class="deck__boton" data-deck-accion="ficha" aria-label="Ver a ficha completa" title="Ver ficha (↑)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 15 6-6 6 6"/></svg>
+    </button>
+  </div>
+  <p class="deck__axuda"><kbd>←</kbd> Non é para min · <kbd>→</kbd> Gústame · <kbd>↑</kbd> Ver ficha · <kbd>Z</kbd> Desfacer</p>
+
+  {# Os lectores de pantalla anuncian aquí cada decisión #}
+  <p class="so-lectores" data-deck-anuncio role="status" aria-live="polite"></p>
+</section>

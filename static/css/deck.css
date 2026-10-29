@@ -1,0 +1,91 @@
+/*
+ * Deck de tarxetas con swipe.
+ * En móbil a tarxeta ocupa case toda a pantalla; en escritorio aparece á esquerda
+ * e á dereita un panel cos detalles do can de enriba.
+ */
+
+.deck-paxina { display: grid; gap: var(--esp-5); padding-block: var(--esp-4) var(--esp-6); }
+@media (min-width: 1000px) {
+  .deck-paxina { grid-template-columns: minmax(0, 1fr) 380px; align-items: start; padding-block: var(--esp-5); }
+}
+
+.deck { display: flex; flex-direction: column; align-items: center; gap: var(--esp-4); }
+
+/* Zona onde se apilan as tarxetas */
+.deck__pila {
+  position: relative; width: 100%; max-width: 440px;
+  height: min(calc(100dvh - 260px), 620px); min-height: 380px;
+}
+
+.tarxeta-deck {
+  position: absolute; inset: 0; border-radius: var(--raio-l); overflow: hidden;
+  background: var(--rosa-foto); box-shadow: var(--sombra); user-select: none;
+  /* O navegador non debe facer scroll nin zoom mentres se arrastra a tarxeta */
+  touch-action: none; cursor: grab;
+  transform: translateY(calc(var(--posicion) * 10px)) scale(calc(1 - var(--posicion) * 0.04));
+  transition: transform 0.25s ease;
+  --forza-si: 0; --forza-non: 0;
+}
+.tarxeta-deck[data-posicion="0"] { z-index: 3; }
+.tarxeta-deck[data-posicion="1"] { z-index: 2; }
+.tarxeta-deck[data-posicion="2"] { z-index: 1; }
+.tarxeta-deck.arrastrando { transition: none; cursor: grabbing; }
+
+.tarxeta-deck__foto { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; pointer-events: none; }
+.tarxeta-deck__info {
+  position: absolute; left: 0; right: 0; bottom: 0; padding: var(--esp-7) var(--esp-4) var(--esp-4);
+  display: flex; flex-direction: column; gap: var(--esp-2); color: var(--crema);
+  background: linear-gradient(to top, color-mix(in srgb, var(--vino-profundo) 92%, transparent) 0%,
+    color-mix(in srgb, var(--vino-profundo) 60%, transparent) 60%, transparent 100%);
+}
+.tarxeta-deck__nome { font-size: var(--tam-2xl); color: var(--crema); }
+.tarxeta-deck__lugar { font-size: var(--tam-s); opacity: 0.95; }
+.tarxeta-deck__motivos .etiqueta { font-size: var(--tam-xs); }
+.tarxeta-deck__porcentaxe {
+  position: absolute; top: var(--esp-4); right: var(--esp-4); width: 68px; height: 68px;
+  border-radius: 50%; background: var(--rubi); color: var(--crema); display: flex;
+  align-items: center; justify-content: center; font-family: var(--fonte-titulares);
+  font-weight: 800; font-size: 1.25rem; box-shadow: var(--sombra);
+}
+
+/* Selos que aparecen ao arrastrar */
+.tarxeta-deck__selo {
+  position: absolute; top: var(--esp-6); padding: var(--esp-2) var(--esp-4); border: 4px solid;
+  border-radius: var(--raio-s); font-family: var(--fonte-titulares); font-weight: 800;
+  font-size: 1.75rem; text-transform: uppercase; background: color-mix(in srgb, var(--crema) 85%, transparent);
+  pointer-events: none;
+}
+.tarxeta-deck__selo--si { left: var(--esp-4); color: var(--cor-ok); transform: rotate(-12deg); opacity: var(--forza-si); }
+.tarxeta-deck__selo--non { right: var(--esp-4); color: var(--rubi); transform: rotate(12deg); opacity: var(--forza-non); }
+
+/* Botóns equivalentes aos xestos */
+.deck__controis { display: flex; align-items: center; justify-content: center; gap: var(--esp-4); }
+.deck__boton {
+  display: inline-flex; align-items: center; justify-content: center; border-radius: 50%;
+  border: 2px solid var(--borgona); background: var(--branco); color: var(--borgona);
+  cursor: pointer; width: 52px; height: 52px; transition: transform 0.15s ease;
+}
+.deck__boton:active { transform: scale(0.92); }
+.deck__boton:disabled { opacity: 0.4; cursor: not-allowed; }
+.deck__boton--grande { width: 68px; height: 68px; }
+.deck__boton--gustame { background: var(--salvia); border-color: var(--salvia); color: var(--vino-profundo); }
+.deck__boton svg { width: 26px; height: 26px; }
+.deck__boton--grande svg { width: 32px; height: 32px; }
+.deck__axuda { font-size: var(--tam-s); color: var(--texto-secundario); text-align: center; }
+.deck__axuda kbd { font-family: inherit; font-weight: 700; }
+
+.deck__baleiro { text-align: center; padding: var(--esp-6) var(--esp-4); }
+
+/* Filtros do deck e selector tarxetas/grella */
+.deck-filtros { display: flex; flex-wrap: wrap; gap: var(--esp-2); align-items: center; justify-content: space-between; }
+.vista-selector { display: inline-flex; gap: var(--esp-1); font-size: var(--tam-s); font-weight: 700; }
+.vista-selector a { padding: var(--esp-1) var(--esp-2); border-radius: var(--raio-s); text-decoration: none; }
+.vista-selector a[aria-current="page"] { background: var(--rosa-claro); }
+
+/* Panel de detalles (só escritorio) */
+.deck-detalle { display: none; }
+@media (min-width: 1000px) {
+  .deck-detalle { display: flex; flex-direction: column; gap: var(--esp-4); position: sticky; top: var(--esp-5); }
+  .deck__axuda { display: block; }
+}
+@media (max-width: 999px) { .deck__axuda { display: none; } }

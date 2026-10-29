@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% load static %}
+{% block titulo %}Proba do deck{% endblock %}
+{% block estilos %}<link rel="stylesheet" href="{% static 'css/deck.css' %}">{% endblock %}
+{% block scripts %}<script type="module" src="{% static 'js/proba-deck.js' %}"></script>{% endblock %}
+{% block contido %}
+<div class="contedor deck-paxina">
+  {% include "animais/_deck.html" %}
+</div>
+{% endblock %}

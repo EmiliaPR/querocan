@@ -34,5 +34,5 @@ def test_o_css_so_usa_cores_dos_tokens():
     for ficheiro in directorio.glob("*.css"):
         if ficheiro.name == "tokens.css":
             continue
-        cores = re.findall(r"#[0-9a-fA-F]{3,8}\b", ficheiro.read_text())
+        cores = re.findall(r"#[0-9a-fA-F]{3,8}\b|rgba?\(|hsla?\(", ficheiro.read_text())
         assert cores == [], f"{ficheiro.name} ten cores fóra dos tokens: {cores}"

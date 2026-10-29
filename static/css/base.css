@@ -20,6 +20,8 @@ body {
   flex-direction: column;
 }
 main { flex: 1; }
+/* O destino do enlace «Ir ao contido» recibe o foco pero non necesita marco */
+main:focus { outline: none; }
 img { max-width: 100%; display: block; }
 a { color: inherit; }
 h1, h2, h3 { font-family: var(--fonte-titulares); font-weight: 800; line-height: 1.15; margin: 0; }
@@ -28,7 +30,7 @@ h2 { font-size: var(--tam-2xl); }
 h3 { font-size: var(--tam-xl); }
 p { margin: 0; }
 a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible,
-textarea:focus-visible, summary:focus-visible, [tabindex]:focus-visible {
+textarea:focus-visible, summary:focus-visible, [tabindex]:not(main):focus-visible {
   outline: 3px solid var(--cor-foco);
   outline-offset: 2px;
 }
