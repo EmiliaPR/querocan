@@ -1,0 +1,11 @@
+{% extends "contas/base_conta.html" %}
+{% block titulo %}Datos da protectora{% endblock %}
+{% block caixa %}
+  <h1>Datos da protectora</h1>
+  <p class="texto-secundario">Despois de enviar estes datos, o equipo de QueroCan revisará a protectora. Cando estea validada xa poderás publicar os teus cans.</p>
+  <form method="post" class="formulario" novalidate>
+    {% csrf_token %}
+    {% include "componentes/formulario.html" %}
+    <button type="submit" class="boton boton--primario boton--bloque">Enviar para validar</button>
+  </form>
+{% endblock %}

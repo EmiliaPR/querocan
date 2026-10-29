@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load static %}
+{% block estilos %}<link rel="stylesheet" href="{% static 'css/xestion.css' %}">{% block estilos_xestion %}{% endblock %}{% endblock %}
+{% block contido %}
+<div class="contedor xestion">
+  <nav class="xestion__menu" aria-label="Xestión">
+    <a href="{% url 'xestion:inicio' %}" {% if seccion == "inicio" %}aria-current="page"{% endif %}>Resumo</a>
+    <a href="{% url 'xestion:protectoras' %}" {% if seccion == "protectoras" %}aria-current="page"{% endif %}>Protectoras</a>
+    {% block menu_extra %}{% endblock %}
+  </nav>
+  <div class="xestion__contido">
+    {% block xestion %}{% endblock %}
+  </div>
+</div>
+{% endblock %}

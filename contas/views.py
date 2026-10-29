@@ -5,11 +5,13 @@ Vistas de contas: entrar, saír, crear conta e recuperar o contrasinal.
 from django.contrib import messages
 from django.contrib.auth import login
 from django.contrib.auth import views as auth_views
+from django.core.mail import send_mail
 from django.shortcuts import redirect, render
 from django.urls import reverse, reverse_lazy
 from django.utils.http import url_has_allowed_host_and_scheme
 
-from .forms import FormularioEntrada, FormularioRexistro
+from .decoradores import require_rol
+from .forms import FormularioEntrada, FormularioProtectora, FormularioRexistro
 from .models import Usuario
 
 
@@ -68,9 +70,37 @@ def rexistro(request):
     return render(request, "contas/rexistro.html", {"formulario": formulario})
 
 
+@require_rol(Usuario.Rol.PROTECTORA)
 def alta_protectora(request):
-    """Segundo paso do rexistro das protectoras (implementado en T6)."""
-    return render(request, "en_construcion.html", {"titulo": "Datos da protectora"})
+    """Segundo paso do rexistro: datos da entidade. Despois queda pendente de validación."""
+    if hasattr(request.user, "protectora"):
+        return redirect("animais:protectora_cans")
+
+    formulario = FormularioProtectora(request.POST or None)
+    if request.method == "POST" and formulario.is_valid():
+        protectora = formulario.save(commit=False)
+        protectora.usuario = request.user
+        protectora.save()
+        avisar_superadmins_protectora_nova(protectora)
+        return redirect("animais:protectora_cans")
+    return render(request, "contas/alta_protectora.html", {"formulario": formulario})
+
+
+def avisar_superadmins_protectora_nova(protectora):
+    """Envía un correo ás persoas superadmin para que validen a protectora nova."""
+    destinatarios = list(
+        Usuario.objects.filter(rol=Usuario.Rol.SUPERADMIN, is_active=True).values_list(
+            "email", flat=True
+        )
+    )
+    if destinatarios:
+        send_mail(
+            "QueroCan: nova protectora pendente de validación",
+            f"A protectora «{protectora.nome}» ({protectora.concello.nome}) rexistrouse e "
+            "agarda a túa validación no panel de xestión.",
+            None,
+            destinatarios,
+        )
 
 
 # Recuperación do contrasinal: usamos as vistas de Django coas nosas plantillas

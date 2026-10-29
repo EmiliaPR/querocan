@@ -1,0 +1,11 @@
+/* Panel do superadmin: pensado para escritorio, pero usable en móbil. */
+.xestion { display: grid; gap: var(--esp-5); padding-block: var(--esp-5) var(--esp-6); }
+@media (min-width: 1000px) { .xestion { grid-template-columns: 220px minmax(0, 1fr); } }
+.xestion__menu { display: flex; flex-wrap: wrap; gap: var(--esp-2); align-content: start; }
+@media (min-width: 1000px) { .xestion__menu { flex-direction: column; position: sticky; top: var(--esp-5); } }
+.xestion__menu a { padding: var(--esp-2) var(--esp-3); border-radius: var(--raio-s); text-decoration: none; font-weight: 500; }
+.xestion__menu a[aria-current="page"] { background: var(--borgona); color: var(--crema); }
+.xestion__contido { display: flex; flex-direction: column; gap: var(--esp-5); min-width: 0; }
+.xestion__resumo { display: grid; gap: var(--esp-4); grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); }
+.xestion__cifra { display: flex; flex-direction: column; gap: var(--esp-1); text-decoration: none; }
+.xestion__numero { font-family: var(--fonte-titulares); font-weight: 800; font-size: 2.5rem; color: var(--rubi); line-height: 1; }

@@ -1,0 +1,3132 @@
+[
+ {
+  "model": "compatibilidade.concello",
+  "pk": 15001,
+  "fields": {
+   "nome": "Abegondo",
+   "provincia": "A Coruña",
+   "latitude": 43.2275,
+   "lonxitude": -8.28833
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 15002,
+  "fields": {
+   "nome": "Ames",
+   "provincia": "A Coruña",
+   "latitude": 42.89016,
+   "lonxitude": -8.67233
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 15003,
+  "fields": {
+   "nome": "Aranga",
+   "provincia": "A Coruña",
+   "latitude": 43.23389,
+   "lonxitude": -8.01583
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 15004,
+  "fields": {
+   "nome": "Ares",
+   "provincia": "A Coruña",
+   "latitude": 43.42642,
+   "lonxitude": -8.24434
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 15005,
+  "fields": {
+   "nome": "Arteixo",
+   "provincia": "A Coruña",
+   "latitude": 43.3,
+   "lonxitude": -8.5
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 15006,
+  "fields": {
+   "nome": "Arzúa",
+   "provincia": "A Coruña",
+   "latitude": 42.93,
+   "lonxitude": -8.16
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 15007,
+  "fields": {
+   "nome": "A Baña",
+   "provincia": "A Coruña",
+   "latitude": 42.96667,
+   "lonxitude": -8.76667
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 15008,
+  "fields": {
+   "nome": "Bergondo",
+   "provincia": "A Coruña",
+   "latitude": 43.31944,
+   "lonxitude": -8.23389
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 15009,
+  "fields": {
+   "nome": "Betanzos",
+   "provincia": "A Coruña",
+   "latitude": 43.27917,
+   "lonxitude": -8.21063
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 15010,
+  "fields": {
+   "nome": "Boimorto",
+   "provincia": "A Coruña",
+   "latitude": 43.0075,
+   "lonxitude": -8.12694
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 15011,
+  "fields": {
+   "nome": "Boiro",
+   "provincia": "A Coruña",
+   "latitude": 42.65,
+   "lonxitude": -8.88333
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 15012,
+  "fields": {
+   "nome": "Boqueixón",
+   "provincia": "A Coruña",
+   "latitude": 42.81667,
+   "lonxitude": -8.41667
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 15013,
+  "fields": {
+   "nome": "Brión",
+   "provincia": "A Coruña",
+   "latitude": 42.86667,
+   "lonxitude": -8.67833
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 15014,
+  "fields": {
+   "nome": "Cabana de Bergantiños",
+   "provincia": "A Coruña",
+   "latitude": 43.1898,
+   "lonxitude": -8.91421
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 15015,
+  "fields": {
+   "nome": "Cabanas",
+   "provincia": "A Coruña",
+   "latitude": 43.42182,
+   "lonxitude": -8.1638
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 15016,
+  "fields": {
+   "nome": "Camariñas",
+   "provincia": "A Coruña",
+   "latitude": 43.13,
+   "lonxitude": -9.185
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 15017,
+  "fields": {
+   "nome": "Cambre",
+   "provincia": "A Coruña",
+   "latitude": 43.28333,
+   "lonxitude": -8.33333
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 15018,
+  "fields": {
+   "nome": "A Capela",
+   "provincia": "A Coruña",
+   "latitude": 43.43437,
+   "lonxitude": -8.07137
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 15019,
+  "fields": {
+   "nome": "Carballo",
+   "provincia": "A Coruña",
+   "latitude": 43.21667,
+   "lonxitude": -8.68333
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 15020,
+  "fields": {
+   "nome": "Carnota",
+   "provincia": "A Coruña",
+   "latitude": 42.82111,
+   "lonxitude": -9.08722
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 15021,
+  "fields": {
+   "nome": "Carral",
+   "provincia": "A Coruña",
+   "latitude": 43.22955,
+   "lonxitude": -8.356
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 15022,
+  "fields": {
+   "nome": "Cedeira",
+   "provincia": "A Coruña",
+   "latitude": 43.65,
+   "lonxitude": -8.05
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 15023,
+  "fields": {
+   "nome": "Cee",
+   "provincia": "A Coruña",
+   "latitude": 42.95556,
+   "lonxitude": -9.19
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 15024,
+  "fields": {
+   "nome": "Cerceda",
+   "provincia": "A Coruña",
+   "latitude": 43.18861,
+   "lonxitude": -8.47028
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 15025,
+  "fields": {
+   "nome": "Cerdido",
+   "provincia": "A Coruña",
+   "latitude": 43.61212,
+   "lonxitude": -7.95202
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 15027,
+  "fields": {
+   "nome": "Coirós",
+   "provincia": "A Coruña",
+   "latitude": 43.24617,
+   "lonxitude": -8.14706
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 15028,
+  "fields": {
+   "nome": "Corcubión",
+   "provincia": "A Coruña",
+   "latitude": 42.94583,
+   "lonxitude": -9.19333
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 15029,
+  "fields": {
+   "nome": "Coristanco",
+   "provincia": "A Coruña",
+   "latitude": 43.18631,
+   "lonxitude": -8.74036
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 15030,
+  "fields": {
+   "nome": "A Coruña",
+   "provincia": "A Coruña",
+   "latitude": 43.37111,
+   "lonxitude": -8.39611
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 15031,
+  "fields": {
+   "nome": "Culleredo",
+   "provincia": "A Coruña",
+   "latitude": 43.27768,
+   "lonxitude": -8.41186
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 15032,
+  "fields": {
+   "nome": "Curtis",
+   "provincia": "A Coruña",
+   "latitude": 43.13917,
+   "lonxitude": -8.03556
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 15033,
+  "fields": {
+   "nome": "Dodro",
+   "provincia": "A Coruña",
+   "latitude": 42.71549,
+   "lonxitude": -8.71481
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 15034,
+  "fields": {
+   "nome": "Dumbría",
+   "provincia": "A Coruña",
+   "latitude": 43.0104,
+   "lonxitude": -9.11795
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 15035,
+  "fields": {
+   "nome": "Fene",
+   "provincia": "A Coruña",
+   "latitude": 43.46667,
+   "lonxitude": -8.16667
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 15036,
+  "fields": {
+   "nome": "Ferrol",
+   "provincia": "A Coruña",
+   "latitude": 43.48444,
+   "lonxitude": -8.23278
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 15037,
+  "fields": {
+   "nome": "Fisterra",
+   "provincia": "A Coruña",
+   "latitude": 42.90861,
+   "lonxitude": -9.26278
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 15038,
+  "fields": {
+   "nome": "Frades",
+   "provincia": "A Coruña",
+   "latitude": 43.04954,
+   "lonxitude": -8.28369
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 15039,
+  "fields": {
+   "nome": "Irixoa",
+   "provincia": "A Coruña",
+   "latitude": 43.28773,
+   "lonxitude": -8.04874
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 15040,
+  "fields": {
+   "nome": "Laxe",
+   "provincia": "A Coruña",
+   "latitude": 43.21972,
+   "lonxitude": -9.005
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 15041,
+  "fields": {
+   "nome": "A Laracha",
+   "provincia": "A Coruña",
+   "latitude": 43.24861,
+   "lonxitude": -8.58333
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 15042,
+  "fields": {
+   "nome": "Lousame",
+   "provincia": "A Coruña",
+   "latitude": 42.75889,
+   "lonxitude": -8.82944
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 15043,
+  "fields": {
+   "nome": "Malpica de Bergantiños",
+   "provincia": "A Coruña",
+   "latitude": 43.29836,
+   "lonxitude": -8.82462
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 15044,
+  "fields": {
+   "nome": "Mañón",
+   "provincia": "A Coruña",
+   "latitude": 43.73611,
+   "lonxitude": -7.70556
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 15045,
+  "fields": {
+   "nome": "Mazaricos",
+   "provincia": "A Coruña",
+   "latitude": 42.93611,
+   "lonxitude": -8.99139
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 15046,
+  "fields": {
+   "nome": "Melide",
+   "provincia": "A Coruña",
+   "latitude": 42.91457,
+   "lonxitude": -8.01361
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 15047,
+  "fields": {
+   "nome": "Mesía",
+   "provincia": "A Coruña",
+   "latitude": 43.08914,
+   "lonxitude": -8.2156
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 15048,
+  "fields": {
+   "nome": "Miño",
+   "provincia": "A Coruña",
+   "latitude": 43.3475,
+   "lonxitude": -8.20639
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 15049,
+  "fields": {
+   "nome": "Moeche",
+   "provincia": "A Coruña",
+   "latitude": 43.56367,
+   "lonxitude": -8.01094
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 15050,
+  "fields": {
+   "nome": "Monfero",
+   "provincia": "A Coruña",
+   "latitude": 43.32682,
+   "lonxitude": -8.04943
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 15051,
+  "fields": {
+   "nome": "Mugardos",
+   "provincia": "A Coruña",
+   "latitude": 43.46056,
+   "lonxitude": -8.25361
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 15052,
+  "fields": {
+   "nome": "Muxía",
+   "provincia": "A Coruña",
+   "latitude": 43.10617,
+   "lonxitude": -9.21746
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 15053,
+  "fields": {
+   "nome": "Muros",
+   "provincia": "A Coruña",
+   "latitude": 42.77444,
+   "lonxitude": -9.0575
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 15054,
+  "fields": {
+   "nome": "Narón",
+   "provincia": "A Coruña",
+   "latitude": 43.50107,
+   "lonxitude": -8.19258
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 15055,
+  "fields": {
+   "nome": "Neda",
+   "provincia": "A Coruña",
+   "latitude": 43.5,
+   "lonxitude": -8.15853
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 15056,
+  "fields": {
+   "nome": "Negreira",
+   "provincia": "A Coruña",
+   "latitude": 42.91097,
+   "lonxitude": -8.73496
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 15057,
+  "fields": {
+   "nome": "Noia",
+   "provincia": "A Coruña",
+   "latitude": 42.785,
+   "lonxitude": -8.88778
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 15058,
+  "fields": {
+   "nome": "Oleiros",
+   "provincia": "A Coruña",
+   "latitude": 43.35475,
+   "lonxitude": -8.32871
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 15059,
+  "fields": {
+   "nome": "Ordes",
+   "provincia": "A Coruña",
+   "latitude": 43.07667,
+   "lonxitude": -8.40722
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 15060,
+  "fields": {
+   "nome": "Oroso",
+   "provincia": "A Coruña",
+   "latitude": 43.00002,
+   "lonxitude": -8.37995
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 15061,
+  "fields": {
+   "nome": "Ortigueira",
+   "provincia": "A Coruña",
+   "latitude": 43.68306,
+   "lonxitude": -7.85
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 15062,
+  "fields": {
+   "nome": "Outes",
+   "provincia": "A Coruña",
+   "latitude": 42.85111,
+   "lonxitude": -8.92639
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 15064,
+  "fields": {
+   "nome": "Paderne",
+   "provincia": "A Coruña",
+   "latitude": 43.28333,
+   "lonxitude": -8.17444
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 15065,
+  "fields": {
+   "nome": "Padrón",
+   "provincia": "A Coruña",
+   "latitude": 42.73902,
+   "lonxitude": -8.66025
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 15066,
+  "fields": {
+   "nome": "O Pino",
+   "provincia": "A Coruña",
+   "latitude": 42.90472,
+   "lonxitude": -8.36222
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 15067,
+  "fields": {
+   "nome": "A Pobra do Caramiñal",
+   "provincia": "A Coruña",
+   "latitude": 42.6,
+   "lonxitude": -8.93333
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 15068,
+  "fields": {
+   "nome": "Ponteceso",
+   "provincia": "A Coruña",
+   "latitude": 43.24287,
+   "lonxitude": -8.90052
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 15069,
+  "fields": {
+   "nome": "Pontedeume",
+   "provincia": "A Coruña",
+   "latitude": 43.40726,
+   "lonxitude": -8.17188
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 15070,
+  "fields": {
+   "nome": "As Pontes de García Rodríguez",
+   "provincia": "A Coruña",
+   "latitude": 43.45022,
+   "lonxitude": -7.85311
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 15071,
+  "fields": {
+   "nome": "O Porto do Son",
+   "provincia": "A Coruña",
+   "latitude": 42.72455,
+   "lonxitude": -9.00591
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 15072,
+  "fields": {
+   "nome": "Rianxo",
+   "provincia": "A Coruña",
+   "latitude": 42.64887,
+   "lonxitude": -8.81737
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 15073,
+  "fields": {
+   "nome": "Ribeira",
+   "provincia": "A Coruña",
+   "latitude": 42.55648,
+   "lonxitude": -8.99221
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 15074,
+  "fields": {
+   "nome": "Rois",
+   "provincia": "A Coruña",
+   "latitude": 42.76231,
+   "lonxitude": -8.70709
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 15075,
+  "fields": {
+   "nome": "Sada",
+   "provincia": "A Coruña",
+   "latitude": 43.34731,
+   "lonxitude": -8.2769
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 15076,
+  "fields": {
+   "nome": "San Sadurniño",
+   "provincia": "A Coruña",
+   "latitude": 43.53272,
+   "lonxitude": -8.07267
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 15077,
+  "fields": {
+   "nome": "Santa Comba",
+   "provincia": "A Coruña",
+   "latitude": 43.03838,
+   "lonxitude": -8.81425
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 15078,
+  "fields": {
+   "nome": "Santiago de Compostela",
+   "provincia": "A Coruña",
+   "latitude": 42.88333,
+   "lonxitude": -8.53333
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 15079,
+  "fields": {
+   "nome": "Santiso",
+   "provincia": "A Coruña",
+   "latitude": 42.87152,
+   "lonxitude": -8.06459
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 15080,
+  "fields": {
+   "nome": "Sobrado",
+   "provincia": "A Coruña",
+   "latitude": 43.04194,
+   "lonxitude": -8.0275
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 15081,
+  "fields": {
+   "nome": "As Somozas",
+   "provincia": "A Coruña",
+   "latitude": 43.53303,
+   "lonxitude": -7.94408
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 15082,
+  "fields": {
+   "nome": "Teo",
+   "provincia": "A Coruña",
+   "latitude": 42.7949,
+   "lonxitude": -8.5621
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 15083,
+  "fields": {
+   "nome": "Toques",
+   "provincia": "A Coruña",
+   "latitude": 42.96901,
+   "lonxitude": -7.95569
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 15084,
+  "fields": {
+   "nome": "Tordoia",
+   "provincia": "A Coruña",
+   "latitude": 43.08806,
+   "lonxitude": -8.55972
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 15085,
+  "fields": {
+   "nome": "Touro",
+   "provincia": "A Coruña",
+   "latitude": 42.86667,
+   "lonxitude": -8.28333
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 15086,
+  "fields": {
+   "nome": "Trazo",
+   "provincia": "A Coruña",
+   "latitude": 43.01917,
+   "lonxitude": -8.53333
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 15087,
+  "fields": {
+   "nome": "Valdoviño",
+   "provincia": "A Coruña",
+   "latitude": 43.6,
+   "lonxitude": -8.13306
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 15088,
+  "fields": {
+   "nome": "Val do Dubra",
+   "provincia": "A Coruña",
+   "latitude": 43.0225,
+   "lonxitude": -8.63806
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 15089,
+  "fields": {
+   "nome": "Vedra",
+   "provincia": "A Coruña",
+   "latitude": 42.78333,
+   "lonxitude": -8.46667
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 15090,
+  "fields": {
+   "nome": "Vilasantar",
+   "provincia": "A Coruña",
+   "latitude": 43.07583,
+   "lonxitude": -8.09583
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 15091,
+  "fields": {
+   "nome": "Vilarmaior",
+   "provincia": "A Coruña",
+   "latitude": 43.35512,
+   "lonxitude": -8.13885
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 15092,
+  "fields": {
+   "nome": "Vimianzo",
+   "provincia": "A Coruña",
+   "latitude": 43.11,
+   "lonxitude": -9.03444
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 15093,
+  "fields": {
+   "nome": "Zas",
+   "provincia": "A Coruña",
+   "latitude": 43.09528,
+   "lonxitude": -8.92417
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 15901,
+  "fields": {
+   "nome": "Cariño",
+   "provincia": "A Coruña",
+   "latitude": 43.74139,
+   "lonxitude": -7.86917
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 15902,
+  "fields": {
+   "nome": "Oza-Cesuras",
+   "provincia": "A Coruña",
+   "latitude": 43.16667,
+   "lonxitude": -8.2
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 27001,
+  "fields": {
+   "nome": "Abadín",
+   "provincia": "Lugo",
+   "latitude": 43.36361,
+   "lonxitude": -7.475
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 27002,
+  "fields": {
+   "nome": "Alfoz do Castrodouro",
+   "provincia": "Lugo",
+   "latitude": 43.52833,
+   "lonxitude": -7.41389
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 27003,
+  "fields": {
+   "nome": "Antas de Ulla",
+   "provincia": "Lugo",
+   "latitude": 42.78225,
+   "lonxitude": -7.88969
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 27004,
+  "fields": {
+   "nome": "Baleira",
+   "provincia": "Lugo",
+   "latitude": 43.00167,
+   "lonxitude": -7.23917
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 27005,
+  "fields": {
+   "nome": "Barreiros",
+   "provincia": "Lugo",
+   "latitude": 43.53444,
+   "lonxitude": -7.23972
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 27006,
+  "fields": {
+   "nome": "Becerreá",
+   "provincia": "Lugo",
+   "latitude": 42.85111,
+   "lonxitude": -7.17306
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 27007,
+  "fields": {
+   "nome": "Begonte",
+   "provincia": "Lugo",
+   "latitude": 43.13444,
+   "lonxitude": -7.68972
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 27008,
+  "fields": {
+   "nome": "Bóveda",
+   "provincia": "Lugo",
+   "latitude": 42.62405,
+   "lonxitude": -7.48472
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 27009,
+  "fields": {
+   "nome": "Carballedo",
+   "provincia": "Lugo",
+   "latitude": 42.53073,
+   "lonxitude": -7.80554
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 27010,
+  "fields": {
+   "nome": "Castro de Rei",
+   "provincia": "Lugo",
+   "latitude": 43.20806,
+   "lonxitude": -7.39861
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 27011,
+  "fields": {
+   "nome": "Castroverde",
+   "provincia": "Lugo",
+   "latitude": 43.03056,
+   "lonxitude": -7.325
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 27012,
+  "fields": {
+   "nome": "Cervantes",
+   "provincia": "Lugo",
+   "latitude": 42.86778,
+   "lonxitude": -7.07306
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 27013,
+  "fields": {
+   "nome": "Cervo",
+   "provincia": "Lugo",
+   "latitude": 43.66969,
+   "lonxitude": -7.40954
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 27014,
+  "fields": {
+   "nome": "O Corgo",
+   "provincia": "Lugo",
+   "latitude": 42.94283,
+   "lonxitude": -7.42983
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 27015,
+  "fields": {
+   "nome": "Cospeito",
+   "provincia": "Lugo",
+   "latitude": 43.23611,
+   "lonxitude": -7.55833
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 27016,
+  "fields": {
+   "nome": "Chantada",
+   "provincia": "Lugo",
+   "latitude": 42.60833,
+   "lonxitude": -7.76889
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 27017,
+  "fields": {
+   "nome": "Folgoso do Courel",
+   "provincia": "Lugo",
+   "latitude": 42.58889,
+   "lonxitude": -7.19528
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 27018,
+  "fields": {
+   "nome": "A Fonsagrada",
+   "provincia": "Lugo",
+   "latitude": 43.13333,
+   "lonxitude": -7.06667
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 27019,
+  "fields": {
+   "nome": "Foz",
+   "provincia": "Lugo",
+   "latitude": 43.56887,
+   "lonxitude": -7.25504
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 27020,
+  "fields": {
+   "nome": "Friol",
+   "provincia": "Lugo",
+   "latitude": 43.02887,
+   "lonxitude": -7.79078
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 27021,
+  "fields": {
+   "nome": "Xermade",
+   "provincia": "Lugo",
+   "latitude": 43.35507,
+   "lonxitude": -7.81221
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 27022,
+  "fields": {
+   "nome": "Guitiriz",
+   "provincia": "Lugo",
+   "latitude": 43.18194,
+   "lonxitude": -7.89528
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 27023,
+  "fields": {
+   "nome": "Guntín",
+   "provincia": "Lugo",
+   "latitude": 42.90071,
+   "lonxitude": -7.65825
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 27024,
+  "fields": {
+   "nome": "O Incio",
+   "provincia": "Lugo",
+   "latitude": 42.65667,
+   "lonxitude": -7.36361
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 27025,
+  "fields": {
+   "nome": "Xove",
+   "provincia": "Lugo",
+   "latitude": 43.68583,
+   "lonxitude": -7.50889
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 27026,
+  "fields": {
+   "nome": "Láncara",
+   "provincia": "Lugo",
+   "latitude": 42.8637,
+   "lonxitude": -7.33729
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 27027,
+  "fields": {
+   "nome": "Lourenzá",
+   "provincia": "Lugo",
+   "latitude": 43.47111,
+   "lonxitude": -7.29944
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 27028,
+  "fields": {
+   "nome": "Lugo",
+   "provincia": "Lugo",
+   "latitude": 43.01167,
+   "lonxitude": -7.55722
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 27029,
+  "fields": {
+   "nome": "Meira",
+   "provincia": "Lugo",
+   "latitude": 43.21333,
+   "lonxitude": -7.29417
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 27030,
+  "fields": {
+   "nome": "Mondoñedo",
+   "provincia": "Lugo",
+   "latitude": 43.43157,
+   "lonxitude": -7.34928
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 27031,
+  "fields": {
+   "nome": "Monforte de Lemos",
+   "provincia": "Lugo",
+   "latitude": 42.51639,
+   "lonxitude": -7.51611
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 27032,
+  "fields": {
+   "nome": "Monterroso",
+   "provincia": "Lugo",
+   "latitude": 42.7925,
+   "lonxitude": -7.83611
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 27033,
+  "fields": {
+   "nome": "Muras",
+   "provincia": "Lugo",
+   "latitude": 43.46783,
+   "lonxitude": -7.72314
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 27034,
+  "fields": {
+   "nome": "Navia de Suarna",
+   "provincia": "Lugo",
+   "latitude": 42.965,
+   "lonxitude": -7.00389
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 27035,
+  "fields": {
+   "nome": "Negueira de Muñiz",
+   "provincia": "Lugo",
+   "latitude": 43.13172,
+   "lonxitude": -6.89094
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 27037,
+  "fields": {
+   "nome": "As Nogais",
+   "provincia": "Lugo",
+   "latitude": 42.81778,
+   "lonxitude": -7.08972
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 27038,
+  "fields": {
+   "nome": "Ourol",
+   "provincia": "Lugo",
+   "latitude": 43.56192,
+   "lonxitude": -7.64196
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 27039,
+  "fields": {
+   "nome": "Outeiro de Rei",
+   "provincia": "Lugo",
+   "latitude": 43.10246,
+   "lonxitude": -7.61363
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 27040,
+  "fields": {
+   "nome": "Palas de Rei",
+   "provincia": "Lugo",
+   "latitude": 42.87361,
+   "lonxitude": -7.86944
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 27041,
+  "fields": {
+   "nome": "Pantón",
+   "provincia": "Lugo",
+   "latitude": 42.50882,
+   "lonxitude": -7.64246
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 27042,
+  "fields": {
+   "nome": "Paradela",
+   "provincia": "Lugo",
+   "latitude": 42.76396,
+   "lonxitude": -7.56742
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 27043,
+  "fields": {
+   "nome": "O Páramo",
+   "provincia": "Lugo",
+   "latitude": 42.82756,
+   "lonxitude": -7.51494
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 27044,
+  "fields": {
+   "nome": "Pastoriza",
+   "provincia": "Lugo",
+   "latitude": 43.30041,
+   "lonxitude": -7.35123
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 27045,
+  "fields": {
+   "nome": "Pedrafita do Cebreiro",
+   "provincia": "Lugo",
+   "latitude": 42.72661,
+   "lonxitude": -7.02168
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 27046,
+  "fields": {
+   "nome": "Pol",
+   "provincia": "Lugo",
+   "latitude": 43.12972,
+   "lonxitude": -7.36
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 27047,
+  "fields": {
+   "nome": "A Pobra do Brollón",
+   "provincia": "Lugo",
+   "latitude": 42.55706,
+   "lonxitude": -7.39194
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 27048,
+  "fields": {
+   "nome": "A Pontenova",
+   "provincia": "Lugo",
+   "latitude": 43.34806,
+   "lonxitude": -7.1925
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 27049,
+  "fields": {
+   "nome": "Portomarín",
+   "provincia": "Lugo",
+   "latitude": 42.80722,
+   "lonxitude": -7.61583
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 27050,
+  "fields": {
+   "nome": "Quiroga",
+   "provincia": "Lugo",
+   "latitude": 42.47583,
+   "lonxitude": -7.27167
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 27051,
+  "fields": {
+   "nome": "Ribadeo",
+   "provincia": "Lugo",
+   "latitude": 43.53722,
+   "lonxitude": -7.04306
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 27052,
+  "fields": {
+   "nome": "Ribas de Sil",
+   "provincia": "Lugo",
+   "latitude": 42.42939,
+   "lonxitude": -7.26457
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 27053,
+  "fields": {
+   "nome": "A Ribeira de Piquín",
+   "provincia": "Lugo",
+   "latitude": 43.19856,
+   "lonxitude": -7.20035
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 27054,
+  "fields": {
+   "nome": "Riotorto",
+   "provincia": "Lugo",
+   "latitude": 43.32563,
+   "lonxitude": -7.27327
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 27055,
+  "fields": {
+   "nome": "Samos",
+   "provincia": "Lugo",
+   "latitude": 42.73066,
+   "lonxitude": -7.32659
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 27056,
+  "fields": {
+   "nome": "Rábade",
+   "provincia": "Lugo",
+   "latitude": 43.122,
+   "lonxitude": -7.623
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 27057,
+  "fields": {
+   "nome": "Sarria",
+   "provincia": "Lugo",
+   "latitude": 42.77778,
+   "lonxitude": -7.41444
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 27058,
+  "fields": {
+   "nome": "O Saviñao",
+   "provincia": "Lugo",
+   "latitude": 42.64487,
+   "lonxitude": -7.63951
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 27059,
+  "fields": {
+   "nome": "Sober",
+   "provincia": "Lugo",
+   "latitude": 42.46181,
+   "lonxitude": -7.58703
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 27060,
+  "fields": {
+   "nome": "Taboada",
+   "provincia": "Lugo",
+   "latitude": 42.71572,
+   "lonxitude": -7.76288
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 27061,
+  "fields": {
+   "nome": "Trabada",
+   "provincia": "Lugo",
+   "latitude": 43.44716,
+   "lonxitude": -7.19429
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 27062,
+  "fields": {
+   "nome": "Triacastela",
+   "provincia": "Lugo",
+   "latitude": 42.75634,
+   "lonxitude": -7.23975
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 27063,
+  "fields": {
+   "nome": "O Valadouro",
+   "provincia": "Lugo",
+   "latitude": 43.53451,
+   "lonxitude": -7.48431
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 27064,
+  "fields": {
+   "nome": "O Vicedo",
+   "provincia": "Lugo",
+   "latitude": 43.73249,
+   "lonxitude": -7.67344
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 27065,
+  "fields": {
+   "nome": "Vilalba",
+   "provincia": "Lugo",
+   "latitude": 43.29627,
+   "lonxitude": -7.67861
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 27066,
+  "fields": {
+   "nome": "Viveiro",
+   "provincia": "Lugo",
+   "latitude": 43.64806,
+   "lonxitude": -7.59
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 27901,
+  "fields": {
+   "nome": "Baralla",
+   "provincia": "Lugo",
+   "latitude": 42.89361,
+   "lonxitude": -7.25007
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 27902,
+  "fields": {
+   "nome": "Burela",
+   "provincia": "Lugo",
+   "latitude": 43.66046,
+   "lonxitude": -7.35821
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 32001,
+  "fields": {
+   "nome": "Allariz",
+   "provincia": "Ourense",
+   "latitude": 42.19008,
+   "lonxitude": -7.8018
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 32002,
+  "fields": {
+   "nome": "Amoeiro",
+   "provincia": "Ourense",
+   "latitude": 42.41,
+   "lonxitude": -7.95333
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 32003,
+  "fields": {
+   "nome": "A Arnoia",
+   "provincia": "Ourense",
+   "latitude": 42.25028,
+   "lonxitude": -8.13306
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 32004,
+  "fields": {
+   "nome": "Avión",
+   "provincia": "Ourense",
+   "latitude": 42.38833,
+   "lonxitude": -8.27278
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 32005,
+  "fields": {
+   "nome": "Baltar",
+   "provincia": "Ourense",
+   "latitude": 41.95,
+   "lonxitude": -7.71583
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 32006,
+  "fields": {
+   "nome": "Bande",
+   "provincia": "Ourense",
+   "latitude": 42.03056,
+   "lonxitude": -7.97528
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 32007,
+  "fields": {
+   "nome": "Baños de Molgas",
+   "provincia": "Ourense",
+   "latitude": 42.24111,
+   "lonxitude": -7.67278
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 32008,
+  "fields": {
+   "nome": "Barbadás",
+   "provincia": "Ourense",
+   "latitude": 42.30028,
+   "lonxitude": -7.90639
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 32009,
+  "fields": {
+   "nome": "O Barco de Valdeorras",
+   "provincia": "Ourense",
+   "latitude": 42.41667,
+   "lonxitude": -6.98306
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 32010,
+  "fields": {
+   "nome": "Beade",
+   "provincia": "Ourense",
+   "latitude": 42.33472,
+   "lonxitude": -8.14556
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 32011,
+  "fields": {
+   "nome": "Beariz",
+   "provincia": "Ourense",
+   "latitude": 42.46619,
+   "lonxitude": -8.27043
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 32012,
+  "fields": {
+   "nome": "Os Blancos",
+   "provincia": "Ourense",
+   "latitude": 42.00472,
+   "lonxitude": -7.71694
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 32013,
+  "fields": {
+   "nome": "Boborás",
+   "provincia": "Ourense",
+   "latitude": 42.43278,
+   "lonxitude": -8.14333
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 32014,
+  "fields": {
+   "nome": "A Bola",
+   "provincia": "Ourense",
+   "latitude": 42.15167,
+   "lonxitude": -7.91472
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 32015,
+  "fields": {
+   "nome": "O Bolo",
+   "provincia": "Ourense",
+   "latitude": 42.30667,
+   "lonxitude": -7.09889
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 32016,
+  "fields": {
+   "nome": "Calvos de Randín",
+   "provincia": "Ourense",
+   "latitude": 41.90472,
+   "lonxitude": -7.87556
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 32017,
+  "fields": {
+   "nome": "Carballeda de Valdeorras",
+   "provincia": "Ourense",
+   "latitude": 42.37611,
+   "lonxitude": -6.8775
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 32018,
+  "fields": {
+   "nome": "Carballeda de Avia",
+   "provincia": "Ourense",
+   "latitude": 42.32139,
+   "lonxitude": -8.16528
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 32019,
+  "fields": {
+   "nome": "O Carballiño",
+   "provincia": "Ourense",
+   "latitude": 42.42964,
+   "lonxitude": -8.07747
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 32020,
+  "fields": {
+   "nome": "Cartelle",
+   "provincia": "Ourense",
+   "latitude": 42.24923,
+   "lonxitude": -8.06887
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 32021,
+  "fields": {
+   "nome": "Castrelo do Val",
+   "provincia": "Ourense",
+   "latitude": 41.99056,
+   "lonxitude": -7.42417
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 32022,
+  "fields": {
+   "nome": "Castrelo de Miño",
+   "provincia": "Ourense",
+   "latitude": 42.29444,
+   "lonxitude": -8.06667
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 32023,
+  "fields": {
+   "nome": "O Castro de Caldelas",
+   "provincia": "Ourense",
+   "latitude": 42.375,
+   "lonxitude": -7.41556
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 32024,
+  "fields": {
+   "nome": "Celanova",
+   "provincia": "Ourense",
+   "latitude": 42.15083,
+   "lonxitude": -7.95667
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 32025,
+  "fields": {
+   "nome": "Cenlle",
+   "provincia": "Ourense",
+   "latitude": 42.3425,
+   "lonxitude": -8.08778
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 32026,
+  "fields": {
+   "nome": "Coles",
+   "provincia": "Ourense",
+   "latitude": 42.41222,
+   "lonxitude": -7.83972
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 32027,
+  "fields": {
+   "nome": "Cortegada",
+   "provincia": "Ourense",
+   "latitude": 42.20694,
+   "lonxitude": -8.16917
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 32028,
+  "fields": {
+   "nome": "Cualedro",
+   "provincia": "Ourense",
+   "latitude": 41.98306,
+   "lonxitude": -7.58306
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 32029,
+  "fields": {
+   "nome": "Chandrexa de Queixa",
+   "provincia": "Ourense",
+   "latitude": 42.24028,
+   "lonxitude": -7.42611
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 32030,
+  "fields": {
+   "nome": "Entrimo",
+   "provincia": "Ourense",
+   "latitude": 41.94083,
+   "lonxitude": -8.14083
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 32031,
+  "fields": {
+   "nome": "Esgos",
+   "provincia": "Ourense",
+   "latitude": 42.325,
+   "lonxitude": -7.69722
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 32032,
+  "fields": {
+   "nome": "Xinzo de Limia",
+   "provincia": "Ourense",
+   "latitude": 42.06361,
+   "lonxitude": -7.72389
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 32033,
+  "fields": {
+   "nome": "Gomesende",
+   "provincia": "Ourense",
+   "latitude": 42.18778,
+   "lonxitude": -8.09917
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 32034,
+  "fields": {
+   "nome": "A Gudiña",
+   "provincia": "Ourense",
+   "latitude": 42.06079,
+   "lonxitude": -7.13784
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 32035,
+  "fields": {
+   "nome": "O Irixo",
+   "provincia": "Ourense",
+   "latitude": 42.51194,
+   "lonxitude": -8.11833
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 32036,
+  "fields": {
+   "nome": "Xunqueira de Ambía",
+   "provincia": "Ourense",
+   "latitude": 42.20429,
+   "lonxitude": -7.73499
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 32037,
+  "fields": {
+   "nome": "Xunqueira de Espadanedo",
+   "provincia": "Ourense",
+   "latitude": 42.3175,
+   "lonxitude": -7.62861
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 32038,
+  "fields": {
+   "nome": "Larouco",
+   "provincia": "Ourense",
+   "latitude": 42.3466,
+   "lonxitude": -7.16324
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 32039,
+  "fields": {
+   "nome": "Laza",
+   "provincia": "Ourense",
+   "latitude": 42.06056,
+   "lonxitude": -7.46139
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 32040,
+  "fields": {
+   "nome": "Leiro",
+   "provincia": "Ourense",
+   "latitude": 42.36917,
+   "lonxitude": -8.12472
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 32041,
+  "fields": {
+   "nome": "Lobeira",
+   "provincia": "Ourense",
+   "latitude": 41.99889,
+   "lonxitude": -8.04306
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 32042,
+  "fields": {
+   "nome": "Lobios",
+   "provincia": "Ourense",
+   "latitude": 41.87528,
+   "lonxitude": -8.08444
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 32043,
+  "fields": {
+   "nome": "Maceda",
+   "provincia": "Ourense",
+   "latitude": 42.2708,
+   "lonxitude": -7.65083
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 32044,
+  "fields": {
+   "nome": "Manzaneda",
+   "provincia": "Ourense",
+   "latitude": 42.30944,
+   "lonxitude": -7.23333
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 32045,
+  "fields": {
+   "nome": "Maside",
+   "provincia": "Ourense",
+   "latitude": 42.41306,
+   "lonxitude": -8.02417
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 32046,
+  "fields": {
+   "nome": "Melón",
+   "provincia": "Ourense",
+   "latitude": 42.26016,
+   "lonxitude": -8.214
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 32047,
+  "fields": {
+   "nome": "A Merca",
+   "provincia": "Ourense",
+   "latitude": 42.22306,
+   "lonxitude": -7.90528
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 32048,
+  "fields": {
+   "nome": "A Mezquita",
+   "provincia": "Ourense",
+   "latitude": 42.01145,
+   "lonxitude": -7.04515
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 32049,
+  "fields": {
+   "nome": "Montederramo",
+   "provincia": "Ourense",
+   "latitude": 42.27667,
+   "lonxitude": -7.50417
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 32050,
+  "fields": {
+   "nome": "Monterrei",
+   "provincia": "Ourense",
+   "latitude": 41.94677,
+   "lonxitude": -7.44915
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 32051,
+  "fields": {
+   "nome": "Muíños",
+   "provincia": "Ourense",
+   "latitude": 41.95417,
+   "lonxitude": -7.98556
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 32052,
+  "fields": {
+   "nome": "Nogueira de Ramuín",
+   "provincia": "Ourense",
+   "latitude": 42.41972,
+   "lonxitude": -7.75306
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 32053,
+  "fields": {
+   "nome": "Oímbra",
+   "provincia": "Ourense",
+   "latitude": 41.88528,
+   "lonxitude": -7.4725
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 32054,
+  "fields": {
+   "nome": "Ourense",
+   "provincia": "Ourense",
+   "latitude": 42.33556,
+   "lonxitude": -7.86406
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 32055,
+  "fields": {
+   "nome": "Paderne de Allariz",
+   "provincia": "Ourense",
+   "latitude": 42.2775,
+   "lonxitude": -7.74583
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 32056,
+  "fields": {
+   "nome": "Padrenda",
+   "provincia": "Ourense",
+   "latitude": 42.13943,
+   "lonxitude": -8.15829
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 32057,
+  "fields": {
+   "nome": "Parada de Sil",
+   "provincia": "Ourense",
+   "latitude": 42.38306,
+   "lonxitude": -7.56889
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 32058,
+  "fields": {
+   "nome": "O Pereiro de Aguiar",
+   "provincia": "Ourense",
+   "latitude": 42.34634,
+   "lonxitude": -7.80026
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 32059,
+  "fields": {
+   "nome": "A Peroxa",
+   "provincia": "Ourense",
+   "latitude": 42.43889,
+   "lonxitude": -7.79333
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 32060,
+  "fields": {
+   "nome": "Petín",
+   "provincia": "Ourense",
+   "latitude": 42.38222,
+   "lonxitude": -7.12583
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 32061,
+  "fields": {
+   "nome": "Piñor",
+   "provincia": "Ourense",
+   "latitude": 42.49778,
+   "lonxitude": -8.005
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 32062,
+  "fields": {
+   "nome": "Porqueira",
+   "provincia": "Ourense",
+   "latitude": 42.01778,
+   "lonxitude": -7.84444
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 32063,
+  "fields": {
+   "nome": "A Pobra de Trives",
+   "provincia": "Ourense",
+   "latitude": 42.33944,
+   "lonxitude": -7.25306
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 32064,
+  "fields": {
+   "nome": "Pontedeva",
+   "provincia": "Ourense",
+   "latitude": 42.16861,
+   "lonxitude": -8.13917
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 32065,
+  "fields": {
+   "nome": "Punxín",
+   "provincia": "Ourense",
+   "latitude": 42.37028,
+   "lonxitude": -8.01194
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 32066,
+  "fields": {
+   "nome": "Quintela de Leirado",
+   "provincia": "Ourense",
+   "latitude": 42.13833,
+   "lonxitude": -8.10167
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 32067,
+  "fields": {
+   "nome": "Rairiz de Veiga",
+   "provincia": "Ourense",
+   "latitude": 42.08306,
+   "lonxitude": -7.83222
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 32068,
+  "fields": {
+   "nome": "Ramirás",
+   "provincia": "Ourense",
+   "latitude": 42.18528,
+   "lonxitude": -8.02528
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 32069,
+  "fields": {
+   "nome": "Ribadavia",
+   "provincia": "Ourense",
+   "latitude": 42.28821,
+   "lonxitude": -8.14313
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 32070,
+  "fields": {
+   "nome": "San Xoán de Río",
+   "provincia": "Ourense",
+   "latitude": 42.38444,
+   "lonxitude": -7.31417
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 32071,
+  "fields": {
+   "nome": "O Riós",
+   "provincia": "Ourense",
+   "latitude": 41.97417,
+   "lonxitude": -7.2825
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 32072,
+  "fields": {
+   "nome": "A Rúa",
+   "provincia": "Ourense",
+   "latitude": 42.39381,
+   "lonxitude": -7.1143
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 32073,
+  "fields": {
+   "nome": "Rubiá",
+   "provincia": "Ourense",
+   "latitude": 42.44972,
+   "lonxitude": -6.94889
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 32074,
+  "fields": {
+   "nome": "San Amaro",
+   "provincia": "Ourense",
+   "latitude": 42.37306,
+   "lonxitude": -8.07306
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 32075,
+  "fields": {
+   "nome": "San Cibrao das Viñas",
+   "provincia": "Ourense",
+   "latitude": 42.29694,
+   "lonxitude": -7.87139
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 32076,
+  "fields": {
+   "nome": "San Cristovo de Cea",
+   "provincia": "Ourense",
+   "latitude": 42.47503,
+   "lonxitude": -7.98601
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 32077,
+  "fields": {
+   "nome": "Sandiás",
+   "provincia": "Ourense",
+   "latitude": 42.11111,
+   "lonxitude": -7.75667
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 32078,
+  "fields": {
+   "nome": "Sarreaus",
+   "provincia": "Ourense",
+   "latitude": 42.08667,
+   "lonxitude": -7.60333
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 32079,
+  "fields": {
+   "nome": "Taboadela",
+   "provincia": "Ourense",
+   "latitude": 42.24083,
+   "lonxitude": -7.825
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 32080,
+  "fields": {
+   "nome": "A Teixeira",
+   "provincia": "Ourense",
+   "latitude": 42.39167,
+   "lonxitude": -7.47417
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 32081,
+  "fields": {
+   "nome": "Toén",
+   "provincia": "Ourense",
+   "latitude": 42.31472,
+   "lonxitude": -7.95389
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 32082,
+  "fields": {
+   "nome": "Trasmiras",
+   "provincia": "Ourense",
+   "latitude": 42.02278,
+   "lonxitude": -7.61667
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 32083,
+  "fields": {
+   "nome": "A Veiga",
+   "provincia": "Ourense",
+   "latitude": 42.27249,
+   "lonxitude": -6.93966
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 32084,
+  "fields": {
+   "nome": "Verea",
+   "provincia": "Ourense",
+   "latitude": 42.09389,
+   "lonxitude": -7.99361
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 32085,
+  "fields": {
+   "nome": "Verín",
+   "provincia": "Ourense",
+   "latitude": 41.94083,
+   "lonxitude": -7.43583
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 32086,
+  "fields": {
+   "nome": "Viana do Bolo",
+   "provincia": "Ourense",
+   "latitude": 42.17944,
+   "lonxitude": -7.11111
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 32087,
+  "fields": {
+   "nome": "Vilamarín",
+   "provincia": "Ourense",
+   "latitude": 42.46417,
+   "lonxitude": -7.89
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 32088,
+  "fields": {
+   "nome": "Vilamartín de Valdeorras",
+   "provincia": "Ourense",
+   "latitude": 42.41556,
+   "lonxitude": -7.05917
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 32089,
+  "fields": {
+   "nome": "Vilar de Barrio",
+   "provincia": "Ourense",
+   "latitude": 42.15972,
+   "lonxitude": -7.61167
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 32090,
+  "fields": {
+   "nome": "Vilar de Santos",
+   "provincia": "Ourense",
+   "latitude": 42.08556,
+   "lonxitude": -7.79667
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 32091,
+  "fields": {
+   "nome": "Vilardevós",
+   "provincia": "Ourense",
+   "latitude": 41.90694,
+   "lonxitude": -7.31306
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 32092,
+  "fields": {
+   "nome": "Vilariño de Conso",
+   "provincia": "Ourense",
+   "latitude": 42.17694,
+   "lonxitude": -7.17111
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 36001,
+  "fields": {
+   "nome": "Arbo",
+   "provincia": "Pontevedra",
+   "latitude": 42.11229,
+   "lonxitude": -8.31239
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 36002,
+  "fields": {
+   "nome": "Barro",
+   "provincia": "Pontevedra",
+   "latitude": 42.525,
+   "lonxitude": -8.64722
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 36003,
+  "fields": {
+   "nome": "Baiona",
+   "provincia": "Pontevedra",
+   "latitude": 42.11993,
+   "lonxitude": -8.85009
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 36004,
+  "fields": {
+   "nome": "Bueu",
+   "provincia": "Pontevedra",
+   "latitude": 42.32488,
+   "lonxitude": -8.78593
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 36005,
+  "fields": {
+   "nome": "Caldas de Reis",
+   "provincia": "Pontevedra",
+   "latitude": 42.60278,
+   "lonxitude": -8.63833
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 36006,
+  "fields": {
+   "nome": "Cambados",
+   "provincia": "Pontevedra",
+   "latitude": 42.51439,
+   "lonxitude": -8.81384
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 36007,
+  "fields": {
+   "nome": "O Campo Lameiro",
+   "provincia": "Pontevedra",
+   "latitude": 42.53786,
+   "lonxitude": -8.50997
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 36008,
+  "fields": {
+   "nome": "Cangas de Morrazo",
+   "provincia": "Pontevedra",
+   "latitude": 42.2779,
+   "lonxitude": -8.78984
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 36009,
+  "fields": {
+   "nome": "A Caniza",
+   "provincia": "Pontevedra",
+   "latitude": 42.21278,
+   "lonxitude": -8.27444
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 36010,
+  "fields": {
+   "nome": "Catoira",
+   "provincia": "Pontevedra",
+   "latitude": 42.66114,
+   "lonxitude": -8.71493
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 36013,
+  "fields": {
+   "nome": "Covelo",
+   "provincia": "Pontevedra",
+   "latitude": 42.23144,
+   "lonxitude": -8.36321
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 36014,
+  "fields": {
+   "nome": "Crecente",
+   "provincia": "Pontevedra",
+   "latitude": 42.1525,
+   "lonxitude": -8.2225
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 36015,
+  "fields": {
+   "nome": "Cuntis",
+   "provincia": "Pontevedra",
+   "latitude": 42.63534,
+   "lonxitude": -8.56179
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 36016,
+  "fields": {
+   "nome": "Dozón",
+   "provincia": "Pontevedra",
+   "latitude": 42.59534,
+   "lonxitude": -8.04672
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 36017,
+  "fields": {
+   "nome": "A Estrada",
+   "provincia": "Pontevedra",
+   "latitude": 42.68917,
+   "lonxitude": -8.48722
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 36018,
+  "fields": {
+   "nome": "Forcarei",
+   "provincia": "Pontevedra",
+   "latitude": 42.59223,
+   "lonxitude": -8.3501
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 36019,
+  "fields": {
+   "nome": "Fornelos de Montes",
+   "provincia": "Pontevedra",
+   "latitude": 42.34028,
+   "lonxitude": -8.45139
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 36020,
+  "fields": {
+   "nome": "Agolada",
+   "provincia": "Pontevedra",
+   "latitude": 42.76222,
+   "lonxitude": -8.01972
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 36021,
+  "fields": {
+   "nome": "Gondomar",
+   "provincia": "Pontevedra",
+   "latitude": 42.11083,
+   "lonxitude": -8.76139
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 36022,
+  "fields": {
+   "nome": "O Grove",
+   "provincia": "Pontevedra",
+   "latitude": 42.4953,
+   "lonxitude": -8.86409
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 36023,
+  "fields": {
+   "nome": "A Guarda",
+   "provincia": "Pontevedra",
+   "latitude": 41.90164,
+   "lonxitude": -8.8754
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 36024,
+  "fields": {
+   "nome": "Lalín",
+   "provincia": "Pontevedra",
+   "latitude": 42.66141,
+   "lonxitude": -8.11098
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 36025,
+  "fields": {
+   "nome": "A Lama",
+   "provincia": "Pontevedra",
+   "latitude": 42.39685,
+   "lonxitude": -8.44231
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 36026,
+  "fields": {
+   "nome": "Marín",
+   "provincia": "Pontevedra",
+   "latitude": 42.39278,
+   "lonxitude": -8.69889
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 36027,
+  "fields": {
+   "nome": "Meaño",
+   "provincia": "Pontevedra",
+   "latitude": 42.44521,
+   "lonxitude": -8.78252
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 36028,
+  "fields": {
+   "nome": "Meis",
+   "provincia": "Pontevedra",
+   "latitude": 42.49972,
+   "lonxitude": -8.72489
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 36029,
+  "fields": {
+   "nome": "Moaña",
+   "provincia": "Pontevedra",
+   "latitude": 42.30725,
+   "lonxitude": -8.73754
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 36030,
+  "fields": {
+   "nome": "Mondariz",
+   "provincia": "Pontevedra",
+   "latitude": 42.23908,
+   "lonxitude": -8.45322
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 36031,
+  "fields": {
+   "nome": "Mondariz Balneario",
+   "provincia": "Pontevedra",
+   "latitude": 42.2197,
+   "lonxitude": -8.47138
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 36032,
+  "fields": {
+   "nome": "Moraña",
+   "provincia": "Pontevedra",
+   "latitude": 42.56275,
+   "lonxitude": -8.58558
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 36033,
+  "fields": {
+   "nome": "Mos",
+   "provincia": "Pontevedra",
+   "latitude": 42.21377,
+   "lonxitude": -8.63121
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 36034,
+  "fields": {
+   "nome": "As Neves",
+   "provincia": "Pontevedra",
+   "latitude": 42.08806,
+   "lonxitude": -8.415
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 36035,
+  "fields": {
+   "nome": "Nigrán",
+   "provincia": "Pontevedra",
+   "latitude": 42.1416,
+   "lonxitude": -8.80663
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 36036,
+  "fields": {
+   "nome": "Oia",
+   "provincia": "Pontevedra",
+   "latitude": 42.03254,
+   "lonxitude": -8.84425
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 36037,
+  "fields": {
+   "nome": "Pazos de Borbén",
+   "provincia": "Pontevedra",
+   "latitude": 42.29337,
+   "lonxitude": -8.53211
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 36038,
+  "fields": {
+   "nome": "Pontevedra",
+   "provincia": "Pontevedra",
+   "latitude": 42.43361,
+   "lonxitude": -8.6475
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 36039,
+  "fields": {
+   "nome": "O Porriño",
+   "provincia": "Pontevedra",
+   "latitude": 42.16187,
+   "lonxitude": -8.62019
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 36040,
+  "fields": {
+   "nome": "Portas",
+   "provincia": "Pontevedra",
+   "latitude": 42.56403,
+   "lonxitude": -8.65708
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 36041,
+  "fields": {
+   "nome": "Poio",
+   "provincia": "Pontevedra",
+   "latitude": 42.44083,
+   "lonxitude": -8.70139
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 36042,
+  "fields": {
+   "nome": "Ponteareas",
+   "provincia": "Pontevedra",
+   "latitude": 42.17532,
+   "lonxitude": -8.50489
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 36043,
+  "fields": {
+   "nome": "Ponte Caldelas",
+   "provincia": "Pontevedra",
+   "latitude": 42.38877,
+   "lonxitude": -8.50225
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 36044,
+  "fields": {
+   "nome": "Pontecesures",
+   "provincia": "Pontevedra",
+   "latitude": 42.72079,
+   "lonxitude": -8.65299
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 36045,
+  "fields": {
+   "nome": "Redondela",
+   "provincia": "Pontevedra",
+   "latitude": 42.28333,
+   "lonxitude": -8.6
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 36046,
+  "fields": {
+   "nome": "Ribadumia",
+   "provincia": "Pontevedra",
+   "latitude": 42.51482,
+   "lonxitude": -8.75877
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 36047,
+  "fields": {
+   "nome": "Rodeiro",
+   "provincia": "Pontevedra",
+   "latitude": 42.64925,
+   "lonxitude": -7.94718
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 36048,
+  "fields": {
+   "nome": "O Rosal",
+   "provincia": "Pontevedra",
+   "latitude": 41.93567,
+   "lonxitude": -8.8251
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 36049,
+  "fields": {
+   "nome": "Salceda de Caselas",
+   "provincia": "Pontevedra",
+   "latitude": 42.10222,
+   "lonxitude": -8.55778
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 36050,
+  "fields": {
+   "nome": "Salvaterra de Miño",
+   "provincia": "Pontevedra",
+   "latitude": 42.08306,
+   "lonxitude": -8.49806
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 36051,
+  "fields": {
+   "nome": "Sanxenxo",
+   "provincia": "Pontevedra",
+   "latitude": 42.39946,
+   "lonxitude": -8.80679
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 36052,
+  "fields": {
+   "nome": "Silleda",
+   "provincia": "Pontevedra",
+   "latitude": 42.69798,
+   "lonxitude": -8.24664
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 36053,
+  "fields": {
+   "nome": "Soutomaior",
+   "provincia": "Pontevedra",
+   "latitude": 42.33864,
+   "lonxitude": -8.57272
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 36054,
+  "fields": {
+   "nome": "Tomiño",
+   "provincia": "Pontevedra",
+   "latitude": 41.99607,
+   "lonxitude": -8.73141
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 36055,
+  "fields": {
+   "nome": "Tui",
+   "provincia": "Pontevedra",
+   "latitude": 42.04806,
+   "lonxitude": -8.64444
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 36056,
+  "fields": {
+   "nome": "Valga",
+   "provincia": "Pontevedra",
+   "latitude": 42.68927,
+   "lonxitude": -8.64813
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 36057,
+  "fields": {
+   "nome": "Vigo",
+   "provincia": "Pontevedra",
+   "latitude": 42.23583,
+   "lonxitude": -8.72667
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 36058,
+  "fields": {
+   "nome": "Vilaboa",
+   "provincia": "Pontevedra",
+   "latitude": 42.35972,
+   "lonxitude": -8.63806
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 36059,
+  "fields": {
+   "nome": "Vila de Cruces",
+   "provincia": "Pontevedra",
+   "latitude": 42.79508,
+   "lonxitude": -8.16827
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 36060,
+  "fields": {
+   "nome": "Vilagarcía de Arousa",
+   "provincia": "Pontevedra",
+   "latitude": 42.59506,
+   "lonxitude": -8.74306
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 36061,
+  "fields": {
+   "nome": "Vilanova de Arousa",
+   "provincia": "Pontevedra",
+   "latitude": 42.56263,
+   "lonxitude": -8.82993
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 36901,
+  "fields": {
+   "nome": "A Illa de Arousa",
+   "provincia": "Pontevedra",
+   "latitude": 42.55444,
+   "lonxitude": -8.86389
+  }
+ },
+ {
+  "model": "compatibilidade.concello",
+  "pk": 36902,
+  "fields": {
+   "nome": "Cerdedo-Cotobade",
+   "provincia": "Pontevedra",
+   "latitude": 42.47194,
+   "lonxitude": -8.48194
+  }
+ }
+]

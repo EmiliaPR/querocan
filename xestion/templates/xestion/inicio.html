@@ -1,0 +1,11 @@
+{% extends "xestion/base_xestion.html" %}
+{% block titulo %}Xestión{% endblock %}
+{% block xestion %}
+  <h1>Xestión</h1>
+  <div class="xestion__resumo">
+    <a class="caixa xestion__cifra" href="{% url 'xestion:protectoras' %}">
+      <span class="xestion__numero">{{ pendentes }}</span>
+      <span>protectoras pendentes de validar</span>
+    </a>
+  </div>
+{% endblock %}

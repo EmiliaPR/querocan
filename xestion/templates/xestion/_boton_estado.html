@@ -1,0 +1,5 @@
+<form method="post" action="{% url 'xestion:cambiar_estado_protectora' protectora.pk accion %}">
+  {% csrf_token %}
+  <input type="hidden" name="volver" value="{{ request.get_full_path }}">
+  <button type="submit" class="boton boton--pequeno {{ clase }}">{{ texto }}</button>
+</form>

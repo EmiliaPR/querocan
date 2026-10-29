@@ -1,0 +1,46 @@
+{% extends "xestion/base_xestion.html" %}
+{% block titulo %}Protectoras{% endblock %}
+{% block xestion %}
+  <h1>Protectoras</h1>
+  <form method="get" class="fila">
+    <label for="estado" class="so-lectores">Estado</label>
+    <div class="campo"><select name="estado" id="estado" onchange="this.form.submit()">
+      <option value="todas" {% if estado == "todas" %}selected{% endif %}>Todas</option>
+      {% for valor, texto in estados %}<option value="{{ valor }}" {% if estado == valor %}selected{% endif %}>{{ texto }}</option>{% endfor %}
+    </select></div>
+    <noscript><button class="boton boton--contorno boton--pequeno">Filtrar</button></noscript>
+  </form>
+
+  {% if protectoras %}
+  <div class="taboa-envoltorio">
+    <table class="taboa">
+      <thead><tr><th>Protectora</th><th>Concello</th><th>Contacto</th><th>Alta</th><th>Estado</th><th><span class="so-lectores">Accións</span></th></tr></thead>
+      <tbody>
+      {% for protectora in protectoras %}
+        <tr>
+          <td><strong>{{ protectora.nome }}</strong><br><span class="texto-secundario">CIF {{ protectora.cif }}</span></td>
+          <td>{{ protectora.concello.nome }}</td>
+          <td>{{ protectora.email_contacto }}<br>{{ protectora.telefono }}</td>
+          <td>{{ protectora.data_alta|date:"d/m/Y" }}</td>
+          <td><span class="etiqueta">{{ protectora.get_estado_display }}</span></td>
+          <td>
+            <div class="fila">
+            {% if protectora.estado == "pendente" %}
+              {% include "xestion/_boton_estado.html" with accion="validar" texto="Validar" clase="boton--primario" %}
+              {% include "xestion/_boton_estado.html" with accion="rexeitar" texto="Rexeitar" clase="boton--contorno" %}
+            {% elif protectora.estado == "activa" %}
+              {% include "xestion/_boton_estado.html" with accion="desactivar" texto="Desactivar" clase="boton--contorno" %}
+            {% else %}
+              {% include "xestion/_boton_estado.html" with accion="reactivar" texto="Activar" clase="boton--contorno" %}
+            {% endif %}
+            </div>
+          </td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  {% else %}
+    <p class="caixa">Non hai protectoras neste estado.</p>
+  {% endif %}
+{% endblock %}

@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     # Apps de QueroCan
     "querocan",
     "contas",
+    "compatibilidade",
     "contido",
     "animais",
     "xestion",

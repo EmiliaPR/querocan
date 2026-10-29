@@ -31,3 +31,28 @@ def require_rol(*roles):
         return envoltorio
 
     return decorador
+
+
+def require_protectora_activa(vista):
+    """Só para protectoras xa validadas polo superadmin.
+
+    - Se a conta aínda non completou os datos da protectora, mándaa a facelo.
+    - Se está pendente de validación (ou rexeitada/desactivada), amósalle o seu estado.
+    A vista recibe a protectora en `request.protectora`.
+    """
+    from django.shortcuts import redirect, render
+
+    from .models import Usuario
+
+    @require_rol(Usuario.Rol.PROTECTORA)
+    @wraps(vista)
+    def envoltorio(request, *args, **kwargs):
+        protectora = getattr(request.user, "protectora", None)
+        if protectora is None:
+            return redirect("contas:alta_protectora")
+        if not protectora.activa:
+            return render(request, "contas/protectora_estado.html", {"protectora": protectora})
+        request.protectora = protectora
+        return vista(request, *args, **kwargs)
+
+    return envoltorio

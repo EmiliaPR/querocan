@@ -4,8 +4,7 @@ from django.conf import settings
 from django.http import Http404
 from django.shortcuts import render
 
-from contas.decoradores import require_rol
-from contas.models import Usuario
+from contas.decoradores import require_protectora_activa
 
 
 def deck(request):
@@ -13,7 +12,7 @@ def deck(request):
     return render(request, "en_construcion.html", {"titulo": "Descubrir cans"})
 
 
-@require_rol(Usuario.Rol.PROTECTORA)
+@require_protectora_activa
 def protectora_cans(request):
     """Listado de cans da protectora (implementado en T7)."""
     return render(request, "en_construcion.html", {"titulo": "Os meus cans"})

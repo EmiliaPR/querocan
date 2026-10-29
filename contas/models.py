@@ -76,3 +76,56 @@ class Usuario(AbstractUser):
     @property
     def es_superadmin(self):
         return self.rol == self.Rol.SUPERADMIN
+
+
+class Protectora(models.Model):
+    """Datos da entidade protectora. Cada protectora ten unha conta co rol «protectora».
+
+    Unha protectora nova queda pendente ata que o superadmin a valida; mentres tanto
+    non pode publicar cans.
+    """
+
+    class Estado(models.TextChoices):
+        PENDENTE_VALIDACION = "pendente", "Pendente de validación"
+        ACTIVA = "activa", "Activa"
+        REXEITADA = "rexeitada", "Rexeitada"
+        DESACTIVADA = "desactivada", "Desactivada"
+
+    usuario = models.OneToOneField(
+        Usuario, on_delete=models.CASCADE, related_name="protectora", verbose_name="conta"
+    )
+    nome = models.CharField("nome da protectora", max_length=150)
+    cif = models.CharField("CIF", max_length=12, unique=True)
+    concello = models.ForeignKey(
+        "compatibilidade.Concello", on_delete=models.PROTECT, verbose_name="concello"
+    )
+    enderezo = models.CharField("enderezo", max_length=200, blank=True)
+    telefono = models.CharField("teléfono", max_length=20)
+    email_contacto = models.EmailField("correo de contacto")
+    web = models.URLField("web", blank=True)
+    descricion = models.TextField("descrición", blank=True)
+    estado = models.CharField(
+        "estado", max_length=12, choices=Estado.choices, default=Estado.PENDENTE_VALIDACION
+    )
+    data_alta = models.DateTimeField("data de alta", auto_now_add=True)
+    data_validacion = models.DateTimeField("data de validación", null=True, blank=True)
+
+    class Meta:
+        verbose_name = "protectora"
+        verbose_name_plural = "protectoras"
+        ordering = ["nome"]
+
+    def __str__(self):
+        return self.nome
+
+    @property
+    def activa(self):
+        return self.estado == self.Estado.ACTIVA
+
+    @property
+    def latitude(self):
+        return self.concello.latitude
+
+    @property
+    def lonxitude(self):
+        return self.concello.lonxitude
