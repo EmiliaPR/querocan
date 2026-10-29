@@ -94,3 +94,34 @@ def crear_protectora(crear_usuario, concello):
 def protectora(crear_protectora):
     """Unha protectora xa validada (activa)."""
     return crear_protectora()
+
+
+@pytest.fixture(autouse=True)
+def _media_temporal(settings, tmp_path):
+    """As fotos subidas nas probas gárdanse nun directorio temporal."""
+    settings.MEDIA_ROOT = tmp_path / "media"
+
+
+@pytest.fixture
+def crear_can(protectora):
+    """Fábrica: crear_can(**campos) devolve un Can dispoñible con necesidades flexibles."""
+    from datetime import date
+
+    from animais.models import Can
+
+    def _crear(**campos):
+        campos.setdefault("protectora", protectora)
+        campos.setdefault("nome", "Luna")
+        campos.setdefault("sexo", Can.Sexo.FEMIA)
+        campos.setdefault("data_nacemento", date(2023, 1, 15))
+        campos.setdefault("tamano", "mediano")
+        campos.setdefault("descricion", "Tranquila e cariñosa.")
+        campos.setdefault("espazo", "indiferente")
+        campos.setdefault("tolerancia_soidade", "media")
+        campos.setdefault("convive_nenos", "si")
+        campos.setdefault("convive_cans", "si")
+        campos.setdefault("convive_gatos", "desconecido")
+        campos.setdefault("enerxia", "medio")
+        return Can.objects.create(**campos)
+
+    return _crear

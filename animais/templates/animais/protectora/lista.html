@@ -1,0 +1,42 @@
+{% extends "panel/base_panel.html" %}
+{% block titulo %}Os meus cans{% endblock %}
+{% block panel %}
+  <div class="fila fila--separada">
+    <h1>Os meus cans</h1>
+    <a href="{% url 'animais:protectora_can_novo' %}" class="boton boton--primario">Publicar un can</a>
+  </div>
+
+  {% if cans %}
+  <div class="taboa-envoltorio">
+    <table class="taboa">
+      <thead><tr><th>Can</th><th>Idade</th><th>Estado</th><th>Fotos</th><th><span class="so-lectores">Accións</span></th></tr></thead>
+      <tbody>
+        {% for can in cans %}
+        <tr>
+          <td><strong>{{ can.nome }}</strong>{% if can.urxente %} <span class="etiqueta etiqueta--forte">Urxente</span>{% endif %}<br><span class="texto-secundario">{{ can.get_tamano_display }} · {{ can.get_sexo_display }}</span></td>
+          <td>{{ can.idade_texto }}</td>
+          <td><span class="etiqueta">{{ can.get_estado_display }}</span></td>
+          <td>{{ can.fotos.count }}</td>
+          <td>
+            <div class="fila">
+              <a class="boton boton--pequeno boton--contorno" href="{% url 'animais:protectora_can_editar' can.pk %}">Editar</a>
+              <a class="boton boton--pequeno boton--suave" href="{% url 'animais:protectora_fotos' can.pk %}">Fotos</a>
+              {% if can.pode_retirarse %}
+                <form method="post" action="{% url 'animais:protectora_can_retirar' can.pk %}">{% csrf_token %}<button class="boton boton--pequeno boton--suave">Retirar</button></form>
+              {% elif can.estado == "retirado" %}
+                <form method="post" action="{% url 'animais:protectora_can_republicar' can.pk %}">{% csrf_token %}<button class="boton boton--pequeno boton--suave">Volver publicar</button></form>
+              {% endif %}
+            </div>
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  {% else %}
+    <div class="caixa pila">
+      <p>Aínda non publicaches ningún can.</p>
+      <p><a href="{% url 'animais:protectora_can_novo' %}" class="boton boton--primario">Publicar o primeiro</a></p>
+    </div>
+  {% endif %}
+{% endblock %}

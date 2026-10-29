@@ -98,41 +98,69 @@ class Nivel(StrEnum):
     ALTO = "alto"
 
 
-# Textos para amosar cada valor na interface (formularios, fichas e test)
+# Textos para amosar cada valor na interface (formularios, fichas e test).
+# Van agrupados por enum porque varios enums comparten valores («indiferente», «pequeno»...)
+# e, ao ser StrEnum, nun dicionario plano pisaríanse uns a outros.
 ETIQUETAS = {
-    Vivenda.PISO: "Piso",
-    Vivenda.CASA_SEN_PATIO: "Casa sen patio",
-    Vivenda.CASA_CON_PATIO: "Casa con patio ou xardín",
-    Espazo.INDIFERENTE: "Adáptase a calquera vivenda",
-    Espazo.PATIO_RECOMENDADO: "Recoméndase patio",
-    Espazo.PATIO_NECESARIO: "Necesita patio",
-    Tamano.PEQUENO: "Pequeno",
-    Tamano.MEDIANO: "Mediano",
-    Tamano.GRANDE: "Grande",
-    PreferenciaTamano.INDIFERENTE: "Non teño preferencia",
-    HorasSo.MENOS_DE_2: "Menos de 2 horas",
-    HorasSo.DE_2_A_4: "Entre 2 e 4 horas",
-    HorasSo.DE_4_A_6: "Entre 4 e 6 horas",
-    HorasSo.MAIS_DE_6: "Máis de 6 horas",
-    Tolerancia.BAIXA: "Baixa (menos de 2 horas)",
-    Tolerancia.MEDIA: "Media (ata 4 horas)",
-    Tolerancia.ALTA: "Alta (ata 6 horas)",
-    Convivencia.SI: "Si",
-    Convivencia.NON: "Non",
-    Convivencia.DESCONECIDO: "Non se sabe",
-    OutrosAnimais.NINGUN: "Ningún",
-    OutrosAnimais.CANS: "Cans",
-    OutrosAnimais.GATOS: "Gatos",
-    OutrosAnimais.CANS_E_GATOS: "Cans e gatos",
-    Nivel.BAIXO: "Baixo",
-    Nivel.MEDIO: "Medio",
-    Nivel.ALTO: "Alto",
+    Vivenda: {
+        Vivenda.PISO: "Piso",
+        Vivenda.CASA_SEN_PATIO: "Casa sen patio",
+        Vivenda.CASA_CON_PATIO: "Casa con patio ou xardín",
+    },
+    Espazo: {
+        Espazo.INDIFERENTE: "Adáptase a calquera vivenda",
+        Espazo.PATIO_RECOMENDADO: "Recoméndase patio",
+        Espazo.PATIO_NECESARIO: "Necesita patio",
+    },
+    Tamano: {
+        Tamano.PEQUENO: "Pequeno",
+        Tamano.MEDIANO: "Mediano",
+        Tamano.GRANDE: "Grande",
+    },
+    PreferenciaTamano: {
+        PreferenciaTamano.PEQUENO: "Pequeno",
+        PreferenciaTamano.MEDIANO: "Mediano",
+        PreferenciaTamano.GRANDE: "Grande",
+        PreferenciaTamano.INDIFERENTE: "Non teño preferencia",
+    },
+    HorasSo: {
+        HorasSo.MENOS_DE_2: "Menos de 2 horas",
+        HorasSo.DE_2_A_4: "Entre 2 e 4 horas",
+        HorasSo.DE_4_A_6: "Entre 4 e 6 horas",
+        HorasSo.MAIS_DE_6: "Máis de 6 horas",
+    },
+    Tolerancia: {
+        Tolerancia.BAIXA: "Baixa (menos de 2 horas)",
+        Tolerancia.MEDIA: "Media (ata 4 horas)",
+        Tolerancia.ALTA: "Alta (ata 6 horas)",
+    },
+    Convivencia: {
+        Convivencia.SI: "Si",
+        Convivencia.NON: "Non",
+        Convivencia.DESCONECIDO: "Non se sabe",
+    },
+    OutrosAnimais: {
+        OutrosAnimais.NINGUN: "Ningún",
+        OutrosAnimais.CANS: "Cans",
+        OutrosAnimais.GATOS: "Gatos",
+        OutrosAnimais.CANS_E_GATOS: "Cans e gatos",
+    },
+    Nivel: {
+        Nivel.BAIXO: "Baixo",
+        Nivel.MEDIO: "Medio",
+        Nivel.ALTO: "Alto",
+    },
 }
 
 
 def opcions(enum):
     """Lista de pares (valor, texto) dun enum, lista para usar como `choices` en Django."""
-    return [(membro.value, ETIQUETAS[membro]) for membro in enum]
+    return [(membro.value, texto) for membro, texto in ETIQUETAS[enum].items()]
+
+
+def etiqueta(enum, valor):
+    """Texto en galego dun valor: etiqueta(Espazo, "indiferente") → «Adáptase…»."""
+    return ETIQUETAS[enum][enum(valor)]
 
 
 # ---------------------------------------------------------------------------------------

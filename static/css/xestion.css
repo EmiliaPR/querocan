@@ -9,3 +9,5 @@
 .xestion__resumo { display: grid; gap: var(--esp-4); grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); }
 .xestion__cifra { display: flex; flex-direction: column; gap: var(--esp-1); text-decoration: none; }
 .xestion__numero { font-family: var(--fonte-titulares); font-weight: 800; font-size: 2.5rem; color: var(--rubi); line-height: 1; }
+.grella-fotos { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--esp-4); grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); }
+.grella-fotos img { aspect-ratio: 1; width: 100%; object-fit: cover; }

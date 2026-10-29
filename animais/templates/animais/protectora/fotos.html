@@ -1,0 +1,36 @@
+{% extends "panel/base_panel.html" %}
+{% block titulo %}Fotos de {{ can.nome }}{% endblock %}
+{% block panel %}
+  <div class="fila fila--separada">
+    <h1>Fotos de {{ can.nome }}</h1>
+    <a href="{% url 'animais:protectora_cans' %}" class="boton boton--contorno">Volver aos cans</a>
+  </div>
+
+  {% if fotos %}
+    <ul class="grella-fotos">
+      {% for foto in fotos %}
+        <li class="tarxeta">
+          <img src="{{ foto.imaxe.url }}" alt="Foto {{ forloop.counter }} de {{ can.nome }}" loading="lazy">
+          <div class="tarxeta__corpo">
+            {% if foto.principal %}
+              <span class="etiqueta">Foto principal</span>
+            {% else %}
+              <form method="post" action="{% url 'animais:protectora_foto_principal' can.pk foto.pk %}">{% csrf_token %}<button class="boton boton--pequeno boton--suave">Facer principal</button></form>
+            {% endif %}
+            <form method="post" action="{% url 'animais:protectora_foto_borrar' can.pk foto.pk %}">{% csrf_token %}<button class="boton boton--pequeno boton--contorno">Borrar</button></form>
+          </div>
+        </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p class="caixa">{{ can.nome }} aínda non ten fotos. A primeira que subas será a principal.</p>
+  {% endif %}
+
+  {% if fotos|length < 6 %}
+  <form method="post" enctype="multipart/form-data" class="caixa formulario" novalidate>
+    {% csrf_token %}
+    {% include "componentes/formulario.html" %}
+    <button type="submit" class="boton boton--primario">Subir a foto</button>
+  </form>
+  {% endif %}
+{% endblock %}

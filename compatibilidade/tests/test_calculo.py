@@ -24,6 +24,7 @@ from compatibilidade.calculo import (
     Tolerancia,
     Vivenda,
     calcular,
+    etiqueta,
     opcions,
 )
 
@@ -290,6 +291,13 @@ def test_motivos_destacados_priorizan_fortes_e_despois_avisos():
 def test_opcions_devolve_pares_para_django():
     assert opcions(Vivenda)[0] == ("piso", "Piso")
     assert ("desconecido", "Non se sabe") in opcions(Convivencia)
+
+
+def test_valores_compartidos_entre_enums_teñen_cada_un_a_súa_etiqueta():
+    """«indiferente» existe en Espazo e en PreferenciaTamano con textos distintos."""
+    assert etiqueta(Espazo, "indiferente") == "Adáptase a calquera vivenda"
+    assert etiqueta(PreferenciaTamano, "indiferente") == "Non teño preferencia"
+    assert dict(opcions(Espazo))["indiferente"] == "Adáptase a calquera vivenda"
 
 
 # --- Os tres perfís da demostración ---------------------------------------------------

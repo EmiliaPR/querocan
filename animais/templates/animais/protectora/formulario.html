@@ -1,0 +1,47 @@
+{% extends "panel/base_panel.html" %}
+{% block titulo %}{% if can %}Editar {{ can.nome }}{% else %}Publicar un can{% endif %}{% endblock %}
+{% block panel %}
+  <h1>{% if can %}Editar {{ can.nome }}{% else %}Publicar un can{% endif %}</h1>
+  <form method="post" class="formulario" novalidate>
+    {% csrf_token %}
+    {% if formulario.non_field_errors %}<ul class="mensaxe mensaxe--error">{% for e in formulario.non_field_errors %}<li>{{ e }}</li>{% endfor %}</ul>{% endif %}
+
+    <fieldset class="caixa formulario">
+      <legend><h2>Ficha</h2></legend>
+      {% include "componentes/campo.html" with campo=formulario.nome %}
+      {% include "componentes/campo.html" with campo=formulario.sexo %}
+      {% include "componentes/campo.html" with campo=formulario.data_nacemento %}
+      {% include "componentes/campo.html" with campo=formulario.tamano %}
+      {% include "componentes/campo.html" with campo=formulario.peso_kg %}
+      {% include "componentes/campo.html" with campo=formulario.raza %}
+      {% include "componentes/campo.html" with campo=formulario.etiquetas %}
+      {% include "componentes/campo.html" with campo=formulario.descricion %}
+      {% include "componentes/campo.html" with campo=formulario.urxente %}
+    </fieldset>
+
+    <fieldset class="caixa formulario">
+      <legend><h2>Saúde</h2></legend>
+      {% include "componentes/campo.html" with campo=formulario.vacinado %}
+      {% include "componentes/campo.html" with campo=formulario.desparasitado %}
+      {% include "componentes/campo.html" with campo=formulario.microchip %}
+      {% include "componentes/campo.html" with campo=formulario.esterilizado %}
+    </fieldset>
+
+    <fieldset class="caixa formulario">
+      <legend><h2>Necesidades</h2></legend>
+      <p class="texto-secundario">Con estas respostas calculamos a compatibilidade con cada persoa. Todas son obrigatorias: se algo non o sabedes, escollede «Non se sabe» ou a opción máis flexible.</p>
+      {% include "componentes/campo.html" with campo=formulario.espazo %}
+      {% include "componentes/campo.html" with campo=formulario.tolerancia_soidade %}
+      {% include "componentes/campo.html" with campo=formulario.convive_nenos %}
+      {% include "componentes/campo.html" with campo=formulario.convive_cans %}
+      {% include "componentes/campo.html" with campo=formulario.convive_gatos %}
+      {% include "componentes/campo.html" with campo=formulario.enerxia %}
+      {% include "componentes/campo.html" with campo=formulario.require_experiencia %}
+    </fieldset>
+
+    <div class="fila">
+      <button type="submit" class="boton boton--primario">{% if can %}Gardar os cambios{% else %}Publicar e engadir fotos{% endif %}</button>
+      <a href="{% url 'animais:protectora_cans' %}" class="boton boton--contorno">Cancelar</a>
+    </div>
+  </form>
+{% endblock %}

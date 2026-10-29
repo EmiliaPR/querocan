@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load static %}
+{# Base dos paneis da protectora: menú lateral en escritorio e superior en móbil. #}
+{% block estilos %}<link rel="stylesheet" href="{% static 'css/xestion.css' %}">{% block estilos_panel %}{% endblock %}{% endblock %}
+{% block contido %}
+<div class="contedor xestion">
+  <nav class="xestion__menu" aria-label="Panel da protectora">
+    <a href="{% url 'animais:protectora_cans' %}" {% if seccion == "cans" %}aria-current="page"{% endif %}>Os meus cans</a>
+    {% block menu_panel %}{% endblock %}
+  </nav>
+  <div class="xestion__contido">
+    {% block panel %}{% endblock %}
+  </div>
+</div>
+{% endblock %}

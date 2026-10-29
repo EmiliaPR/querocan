@@ -48,6 +48,7 @@ textarea:focus-visible, summary:focus-visible, [tabindex]:not(main):focus-visibl
 .texto-secundario { color: var(--texto-secundario); }
 .pila { display: flex; flex-direction: column; gap: var(--esp-4); }
 .fila { display: flex; flex-wrap: wrap; gap: var(--esp-3); align-items: center; }
+.fila--separada { justify-content: space-between; }
 
 /* ---------- Botóns ---------- */
 .boton {
