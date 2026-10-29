@@ -1,0 +1,15 @@
+/* Test de compatibilidade: unha pregunta por pantalla (con JavaScript). */
+.test { max-width: 720px; }
+.test__formulario { display: flex; flex-direction: column; gap: var(--esp-6); }
+.test__pregunta { display: flex; flex-direction: column; gap: var(--esp-4); }
+.test__progreso { font-size: var(--tam-s); font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--terracota); }
+.test__titulo { font-size: clamp(1.75rem, 6vw, 2.5rem); }
+.test__subpregunta { font-weight: 700; }
+.opcions--grandes { display: grid; gap: var(--esp-3); }
+@media (min-width: 600px) { .opcions--grandes { grid-template-columns: repeat(2, 1fr); } }
+.opcions--grandes label, .opcions--grandes span { width: 100%; }
+.opcions--grandes span { min-height: 64px; padding: var(--esp-4) var(--esp-5); border-radius: var(--raio-m); font-size: var(--tam-l); }
+.test__navegacion { display: flex; flex-wrap: wrap; gap: var(--esp-3); justify-content: space-between; }
+.test__despois { text-align: center; }
+/* Con JavaScript só se ve a pregunta actual */
+.test--paso-a-paso .test__pregunta:not(.actual) { display: none; }

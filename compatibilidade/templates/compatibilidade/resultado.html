@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% load static %}
+{% block titulo %}O teu resultado{% endblock %}
+{% block estilos %}<link rel="stylesheet" href="{% static 'css/animais.css' %}">{% endblock %}
+{% block contido %}
+<div class="contedor seccion">
+  <div class="pila">
+    <h1 class="titulo-rubi">Estes son os cans máis compatibles contigo</h1>
+    <p class="texto-secundario">Segundo as túas respostas. <a href="{% url 'compatibilidade:test' %}">Podes repetir o test</a> cando queiras.</p>
+  </div>
+
+  {% if not user.is_authenticated %}
+  <div class="caixa caixa--suave fila fila--separada">
+    <div>
+      <p><strong>Garda o teu resultado</strong></p>
+      <p>Crea unha conta para non perdelo e poder solicitar a adopción.</p>
+    </div>
+    <div class="fila">
+      <a class="boton boton--primario" href="{% url 'contas:rexistro' %}">Crear conta</a>
+      <a class="boton boton--contorno" href="{% url 'contas:entrar' %}?next={% url 'compatibilidade:resultado' %}">Entrar</a>
+    </div>
+  </div>
+  {% endif %}
+
+  {% if avaliados %}
+    <ol class="resultado-lista">
+      {% for avaliado in avaliados %}
+        {% include "animais/_fila_resultado.html" %}
+      {% endfor %}
+    </ol>
+  {% else %}
+    <p class="caixa">Agora mesmo non hai cans dispoñibles. Volve pronto!</p>
+  {% endif %}
+
+  <p><a class="boton boton--contorno" href="{% url 'animais:deck' %}">Descubrir máis cans</a></p>
+</div>
+{% endblock %}

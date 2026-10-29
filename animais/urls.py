@@ -2,13 +2,17 @@
 
 from django.urls import path
 
-from . import views, views_protectora
+from . import api, views, views_protectora
 
 app_name = "animais"
 
 urlpatterns = [
     path("animais/", views.listado, name="listado"),
+    path("animais/<int:pk>/", views.ficha, name="ficha"),
     path("descubrir/", views.deck, name="deck"),
+    path("api/deck/", api.tanda, name="api_deck"),
+    path("api/deck/decision/", api.decision, name="api_decision"),
+    path("api/deck/desfacer/", api.desfacer, name="api_desfacer"),
     path("proba-deck/", views.proba_deck, name="proba_deck"),
     # Xestión da protectora
     path("protectora/cans/", views_protectora.lista, name="protectora_cans"),

@@ -125,3 +125,31 @@ def crear_can(protectora):
         return Can.objects.create(**campos)
 
     return _crear
+
+
+PERFIL_FLEXIBLE = {
+    "vivenda": "casa_con_patio",
+    "tamano": "indiferente",
+    "horas_so": "menos_de_2",
+    "ten_nenos": False,
+    "outros_animais": "ningun",
+    "actividade": "alto",
+    "experiencia": True,
+}
+
+
+@pytest.fixture
+def crear_perfil(db):
+    """Fábrica: crear_perfil(usuario, **respostas) garda o test dunha adoptante."""
+    from contas.models import PerfilAdoptante
+
+    def _crear(usuario, **campos):
+        return PerfilAdoptante.objects.create(usuario=usuario, **{**PERFIL_FLEXIBLE, **campos})
+
+    return _crear
+
+
+@pytest.fixture
+def adoptante_con_perfil(adoptante, crear_perfil):
+    crear_perfil(adoptante)
+    return adoptante

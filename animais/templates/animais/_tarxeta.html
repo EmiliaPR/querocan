@@ -1,0 +1,21 @@
+{# Tarxeta dun can para grellas (landing, listado, animais parecidos). #}
+{% with can=avaliado.can foto=avaliado.can.foto_principal %}
+<li class="tarxeta tarxeta-can">
+  <a href="{% url 'animais:ficha' can.pk %}" class="tarxeta-can__foto-ligazon" tabindex="-1" aria-hidden="true">
+    {% if foto %}<img class="tarxeta-can__foto" src="{{ foto.imaxe.url }}" alt="" loading="lazy">{% else %}<div class="tarxeta-can__foto foto-baleira">Sen foto</div>{% endif %}
+  </a>
+  {% if avaliado.porcentaxe is not None %}<p class="porcentaxe porcentaxe--sobre-foto" aria-label="{{ avaliado.porcentaxe }} % de compatibilidade">{{ avaliado.porcentaxe }}%</p>{% endif %}
+  <div class="tarxeta__corpo">
+    <h3 class="tarxeta-can__nome"><a href="{% url 'animais:ficha' can.pk %}">{{ can.nome }}, {{ can.idade_texto }}</a></h3>
+    <p class="texto-secundario tarxeta-can__lugar">{% if avaliado.distancia_texto %}A {{ avaliado.distancia_texto }} · {% endif %}{{ can.protectora.nome }}</p>
+    <ul class="etiquetas">
+      {% if can.urxente %}<li class="etiqueta etiqueta--forte">Urxente</li>{% endif %}
+      {% for etiqueta in can.lista_etiquetas|slice:":2" %}<li class="etiqueta">{{ etiqueta }}</li>{% endfor %}
+    </ul>
+    <div class="fila">
+      {% include "animais/_boton_adoptar.html" %}
+      {% include "animais/_botons_non_implementados.html" %}
+    </div>
+  </div>
+</li>
+{% endwith %}

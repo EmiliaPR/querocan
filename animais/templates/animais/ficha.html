@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+{% load static %}
+{% block titulo %}{{ can.nome }}{% endblock %}
+{% block descricion %}{{ can.nome }}, {{ can.idade_texto }}, busca fogar en QueroCan. {{ can.descricion|truncatechars:120 }}{% endblock %}
+{% block estilos %}<link rel="stylesheet" href="{% static 'css/animais.css' %}">{% endblock %}
+{% block contido %}
+<div class="contedor seccion">
+  <nav aria-label="Ruta" class="ruta"><a href="{% url 'animais:listado' %}">Animais</a> › <span aria-current="page">{{ can.nome }}</span></nav>
+
+  <div class="ficha">
+    <div class="ficha__galeria">
+      {% with fotos=can.fotos.all %}
+        {% if fotos %}
+          <img class="ficha__foto-principal" src="{{ can.foto_principal.imaxe.url }}" alt="Foto de {{ can.nome }}">
+          {% if fotos|length > 1 %}
+          <ul class="ficha__miniaturas">
+            {% for foto in fotos %}{% if not foto.principal %}<li><a href="{{ foto.imaxe.url }}"><img src="{{ foto.imaxe.url }}" alt="Outra foto de {{ can.nome }}" loading="lazy"></a></li>{% endif %}{% endfor %}
+          </ul>
+          {% endif %}
+        {% else %}
+          <div class="ficha__foto-principal foto-baleira">Sen foto</div>
+        {% endif %}
+      {% endwith %}
+    </div>
+
+    <div class="ficha__datos pila">
+      <div class="fila">
+        <h1 class="ficha__nome">{{ can.nome }}</h1>
+        {% if can.urxente %}<span class="etiqueta etiqueta--forte">Urxente</span>{% endif %}
+        {% if can.estado == "reservado" %}<span class="etiqueta">Reservado</span>{% elif can.estado == "adoptado" %}<span class="etiqueta etiqueta--ok">Adoptado</span>{% endif %}
+      </div>
+      <p class="texto-secundario">{% if avaliado.distancia_texto %}A {{ avaliado.distancia_texto }} · {% endif %}{{ can.protectora.nome }}, {{ can.protectora.concello.nome }}</p>
+      {% if can.lista_etiquetas %}<ul class="etiquetas">{% for e in can.lista_etiquetas %}<li class="etiqueta">{{ e }}</li>{% endfor %}</ul>{% endif %}
+
+      {% if avaliado.porcentaxe is not None %}
+        <div class="caixa compatibilidade-ficha">
+          <p class="compatibilidade-ficha__titulo"><span class="porcentaxe porcentaxe--pequena">{{ avaliado.porcentaxe }}%</span> de compatibilidade contigo</p>
+          {% include "animais/_motivos.html" %}
+        </div>
+      {% elif not user.is_authenticated or user.es_adoptante %}
+        <p class="caixa caixa--suave"><a href="{% url 'compatibilidade:test' %}">Fai o test</a> para saber se {{ can.nome }} encaixa coa túa vida.</p>
+      {% endif %}
+
+      {% if can.estado == "disponible" %}
+        {% if solicitude and solicitude.activa %}
+          <p class="mensaxe">Xa tes unha solicitude para {{ can.nome }}: <strong>{{ solicitude.get_estado_display|lower }}</strong>. <a href="{% url 'adopcions:minas_solicitudes' %}">Ver as miñas solicitudes</a></p>
+        {% elif not user.is_authenticated or user.es_adoptante %}
+          <div class="fila ficha__accions">
+            <form method="post" action="{% url 'adopcions:solicitar' can.pk %}">{% csrf_token %}<input type="hidden" name="volver" value="{{ request.get_full_path }}"><button type="submit" class="boton boton--primario">Adoptar</button></form>
+            <button type="button" class="boton boton--secundario" data-non-implementado>Apadriñar</button>
+            <button type="button" class="boton-icona" data-non-implementado aria-label="Gardar nos favoritos"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><use href="#icona-corazon"></use></svg></button>
+          </div>
+        {% endif %}
+      {% endif %}
+
+      <div class="ficha__descricion">{{ can.descricion|linebreaks }}</div>
+
+      <dl class="datos">
+        <dt>Sexo</dt><dd>{{ can.get_sexo_display }}</dd>
+        <dt>Idade</dt><dd>{{ can.idade_texto }}</dd>
+        <dt>Tamaño</dt><dd>{{ can.get_tamano_display }}{% if can.peso_kg %} ({{ can.peso_kg }} kg){% endif %}</dd>
+        {% if can.raza %}<dt>Raza</dt><dd>{{ can.raza }}</dd>{% endif %}
+        <dt>Saúde</dt><dd>{{ can.saude_texto }}</dd>
+        <dt>Convive con</dt><dd>{{ can.convivencia_texto }}</dd>
+        <dt>Espazo</dt><dd>{{ can.get_espazo_display }}</dd>
+        <dt>Tempo só</dt><dd>{{ can.get_tolerancia_soidade_display }}</dd>
+        <dt>Enerxía</dt><dd>{{ can.get_enerxia_display }}</dd>
+        {% if can.require_experiencia %}<dt>Experiencia</dt><dd>Recoméndase experiencia previa</dd>{% endif %}
+      </dl>
+
+      <div class="caixa fila fila--separada">
+        <div><strong>{{ can.protectora.nome }}</strong><br><span class="texto-secundario">{{ can.protectora.concello.nome }}</span></div>
+        {% if can.protectora.web %}<a class="boton boton--contorno boton--pequeno" href="{{ can.protectora.web }}" rel="noopener">Web da protectora</a>{% endif %}
+      </div>
+    </div>
+  </div>
+
+  {% if parecidos %}
+  <section class="pila" aria-labelledby="parecidos">
+    <h2 id="parecidos">Cans parecidos</h2>
+    <ul class="grella grella--cans">{% for avaliado in parecidos %}{% include "animais/_tarxeta.html" %}{% endfor %}</ul>
+  </section>
+  {% endif %}
+</div>
+{% endblock %}

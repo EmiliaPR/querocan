@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% load static %}
+{% block titulo %}Descubrir cans{% endblock %}
+{% block estilos %}<link rel="stylesheet" href="{% static 'css/animais.css' %}"><link rel="stylesheet" href="{% static 'css/deck.css' %}">{% endblock %}
+{% block scripts %}
+  <script type="module" src="{% static 'js/deck-app.js' %}"></script>
+  <script type="module" src="{% static 'js/xeolocalizacion.js' %}"></script>
+{% endblock %}
+{% block contido %}
+<div class="contedor">
+  <div class="deck-cabeceira">
+    <details class="deck-cabeceira__filtros">
+      <summary class="boton boton--suave boton--pequeno">Filtros e localización</summary>
+      <div class="pila">
+        {% include "compatibilidade/_localizacion.html" %}
+        {% include "animais/_filtros.html" %}
+      </div>
+    </details>
+    <nav class="vista-selector" aria-label="Vista">
+      <a href="{% url 'animais:deck' %}" aria-current="page">Tarxetas</a>
+      <a href="{% url 'animais:listado' %}{% if consulta_filtros %}?{{ consulta_filtros }}{% endif %}">Grella</a>
+    </nav>
+  </div>
+  {% if not ten_perfil %}
+    <p class="caixa caixa--suave deck-aviso-test"><a href="{% url 'compatibilidade:test' %}">Fai o test</a> e ordenamos os cans pola compatibilidade contigo.</p>
+  {% endif %}
+
+  <div class="deck-paxina" data-api="{% url 'animais:api_deck' %}" data-api-decision="{% url 'animais:api_decision' %}" data-api-desfacer="{% url 'animais:api_desfacer' %}" data-filtros="{{ consulta_filtros }}">
+    {% include "animais/_deck.html" %}
+
+    <aside class="deck-detalle caixa" aria-label="Detalles do can" data-deck-detalle>
+      <h2 data-detalle="titulo"></h2>
+      <ul class="etiquetas" data-detalle="etiquetas"></ul>
+      <dl class="datos">
+        <dt>Idade</dt><dd data-detalle="idade"></dd>
+        <dt>Tamaño</dt><dd data-detalle="tamano"></dd>
+        <dt>Convive con</dt><dd data-detalle="convivencia"></dd>
+      </dl>
+      <p data-detalle="descricion" class="texto-secundario"></p>
+      <a class="boton boton--primario" data-detalle="ficha" href="#">Ver a ficha completa</a>
+    </aside>
+  </div>
+</div>
+{% csrf_token %}
+{% endblock %}

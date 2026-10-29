@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% load static %}
+{% block titulo %}Test de compatibilidade{% endblock %}
+{% block estilos %}<link rel="stylesheet" href="{% static 'css/test.css' %}">{% endblock %}
+{% block scripts %}<script type="module" src="{% static 'js/test.js' %}"></script>{% endblock %}
+{% block contido %}
+<div class="contedor seccion test">
+  <form method="post" class="test__formulario" data-test novalidate>
+    {% csrf_token %}
+    {% if formulario.errors %}
+      <p class="mensaxe mensaxe--error" role="alert">Responde todas as preguntas para ver o resultado.</p>
+    {% endif %}
+    {% for numero, titulo, campos in formulario.preguntas %}
+      <fieldset class="test__pregunta" data-pregunta="{{ numero }}" aria-labelledby="pregunta-{{ numero }}">
+        <p class="test__progreso">Pregunta {{ numero }} de {{ formulario.PREGUNTAS|length }}</p>
+        <h1 id="pregunta-{{ numero }}" class="test__titulo">{{ titulo }}</h1>
+        {% for campo in campos %}
+          <div class="pila">
+            {% if campos|length > 1 %}<p class="test__subpregunta">{{ campo.label }}</p>{% endif %}
+            <div class="opcions opcions--grandes" role="radiogroup" aria-label="{{ campo.label }}">
+              {% for opcion in campo %}
+                <label for="{{ opcion.id_for_label }}">{{ opcion.tag }}<span>{{ opcion.choice_label }}</span></label>
+              {% endfor %}
+            </div>
+            {% if campo.errors %}<p class="campo__erro">Escolle unha opción.</p>{% endif %}
+          </div>
+        {% endfor %}
+      </fieldset>
+    {% endfor %}
+
+    <p class="texto-secundario test__nota">Podes cambiar as respostas máis tarde. Só pedimos o necesario para axudarche a atopar o can axeitado.</p>
+
+    <div class="test__navegacion">
+      <button type="button" class="boton boton--contorno" data-test-atras hidden>Atrás</button>
+      <button type="button" class="boton boton--primario" data-test-seguinte hidden>Seguinte</button>
+      <button type="submit" class="boton boton--primario" data-test-enviar>Ver o resultado</button>
+    </div>
+    <p class="test__despois"><a href="{% url 'animais:listado' %}">Facelo máis tarde</a></p>
+  </form>
+</div>
+{% endblock %}

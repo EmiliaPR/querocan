@@ -10,6 +10,8 @@ urlpatterns = [
     path("saude/", views.saude, name="saude"),
     path("", include("contas.urls")),
     path("", include("animais.urls")),
+    path("", include("compatibilidade.urls")),
+    path("", include("adopcions.urls")),
     path("xestion/", include("xestion.urls")),
     path("", include("contido.urls")),
 ]

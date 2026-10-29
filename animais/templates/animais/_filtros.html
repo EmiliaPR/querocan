@@ -1,0 +1,29 @@
+{# Filtros do listado e do deck. Funcionan sen JavaScript (formulario GET). #}
+<form method="get" class="filtros" aria-label="Filtrar cans">
+  <div class="campo">
+    <label for="f-tamano">Tamaño</label>
+    <select name="tamano" id="f-tamano">{% for valor, texto in opcions_tamano %}<option value="{{ valor }}" {% if parametros.tamano == valor %}selected{% endif %}>{{ texto }}</option>{% endfor %}</select>
+  </div>
+  <div class="campo">
+    <label for="f-idade">Idade</label>
+    <select name="idade" id="f-idade">{% for valor, texto in opcions_idade %}<option value="{{ valor }}" {% if parametros.idade == valor %}selected{% endif %}>{{ texto }}</option>{% endfor %}</select>
+  </div>
+  <div class="campo">
+    <label for="f-distancia">Distancia</label>
+    <select name="distancia" id="f-distancia" {% if not localizacion %}aria-describedby="axuda-distancia"{% endif %}>{% for valor, texto in opcions_distancia %}<option value="{{ valor }}" {% if parametros.distancia == valor %}selected{% endif %}>{{ texto }}</option>{% endfor %}</select>
+  </div>
+  <div class="campo">
+    <label for="f-tipo">Tipo</label>
+    {# Acollida aínda non está implementada: ao escollela avísase e volve a «Adopción» #}
+    <select id="f-tipo" data-non-implementado-opcion="acollida" data-valor-previo="adopcion">
+      <option value="adopcion" selected>Adopción</option>
+      <option value="acollida">Acollida</option>
+    </select>
+  </div>
+  <div class="campo campo--check filtros__urxentes">
+    <input type="checkbox" name="urxentes" value="1" id="f-urxentes" {% if parametros.urxentes == "1" %}checked{% endif %}>
+    <label for="f-urxentes">Só urxentes</label>
+  </div>
+  <button type="submit" class="boton boton--primario boton--pequeno">Buscar</button>
+  {% if not localizacion %}<p id="axuda-distancia" class="campo__axuda filtros__axuda">Para filtrar por distancia, indica onde estás.</p>{% endif %}
+</form>

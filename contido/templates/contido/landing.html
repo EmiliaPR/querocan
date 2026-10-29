@@ -8,8 +8,8 @@
   <h1 class="heroe__titulo"><span>Un pequeno xesto,</span> <span>un amor para sempre.</span></h1>
   <p class="heroe__subtitulo">Desliza, coñece o seu carácter e adopta o can que encaixa coa túa vida. Sen présa e con toda a información.</p>
   <div class="fila heroe__accions">
-    <a href="/animais/" class="boton boton--suave">Ver animais</a>
-    <a href="/test/" class="boton boton--primario">Facer o test de compatibilidade</a>
+    <a href="{% url 'animais:listado' %}" class="boton boton--suave">Ver animais</a>
+    <a href="{% url 'compatibilidade:test' %}" class="boton boton--primario">Facer o test de compatibilidade</a>
     <a href="{% url 'contas:rexistro' %}" class="boton boton--contorno">Crear conta</a>
   </div>
 </section>
@@ -59,7 +59,7 @@
         <li class="etiqueta etiqueta--banda">Outros animais</li>
         <li class="etiqueta etiqueta--banda">Experiencia</li>
       </ul>
-      <a href="/test/" class="boton boton--crema">Facer o test</a>
+      <a href="{% url 'compatibilidade:test' %}" class="boton boton--crema">Facer o test</a>
     </div>
   </div>
 </section>

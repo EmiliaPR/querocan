@@ -1,0 +1,68 @@
+/* Listado, ficha, resultado do test e tarxetas de cans. */
+
+.titulo-rubi { color: var(--rubi); }
+
+/* Filtros */
+.filtros { display: grid; gap: var(--esp-3); grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: end; }
+@media (min-width: 900px) { .filtros { grid-template-columns: repeat(4, minmax(0, 1fr)) auto auto; } }
+.filtros__urxentes { align-self: center; }
+.filtros__axuda { grid-column: 1 / -1; }
+.localizacion { background: var(--branco); border: 1px solid var(--borde); border-radius: var(--raio-m); padding: var(--esp-3) var(--esp-4); }
+.localizacion summary { cursor: pointer; }
+.localizacion__corpo { margin-top: var(--esp-3); }
+.localizacion select { max-width: 280px; }
+
+/* Tarxeta de can na grella */
+.grella--cans { list-style: none; margin: 0; padding: 0; }
+.tarxeta-can { position: relative; display: flex; flex-direction: column; }
+.tarxeta-can__foto { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+.tarxeta-can__nome { font-size: var(--tam-xl); }
+.tarxeta-can__nome a { text-decoration: none; }
+.tarxeta-can__nome a:hover { text-decoration: underline; }
+.tarxeta-can__lugar { font-size: var(--tam-s); }
+.tarxeta-can .tarxeta__corpo { flex: 1; }
+.tarxeta-can .fila:last-child { margin-top: auto; }
+
+/* Porcentaxe de compatibilidade (círculo rubí) */
+.porcentaxe {
+  width: 72px; height: 72px; flex: none; border-radius: 50%; background: var(--rubi); color: var(--crema);
+  display: flex; align-items: center; justify-content: center; font-family: var(--fonte-titulares);
+  font-weight: 800; font-size: 1.4rem;
+}
+.porcentaxe--sobre-foto { position: absolute; top: var(--esp-3); right: var(--esp-3); width: 60px; height: 60px; font-size: 1.15rem; box-shadow: var(--sombra); }
+.porcentaxe--pequena { display: inline-flex; width: auto; height: auto; padding: var(--esp-1) var(--esp-3); border-radius: var(--raio-pilula); font-size: var(--tam-m); }
+
+/* Resultado do test */
+.resultado-lista { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: var(--esp-4); }
+.resultado { display: grid; grid-template-columns: 96px 1fr auto; gap: var(--esp-4); padding: var(--esp-3); align-items: center; }
+.resultado__foto { width: 96px; height: 96px; border-radius: var(--raio-m); object-fit: cover; grid-row: span 2; }
+.resultado__datos { display: flex; flex-direction: column; gap: var(--esp-2); min-width: 0; }
+.resultado__nome { font-size: var(--tam-xl); }
+.resultado__nome a { text-decoration: none; }
+.resultado__accions { grid-column: 2 / -1; display: flex; flex-wrap: wrap; gap: var(--esp-2); }
+@media (min-width: 800px) {
+  .resultado { grid-template-columns: 200px 1fr auto auto; padding: var(--esp-4); }
+  .resultado__foto { width: 200px; height: 150px; grid-row: auto; }
+  .resultado__accions { grid-column: auto; flex-direction: column; }
+}
+
+/* Ficha */
+.ruta { font-size: var(--tam-s); }
+.ficha { display: grid; gap: var(--esp-6); }
+@media (min-width: 900px) { .ficha { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: start; } }
+.ficha__foto-principal { width: 100%; aspect-ratio: 6 / 5; object-fit: cover; border-radius: var(--raio-l); }
+.ficha__miniaturas { list-style: none; margin: var(--esp-3) 0 0; padding: 0; display: flex; gap: var(--esp-3); flex-wrap: wrap; }
+.ficha__miniaturas img { width: 96px; height: 72px; object-fit: cover; border-radius: var(--raio-s); }
+.ficha__nome { font-size: clamp(2.25rem, 7vw, 3.25rem); color: var(--rubi); }
+.ficha__descricion p + p { margin-top: var(--esp-3); }
+.compatibilidade-ficha { display: flex; flex-direction: column; gap: var(--esp-3); }
+.compatibilidade-ficha__titulo { font-weight: 700; display: flex; align-items: center; gap: var(--esp-2); }
+
+/* Deck: cabeceira con filtros */
+.deck-cabeceira { display: flex; align-items: center; justify-content: space-between; gap: var(--esp-3); padding-top: var(--esp-4); flex-wrap: wrap; }
+.deck-cabeceira__filtros { flex: 1; }
+.deck-cabeceira__filtros summary { list-style: none; }
+.deck-cabeceira__filtros summary::-webkit-details-marker { display: none; }
+.deck-cabeceira__filtros[open] > .pila { margin-top: var(--esp-3); }
+.deck-aviso-test { margin-top: var(--esp-3); }
+.paxinacion { justify-content: center; }

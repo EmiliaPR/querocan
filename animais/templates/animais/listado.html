@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% load static %}
+{% block titulo %}Cans que buscan fogar{% endblock %}
+{% block estilos %}<link rel="stylesheet" href="{% static 'css/animais.css' %}">{% endblock %}
+{% block scripts %}<script type="module" src="{% static 'js/xeolocalizacion.js' %}"></script>{% endblock %}
+{% block contido %}
+<div class="contedor seccion">
+  <div class="fila fila--separada">
+    <div class="pila">
+      <h1>Cans que buscan fogar</h1>
+      <p class="texto-secundario">{{ total }} can{{ total|pluralize:"s" }} de {{ total_protectoras }} protectora{{ total_protectoras|pluralize:"s" }}{% if ten_perfil %} · ordenados por compatibilidade contigo{% endif %}</p>
+    </div>
+    <nav class="vista-selector" aria-label="Vista">
+      <a href="{% url 'animais:deck' %}{% if consulta_filtros %}?{{ consulta_filtros }}{% endif %}">Tarxetas</a>
+      <a href="{% url 'animais:listado' %}" aria-current="page">Grella</a>
+    </nav>
+  </div>
+
+  {% if not ten_perfil %}
+  <div class="caixa caixa--suave fila fila--separada">
+    <p>Fai o test de compatibilidade e ordenamos os cans segundo o encaixe contigo.</p>
+    <a class="boton boton--primario boton--pequeno" href="{% url 'compatibilidade:test' %}">Facer o test</a>
+  </div>
+  {% endif %}
+
+  {% include "compatibilidade/_localizacion.html" %}
+  {% include "animais/_filtros.html" %}
+
+  {% if paxina.object_list %}
+    <ul class="grella grella--cans">
+      {% for avaliado in paxina %}{% include "animais/_tarxeta.html" %}{% endfor %}
+    </ul>
+    {% if paxina.has_other_pages %}
+    <nav class="paxinacion fila" aria-label="Páxinas">
+      {% if paxina.has_previous %}<a class="boton boton--contorno boton--pequeno" href="?{% for k, v in parametros.items %}{% if k != 'paxina' %}{{ k }}={{ v|urlencode }}&amp;{% endif %}{% endfor %}paxina={{ paxina.previous_page_number }}">Anterior</a>{% endif %}
+      <span>Páxina {{ paxina.number }} de {{ paxina.paginator.num_pages }}</span>
+      {% if paxina.has_next %}<a class="boton boton--contorno boton--pequeno" href="?{% for k, v in parametros.items %}{% if k != 'paxina' %}{{ k }}={{ v|urlencode }}&amp;{% endif %}{% endfor %}paxina={{ paxina.next_page_number }}">Ver máis cans</a>{% endif %}
+    </nav>
+    {% endif %}
+  {% else %}
+    <div class="caixa pila">
+      <p>Non hai cans con estes filtros.</p>
+      <p><a href="{% url 'animais:listado' %}">Quitar os filtros</a></p>
+    </div>
+  {% endif %}
+</div>
+{% endblock %}

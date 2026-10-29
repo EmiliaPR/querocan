@@ -1,0 +1,7 @@
+{% if motivos %}
+<ul class="etiquetas" aria-label="Por que encaixa">
+  {% for motivo in motivos %}
+    <li class="etiqueta {% if motivo.encaixa %}etiqueta--ok{% else %}etiqueta--aviso{% endif %}"><span aria-hidden="true">{{ motivo.icona }}</span> {{ motivo.texto }}</li>
+  {% endfor %}
+</ul>
+{% endif %}

@@ -1,0 +1,21 @@
+{# Localización da persoa: GPS do navegador ou concello. Sen JavaScript, só o concello. #}
+<details class="localizacion" {% if not localizacion %}open{% endif %}>
+  <summary>
+    {% if localizacion %}Buscando preto de <strong>{{ localizacion }}</strong> · cambiar{% else %}Onde estás? Así amosámosche a distancia ata cada can{% endif %}
+  </summary>
+  <div class="localizacion__corpo fila">
+    <form method="post" action="{% url 'compatibilidade:localizacion' %}" data-xeolocalizacion hidden>
+      {% csrf_token %}
+      <input type="hidden" name="latitude"><input type="hidden" name="lonxitude">
+      <input type="hidden" name="volver" value="{{ request.get_full_path }}">
+      <button type="button" class="boton boton--suave boton--pequeno" data-xeolocalizacion-boton>Usar a miña localización</button>
+    </form>
+    <form method="post" action="{% url 'compatibilidade:localizacion' %}" class="fila">
+      {% csrf_token %}
+      <input type="hidden" name="volver" value="{{ request.get_full_path }}">
+      <div class="campo"><label for="id_concello" class="so-lectores">O teu concello</label>{{ formulario_localizacion.concello }}</div>
+      <button type="submit" class="boton boton--contorno boton--pequeno">Gardar</button>
+    </form>
+    <p class="campo__axuda" data-xeolocalizacion-estado role="status"></p>
+  </div>
+</details>

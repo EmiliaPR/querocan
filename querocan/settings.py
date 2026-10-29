@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     "compatibilidade",
     "contido",
     "animais",
+    "adopcions",
     "xestion",
 ]
 
@@ -117,6 +118,9 @@ MEDIA_URL = "media/"
 MEDIA_ROOT = BASE_DIR / "media"
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+# Enderezo público da web (para as ligazóns dos correos)
+SITIO_URL = _env("SITIO_URL", "http://localhost:8000")
 
 # Correo
 EMAIL_BACKEND = _env("EMAIL_BACKEND", "django.core.mail.backends.console.EmailBackend")

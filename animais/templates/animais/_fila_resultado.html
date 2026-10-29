@@ -1,0 +1,18 @@
+{# Fila do resultado do test: foto, nome, motivos, porcentaxe e accións. #}
+{% with can=avaliado.can foto=avaliado.can.foto_principal %}
+<li class="tarxeta resultado">
+  {% if foto %}<img class="resultado__foto" src="{{ foto.imaxe.url }}" alt="" loading="lazy">{% else %}<div class="resultado__foto foto-baleira">Sen foto</div>{% endif %}
+  <div class="resultado__datos">
+    <h2 class="resultado__nome"><a href="{% url 'animais:ficha' can.pk %}">{{ can.nome }}, {{ can.idade_texto }}</a></h2>
+    <p class="texto-secundario">{% if avaliado.distancia_texto %}A {{ avaliado.distancia_texto }} · {% endif %}{{ can.protectora.nome }}</p>
+    {% include "animais/_motivos.html" with motivos=avaliado.motivos %}
+  </div>
+  {% if avaliado.porcentaxe is not None %}
+    <p class="porcentaxe" aria-label="{{ avaliado.porcentaxe }} % de compatibilidade">{{ avaliado.porcentaxe }}%</p>
+  {% endif %}
+  <div class="resultado__accions">
+    {% include "animais/_boton_adoptar.html" %}
+    <a class="boton boton--contorno boton--pequeno" href="{% url 'animais:ficha' can.pk %}">Ver ficha</a>
+  </div>
+</li>
+{% endwith %}
