@@ -92,8 +92,8 @@ contido (test, contrato, manual).
   como limitación
 - Machine learning na compatibilidade — regras con pesos son explicables e testables
 - Outras especies — decisión explícita: só cans
-- Apadriñamento e acollida temporal — os botóns existen pero só avisan de que non están
-  implementados; traballo futuro
+- Apadriñamento, acollida temporal e favoritos — os botóns existen pero só avisan de que non
+  están implementados; traballo futuro
 - Testemuños ligados á adopción — quedan como contido estático xestionado polo superadmin
 - Mapas interactivos — a distancia en km na ficha abonda
 
@@ -117,7 +117,9 @@ Diferenzas entre a proposta gráfica e este documento, e como se resolveron (202
    mantéñense na interface, pero ao pulsalos amosan a mensaxe "Esta funcionalidade aínda non
    está implementada". Implementaranse máis adiante (sen modelo de datos nin lóxica no MVP).
 3. **Swipe → mantense como diferencial.** Swipe á dereita ("Gústame") crea a solicitude de
-   adopción, igual que o botón "Adoptar" do listado e da ficha.
+   adopción, igual que o botón "Adoptar" do listado e da ficha. O botón de corazón (favoritos)
+   do listado e da ficha mantense na interface, pero ao pulsalo amosa a mensaxe "Esta
+   funcionalidade aínda non está implementada"; os favoritos quedan como traballo futuro.
 4. **Fluxo → match bidireccional, checklist e contrato.** Os textos da landing que falan de
    "contactar directamente coa protectora" adáptanse a este fluxo.
 5. **Test sen conta → permitido.** O resultado gárdase na sesión e, ao crear a conta, pasa ao
